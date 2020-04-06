@@ -21,15 +21,11 @@ function updateBoard() {
   pixelBoard = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixelBoard.length; i += 1) {
     const pixel = pixelBoard[i];
-    let pixelHandler = function () {
+    const pixelHandler = function () {
       pixel.style.backgroundColor = color;
-    }
+    };
     pixel.addEventListener('click', pixelHandler);
   }
-}
-
-function pixelHandler() {
-
 }
 
 const inputSize = document.getElementById('board-size');
@@ -60,11 +56,11 @@ updateBoard();
 
 for (let i = 0; i < buttonsArray.length; i += 1) {
   const btn = buttonsArray[i];
-  let btnHandler = function () {
+  const btnHandler = function () {
     color = btn.classList[1];
     document.getElementsByClassName('selected')[0].classList.remove('selected');
     btn.classList.add('selected');
-  }
+  };
   btn.addEventListener('click', btnHandler);
 }
 
