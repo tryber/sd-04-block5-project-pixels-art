@@ -17,6 +17,16 @@ window.onload = function () {
   buttonsArray[3].classList.add(colors[c]);
 };
 
+function updateBoard() {
+  pixelBoard = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixelBoard.length; i += 1) {
+    const pixel = pixelBoard[i];
+    pixel.addEventListener('click', () => {
+      pixel.style.backgroundColor = color;
+    });
+  }
+}
+
 const inputSize = document.getElementById('board-size');
 const buttonSize = document.getElementById('generate-board');
 
@@ -40,16 +50,6 @@ buttonSize.addEventListener('click', () => {
 
   updateBoard();
 });
-
-function updateBoard () {
-  pixelBoard = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixelBoard.length; i += 1) {
-    const pixel = pixelBoard[i];
-    pixel.addEventListener('click', () => {
-      pixel.style.backgroundColor = color;
-    });
-  }
-};
 
 updateBoard();
 
