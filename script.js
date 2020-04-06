@@ -3,7 +3,7 @@ const colors = ['red', 'green', 'blue', 'pink', 'yellow', 'brown', 'purple'];
 const buttonsArray = document.getElementsByClassName('color');
 let pixelBoard = document.querySelectorAll('.pixel');
 
-window.onload = function() {
+window.onload = function () {
   let a = 0;
   let b = 0;
   let c = 0;
@@ -31,12 +31,17 @@ buttonSize.addEventListener('click', () => {
     div.className = 'pixel';
     board.appendChild(div);
   }
-  let string = "";
+  let string = '';
   for (let i = 0; i < N; i += 1) {
-    if (i === N - 1) string += "40px";
-    else string += "40px ";
+    if (i === N - 1) string += '40px';
+    else string += '40px ';
   }
   board.style.gridTemplateColumns = string;
+
+  updateBoard();
+});
+
+function updateBoard () {
   pixelBoard = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixelBoard.length; i += 1) {
     const pixel = pixelBoard[i];
@@ -44,15 +49,9 @@ buttonSize.addEventListener('click', () => {
       pixel.style.backgroundColor = color;
     });
   }
-});
+};
 
-pixelBoard = document.querySelectorAll('.pixel');
-for (let i = 0; i < pixelBoard.length; i += 1) {
-  const pixel = pixelBoard[i];
-  pixel.addEventListener('click', () => {
-    pixel.style.backgroundColor = color;
-  });
-}
+updateBoard();
 
 for (let i = 0; i < buttonsArray.length; i += 1) {
   const btn = buttonsArray[i];
