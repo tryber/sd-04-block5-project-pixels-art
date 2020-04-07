@@ -18,10 +18,15 @@ header{
 }
 
 .color{
+  border: 1px solid black;
   float: left;
   height: 40px;
   margin: 0 5px;
   width: 40px;  
+}
+
+.selected{
+  
 }
 
 #color1{
@@ -52,7 +57,7 @@ table{
 
 .pixel{
   background-color: white;
-  height: 39px;
-  width: 39px;
+  height: 41px;
+  width: 41px;
   border: 1px solid black;
 }
