@@ -1,0 +1,18 @@
+body {
+  text-align: center;
+}
+.color-palette {
+  list-style-type: none;
+  display: inline;
+}
+.color {
+  padding: 5px;
+  border: ipx solid black;
+}
+.pixel-board {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.pixel {
+  padding: 5px;
+}
