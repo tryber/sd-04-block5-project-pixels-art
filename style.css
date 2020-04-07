@@ -5,12 +5,12 @@
   width: 55px;
 }
 
-.pixel-board {
+.pixelboard {
 	height: 210px;
 	width: 210px;
 }
 
-.pixel-board, .pixel {
+.pixelboard, .pixel {
 	border: 1px solid black;
 }
 
