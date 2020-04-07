@@ -1,13 +1,13 @@
-// random colors
-const arrayColors = ['black'];
-function randomColors() {
-  for (let i = 1; i < 4; i += 1) {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    arrayColors[i] = '#' + randomColor;
-  }
-}
-randomColors();
 window.onload = () => {
+  // random colors
+  const arrayColors = ['black'];
+  function randomColors() {
+    for (let i = 1; i < 4; i += 1) {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      arrayColors[i] = '#' + randomColor;
+    }
+  }
+  randomColors();
   // variables
   const elementsColor = document.getElementsByClassName('color');
   const palette = document.getElementById('color-palette');
@@ -27,11 +27,12 @@ window.onload = () => {
     const selectedColor = document.querySelector('.selected');
     event.target.style.backgroundColor = selectedColor.style.backgroundColor;
   });
+  // clear the board
+  clearBoard.addEventListener('click', () => {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let pixel of pixels) {
+      pixel = pixel;
+      pixel.style.backgroundColor = 'white';
+    }
+  })
 };
- // clear the board
- clearBoard.addEventListener('click', () => {
-  const pixels = document.querySelectorAll('.pixel');
-  for (const pixel of pixels) {
-    pixel.style.backgroundColor = 'white';
-  }
-});
