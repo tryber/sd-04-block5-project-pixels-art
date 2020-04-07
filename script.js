@@ -11,41 +11,53 @@ const greenPixel = document.getElementById('green');
 greenPixel.style.backgroundColor = 'green';
 
 let selectedColor = 'black';
+blackPixel.className = 'selected';
 
-blackPixel.addEventListener('click', function(){
+function colorSelect(colorPixel) {
+  selectedColor = colorPixel.style.backgroundColor;
+}
+
+blackPixel.addEventListener('click', function () {
   colorSelect(blackPixel);
   blackPixel.className = 'selected';
   bluePixel.className = 'color';
   greenPixel.className = 'color';
   indigoPixel.className = 'color';
-})
+});
 
-bluePixel.addEventListener('click', function(){
+bluePixel.addEventListener('click', function () {
   colorSelect(bluePixel);
   blackPixel.className = 'color';
   bluePixel.className = 'selected';
   greenPixel.className = 'color';
   indigoPixel.className = 'color';
-})
+});
 
-greenPixel.addEventListener('click', function(){
+greenPixel.addEventListener('click', function () {
   colorSelect(greenPixel);
   blackPixel.className = 'color';
   bluePixel.className = 'color';
   greenPixel.className = 'selected';
   indigoPixel.className = 'color';
-})
+});
 
-indigoPixel.addEventListener('click', function(){
+indigoPixel.addEventListener('click', function () {
   colorSelect(indigoPixel);
   blackPixel.className = 'color';
   bluePixel.className = 'color';
   greenPixel.className = 'color';
   indigoPixel.className = 'selected';
-})
+});
 
-function colorSelect(colorPixel) {
-  selectedColor = colorPixel.style.backgroundColor;
+const pixelSelected = document.querySelectorAll('.pixel');
+function paintPixel(index) {
+  pixelSelected[index].addEventListener('click', function () {
+    pixelSelected[index].style.backgroundColor = selectedColor;
+  });
+}
+
+for (let index = 0; index < pixelSelected.length; index += 1) {
+  paintPixel(index);
 }
 
 // blackPixel.addEventListener('click', function(){
