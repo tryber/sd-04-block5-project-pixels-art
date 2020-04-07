@@ -6,3 +6,27 @@
 #title {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.color{
+    width:50px; 
+    height:50px; 
+    margin:4px; 
+    border:1px solid black; 
+    float: left
+}
+
+#black-color {
+    background: black;
+}
+
+#red-color {
+    background: red;
+}
+
+#green-color {
+    background: green;
+}
+
+#blue-color {
+    background: blue;
+}
