@@ -3,11 +3,10 @@ let colorSelected;
 let pixelBoard;
 let boardSizeInput;
 
-
 function clearBoard() {
   const allPixels = document.getElementsByClassName('pixel');
-  for (const i in allPixels.length) {
-    allPixels[i].style.backgroundColor = 'white';
+  for (const i in allPixels) {
+    allPixels[i].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
 
