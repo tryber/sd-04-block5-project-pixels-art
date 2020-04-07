@@ -2,33 +2,41 @@
   background-color: black;
   height: 50px;
   width: 50px;
-  display: inline-block
+  display: inline-block;
+  borde:: 1px black solid;
 }
 
 #color2 {
   background-color: yellow;
   height: 50px;
   width: 50px;
-  display: inline-block
+  display: inline-block;
+  border: 1px black solid;
 }
 
 #color3 {
   background-color: red;
   height: 50px;
   width: 50px;
-  display: inline-block
+  display: inline-block;
+  border: 1px black solid;
 }
 
 #color4 {
   background-color: blue;
   height: 50px;
   width: 50px;
-  display: inline-block
+  display: inline-block;
+  border: 1px black solid;
+}
+#pixel-board {
+  font-size: 0;
 }
 
 .pixel {
   height: 40px;
   width: 40px;
   border: 1px black solid;
-  border-spacing: 10px;
+  line-height: 0px;
+  display: inline-block;
 }
