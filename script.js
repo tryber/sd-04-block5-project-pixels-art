@@ -1,13 +1,32 @@
 let colors;
+let colorSelected;
 let pixelBoard;
 window.onload = function () {
   colors = document.getElementsByClassName("color");
-  colors[0].className += " selected";
-  colors[0].style.backgroundColor = "black";
-  randomizePallet();
   pixelBoard = document.getElementById("pixel-board");
+  selectColor(colors[0]);
+  colorSelected.style.backgroundColor = "black";
+  randomizePallet();
   addGrid(5, 5);
 
+}
+
+function eventSelectColor(event) {
+  selectColor(event.target);
+}
+
+function selectColor(element) {
+  if (colorSelected != element) {
+    if (colorSelected) {
+      colorSelected.className = colorSelected.className.replace(" selected", "");
+    }
+    element.className += " selected";
+    colorSelected = element;
+  }
+}
+
+function paintPixel(event){
+  event.target.style.backgroundColor = colorSelected.style.backgroundColor;
 }
 
 function randomizePallet() {
@@ -31,6 +50,7 @@ function addGrid(xsize, ysize) {
     for (let x = 0; x < xsize; x++) {
       let pixel = document.createElement("div");
       pixel.className = "pixel";
+      pixel.addEventListener("click", paintPixel);
       pixelBoard.appendChild(pixel);
     }
   }

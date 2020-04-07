@@ -12,14 +12,15 @@ body{
 }
 
 .pixel-board{
-  margin: auto;
   line-height: 0;
+  margin: auto;
 }
 
 .pixel {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
+  background-color: white;
   border: 1px solid;
+  display: inline-block;
+  height: 40px;
   margin: -1px;
+  width: 40px;
 }
