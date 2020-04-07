@@ -15,19 +15,19 @@
 }
 
 .color {
-    width: 40px;
-    height: 40px;
     border: 1px solid rgb(0, 0, 0);
+    height: 40px;
+    width: 40px;
 }
 
 #pixel-board {
     border-collapse:collapse ;
+    border-spacing: 0;
 }
 
-
 .pixel {
-    width: 37px;
-    height: 40px;
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(0, 0, 0);
+    height: 40px;
+    width: 37px;
 }
