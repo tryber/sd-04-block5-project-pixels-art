@@ -52,19 +52,28 @@
     </style>
 </head>
 <body>
-    <div class = "main">
-        <h1 id = "title">Paleta de Cores</h1>
-        <div id = "color-palette">
-            <div class = "color selected" id = "black"></div>
-            <div class = "color" id = "red"></div>
-            <div class = "color" id = "blue"></div>
-            <div class = "color" id = "green"></div>
-        </div>
-        <div id = "pixel-board"></div>
+    <h1 id = "title">Paleta de Cores</h1>
+    <div id = "color-palette">
+        <div class = "color selected" id = "black"></div>
+        <div class = "color" id = "red"></div>
+        <div class = "color" id = "blue"></div>
+        <div class = "color" id = "green"></div>
     </div>
+    <div id = "pixel-board"></div>
+    <button id = "clear-board">Clear</button>
+
 <script>
+    let clear = document.getElementById("clear-board")
     let board = document.getElementById("pixel-board")
     let palete = document.getElementsByClassName("color")
+
+    clear.addEventListener("click", function(){
+        pixels = document.getElementsByClassName("pixel");
+        for(pixel of pixels){
+            pixel.style.backgroundColor="";
+        }
+
+    })
     function eventToPalete(){
         for (colors of palete){
             colors.addEventListener("click", colorPallete)
