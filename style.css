@@ -5,28 +5,28 @@ body {
   border: 1px solid black;
   width: auto;
   height: auto;
-  display: inline-flex;
+  margin: 50px;
 }
 .black {
   background-color: black;
-  border: 2px solid black;
+  border: 1px solid rgb(0, 0, 0);
   margin: 5px;
 }
 .blue {
   background-color: rgb(127, 187, 197);
-  border: 2px solid black;
+  border: 1px solid rgb(0, 0, 0);
   margin: 5px;
 
 }
 .brown {
   background-color: rgb(199, 142, 112);
-  border: 2px solid black;
+  border: 1px solid rgb(0, 0, 0);
   margin: 5px;
 
 }
 .gray {
   background-color: rgb(95, 94, 92);
-  border: 2px solid black;
+  border: 1px solid rgb(0, 0, 0);
   margin: 5px;
 
 }
@@ -39,8 +39,8 @@ body {
   border: 1px solid black; 
   width: auto;
   height: auto;
-  display: inline-flex;
-  text-align: center;
+  display: inline-block;
+
 }
 .pixel {
   border: 1px solid black; 
