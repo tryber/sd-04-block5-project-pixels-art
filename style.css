@@ -3,14 +3,56 @@
   padding: 0;
 }
 
+header{
+  margin-bottom: 40px;
+}
+
 #title{
   font-family: "Arial";
   font-size: 30px;
 }
 
-.color{
-  background-color: red;
-  height: 40px;
-  width: 40px;
+#color-palette{
   float: left;
+  margin-bottom: 30px;
+}
+
+.color{
+  float: left;
+  height: 40px;
+  margin: 0 5px;
+  width: 40px;  
+}
+
+#color1{
+  background: black;
+}
+
+#color2{
+  background: red;
+}
+
+#color3{
+  background: green;
+}
+
+#color4{
+  background: blue;
+}
+
+#pixel-board{
+  background-color: red;
+  float: left;
+  clear: both;
+}
+
+table{
+  border-collapse: collapse;
+}
+
+.pixel{
+  background-color: white;
+  height: 39px;
+  width: 39px;
+  border: 1px solid black;
 }
