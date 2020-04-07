@@ -3,39 +3,17 @@ const board = document.getElementById('pixel-board');
 const palete = document.getElementsByClassName('color');
 const generateBoard = document.getElementById('size-form');
 
-function newTable(e) {
-  e.preventDefault();
-  let size = document.getElementById('board-size').value
-  deleteTable();
-  createTable(size, size);
-};
-
 function addRandomColors() {
-  for (let i = 1; i<palete.length; i+=1){
+  for (let i = 1; i < palete.length; i += 1){
     palete[i].style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`
   }
-};
+}
 
 function eventToPalete() {
     for (colors of palete){
         colors.addEventListener('click', colorPallete)
     }
-};
-
-function createTable(i=5, j=5) {
-  for (let m = 0; m < i; m+=1){
-    let row = document.createElement("div")
-    row.className = "row"
-    board.appendChild(row);
-    let lastRow = document.querySelector(".row:last-child")
-    for (let n = 0; n < j; n+=1){
-      let pixel = document.createElement("div")
-      pixel.className = "pixel"
-      pixel.addEventListener('click', colorPallete)
-      lastRow.appendChild(pixel);
-    }
-  }
-};
+}
 
 function colorPallete (e) {
   if (e.target.className == "color"){
@@ -68,6 +46,28 @@ function randomColor () {
 
 function deleteTable () {
   board.innerHTML = ''
+};
+
+function createTable(i = 5, j = 5) {
+  for (let m = 0; m < i; m += 1){
+    let row = document.createElement("div")
+    row.className = "row"
+    board.appendChild(row);
+    let lastRow = document.querySelector(".row:last-child")
+    for (let n = 0; n < j; n += 1){
+      let pixel = document.createElement("div")
+      pixel.className = "pixel"
+      pixel.addEventListener('click', colorPallete)
+      lastRow.appendChild(pixel);
+    }
+  }
+};
+
+function newTable(e) {
+  e.preventDefault ();
+  const size = document.getElementById('board-size').value;
+  deleteTable ();
+  createTable (size, size);
 };
 
 generateBoard.addEventListener('submit', newTable);
