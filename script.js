@@ -1,10 +1,28 @@
-const preto = document.querySelector('#preto');
-const vermelho = document.querySelector('#vermelho');
-const azul = document.querySelector('#azul');
-const amarelo = document.querySelector('#amarelo');
+const colorSelector = document.getElementsByClassName('color');
 
-function selected (div) {
-  div.className += " selected";
+const pixelBoard = document.getElementById('pixel-board');
+
+let selecaoCores = 'black';
+// Seletor da cor
+const selecaoTabela = function (e) {
+  selecaoCores = window.getComputedStyle(e.target).getPropertyValue('background-color');
+    // Selecao da classe
+  for (let i = 0; i < colorSelector.length; i += 1) {
+    colorSelector[i].classList.remove('selected');
+  }
+  e.target.classList.add('selected');
+};
+
+// Pintar o quadro
+function pintaPixel(e) {
+  e.target.style.backgroundColor = selecaoCores;
+  e.target.style.borderColor = selecaoCores;
 }
-selected(preto);
-console.log(selected);
+
+sessionStorage.setItem('color', 'black');
+
+for (let i = 0; i < colorSelector.length; i += 1) {
+  colorSelector[i].addEventListener('click', selecaoTabela);
+}
+
+pixelBoard.addEventListener('click', pintaPixel);
