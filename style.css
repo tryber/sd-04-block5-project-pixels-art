@@ -1,12 +1,12 @@
-/* #color-palette{
- 
-} */
-.color{
-    height: 20px;
-    width: 20px;
+body{
+    text-align:center;
+}
+.color{ 
+    height: 35px;
+    width: 35px;
     margin: 5px;
     border: 1px solid black;
-    display: inline-block;
+    display: inline-flex;
 }
 .pixel{
     height: 40px;
