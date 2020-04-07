@@ -4,6 +4,6 @@ const color3 = document.querySelector('#color3');
 const color4 = document.querySelector('#color4');
 
 function selected(div) { 
-  div.class = 'selected';
+  div.className += ' selected';
 };
 selected(color1);
