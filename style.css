@@ -1,23 +1,23 @@
-*{
+html, body {
   margin: 0;
   padding: 0;
 }
 
-header{
+header {
   margin-bottom: 40px;
 }
 
-#title{
+.title {
   font-family: "Arial";
   font-size: 30px;
 }
 
-#color-palette{
+.color-palette {
   float: left;
   margin-bottom: 30px;
 }
 
-.color{
+.color {
   border: 1px solid black;
   float: left;
   height: 40px;
@@ -25,33 +25,34 @@ header{
   width: 40px;  
 }
 
-.black{
+.black {
   background: black;
 }
 
-.red{
+.red {
   background: red;
 }
 
-.green{
+.green {
   background: green;
 }
 
-.blue{
+.blue {
   background: blue;
 }
 
-#pixel-board{
-  float: left;
+.pixel-board {
   clear: both;
+  float: left; 
 }
 
-table{
+table {
   border-collapse: collapse;
 }
 
-.pixel{
+.pixel {
+  border: 1px solid black;
   height: 41px;
   width: 41px;
-  border: 1px solid black;
+  
 }
