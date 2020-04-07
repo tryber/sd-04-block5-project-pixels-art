@@ -8,10 +8,11 @@
 }
 
 .pixel {
-  margin: -1px;
+  float: left;
 }
 
 .pixel-board {
+  background-color: white;
   height: 210px;
   width: 210px;
 }
