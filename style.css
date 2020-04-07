@@ -2,19 +2,19 @@
   background-color: black;
 }
 .color {
-  display: inline-block;
   border: 1px solid black;
-  width: 40px;
+  display: inline-block;
   height: 40px;
+  width: 40px;
 }
 .pink{
   background-color: rgb(230, 47, 160);
 }
 .pixel-board {
-  border: 1px solid black;
   border-collapse: collapse;
-  height: 200px;
-  width: 200px;
+  border: 1px solid black;
+  height: 204px;
+  width: 204px;
 }
 .pixel {
   border: 1px solid black;
