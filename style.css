@@ -32,10 +32,11 @@
 
 .pixel-board {
   font-size: 0;
+  background-color: rgb(255, 255, 255);
 }
 
 .pixel {
-  background-color: rgb white;
+  background-color: rgb(255, 255, 255);
   border: 1px black solid;
   display: inline-block;
   height: 40px;
