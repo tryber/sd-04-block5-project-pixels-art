@@ -34,6 +34,9 @@ function createBoard(pixels) {
       pixel.addEventListener('click', () => {
         pixel.style.backgroundColor = getComputedStyle(selectedColor).backgroundColor;
       });
+      pixel.addEventListener('dblclick', () => {
+        pixel.style.backgroundColor = 'rgb(255, 255, 255)';
+      });
       pixelRow.appendChild(pixel);
     }
     pixelBoard.appendChild(pixelRow);
