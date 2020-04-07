@@ -1,5 +1,5 @@
 const paleta = document.querySelectorAll('.color'); // Manipula as cores da paleta.
-const quadro = document.getElementById('pixel-board'); // Manipula o quadro de pixels.
+const pixel = document.querySelectorAll('.pixel'); // Manipula o quadro de pixels.
 
 function carregaCores () {
   for (let number = 0; number < paleta.length; number+=1) {
@@ -22,16 +22,13 @@ function carregaCores () {
   }
 }
 
-function carregaPixels () {
-	for (let pixel = 0; pixel < 25; pixel+=1) {
-		let quadrinho = document.createElement('div'); // Cria o pixel.
-		quadrinho.className = 'pixel'; // Configura atributo class.
-		quadrinho.style.backgroundColor = 'white'; // Configura cor de fundo para branco.
-		quadro.appendChild(quadrinho); // Adiciona no quadro.
+function configuraPixels () {
+	for (let p = 0; p < pixel.length; p+=1) { // For que percorre todos os div .pixel. 
+		pixel[p].style.backgroundColor = 'white'; // Configura cor de fundo para branco.
 	}
 }
 
 window.onload = function () {
 	carregaCores ();
-	carregaPixels ();
+	configuraPixels ();
 }
