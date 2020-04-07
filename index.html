@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .line{
+            border:solid black 1px;
+            width: 25px;
+            height: 25px;
+            display: table-row;
+        }
+        .table{
+            display: table;
+        }
+    </style>
+</head>
+<body>
+    <div class = "pixel-board"></div>
+<div class = "table">
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div><br>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div><br>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div>
+    <div class = "line"></div><br>
+</div>
+<script>
+    board = document.getElementById("pixel-board")
+    function createTable(i=5, j=5){
+        let pixel = document.createElement("div")
+        pixel.className = "pixel"
+        for (let m = 0; m < i; m+=1){
+            for (let n = 0; n < j; n+=1){
+                board.appendChild
+            }
+        }
+    }
+</script>
+</body>
+</html>
