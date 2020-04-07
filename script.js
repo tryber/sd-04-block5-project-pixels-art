@@ -1,58 +1,79 @@
 let colors;
 let colorSelected;
 let pixelBoard;
-window.onload = function () {
-  colors = document.getElementsByClassName("color");
-  pixelBoard = document.getElementById("pixel-board");
-  selectColor(colors[0]);
-  colorSelected.style.backgroundColor = "black";
-  randomizePallet();
-  addGrid(5, 5);
+let boardSizeInput;
 
+
+function clearBoard() {
+  const allPixels = document.getElementsByClassName('pixel');
+  for (const i in allPixels.length) {
+    allPixels[i].style.backgroundColor = 'white';
+  }
+}
+
+function selectColor(element) {
+  if (colorSelected !== element) {
+    if (colorSelected) {
+      colorSelected.className = colorSelected.className.replace(' selected', '');
+    }
+    element.className += ' selected';
+    colorSelected = element;
+  }
 }
 
 function eventSelectColor(event) {
   selectColor(event.target);
 }
 
-function selectColor(element) {
-  if (colorSelected != element) {
-    if (colorSelected) {
-      colorSelected.className = colorSelected.className.replace(" selected", "");
-    }
-    element.className += " selected";
-    colorSelected = element;
-  }
-}
-
-function paintPixel(event){
+function paintPixel(event) {
   event.target.style.backgroundColor = colorSelected.style.backgroundColor;
 }
 
-function randomizePallet() {
-  for (let i = 1; i < colors.length; i++) {
-    colors[i].style.backgroundColor = randomColor();
-  }
-}
-
 function randomColor() {
-  let letters = '0123456789ABCDEF';
+  const letters = '0123456789ABCDEF';
   let color = '#';
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i += 1) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
 }
 
-
-function addGrid(xsize, ysize) {
-  for (let y = 0; y < ysize; y++) {
-    for (let x = 0; x < xsize; x++) {
-      let pixel = document.createElement("div");
-      pixel.className = "pixel";
-      pixel.addEventListener("click", paintPixel);
-      pixelBoard.appendChild(pixel);
-    }
+function randomizePallet() {
+  for (let i = 1; i < colors.length; i += 1) {
+    colors[i].style.backgroundColor = randomColor();
   }
-  pixelBoard.style.width = ysize * 40 + "px";
 }
+
+function generateGrid(size) {
+  for (let y = 0; y < (size * size); y += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
+    pixel.addEventListener('click', paintPixel);
+    pixelBoard.appendChild(pixel);
+  }
+  pixelBoard.style.width = `${size * 40}px`;
+}
+
+function generateBoard() {
+  const pixelCount = document.getElementsByClassName('pixel').length;
+  for (let i = 0; i < pixelCount; i += 1) {
+    pixelBoard.removeChild(pixelBoard.lastChild);
+  }
+  let size = boardSizeInput.value;
+  if (size < 5) {
+    size = 5;
+  } else if (size > 50) {
+    size = 50;
+  }
+  generateGrid(size);
+}
+
+window.onload = function () {
+  colors = document.getElementsByClassName('color');
+  pixelBoard = document.getElementById('pixel-board');
+  boardSizeInput = document.getElementById('board-size');
+  selectColor(colors[0]);
+  colorSelected.style.backgroundColor = 'black';
+  randomizePallet();
+  generateGrid(5);
+};

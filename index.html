@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Pixel Art</title>
 </head>
+
 <body>
   <h1 id="title">Paleta de Cores</h1>
   <div id="color-palette">
@@ -14,7 +16,15 @@
     <div class="color" onclick="eventSelectColor(event)"></div>
     <div class="color" onclick="eventSelectColor(event)"></div>
   </div>
+  <br>
+  <label for="board-size">Select board size: </label>
+  <input type="number" id="board-size">
+  <button id="generate-board" onclick="generateBoard()">Generate</button>
+  <br>
+  <br>
   <div id="pixel-board" class="pixel-board"></div>
+  <button id="clear-board" onclick="clearBoard()">Clear board</button>
   <script src="script.js"></script>
 </body>
+
 </html>

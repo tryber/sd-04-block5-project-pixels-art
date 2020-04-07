@@ -1,8 +1,8 @@
-body{
+body {
   text-align: center;
 }
 
-.color{
+.color {
   background-color: black;
   border: 1px solid black;
   border-radius: 10px;
@@ -11,7 +11,7 @@ body{
   width: 30px;
 }
 
-.pixel-board{
+.pixel-board {
   line-height: 0;
   margin: auto;
 }
