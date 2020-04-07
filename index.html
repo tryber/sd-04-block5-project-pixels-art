@@ -55,7 +55,7 @@
     <div class = "main">
         <h1 id = "title">Paleta de Cores</h1>
         <div id = "color-palette">
-            <div class = "color" id = "black"></div>
+            <div class = "color selected" id = "black"></div>
             <div class = "color" id = "red"></div>
             <div class = "color" id = "blue"></div>
             <div class = "color" id = "green"></div>
@@ -93,7 +93,9 @@
         event.target.classList.add("selected");
     }
     function printPixel(event){
-        console.log(event.target.className + "é um pixel")
+        let colorSelected = document.getElementsByClassName('color selected')[0];
+        console.log(colorSelected.id)
+        event.target.style.backgroundColor = colorSelected.id
     }
     function removeSelected(){
         for (colors of palete){
