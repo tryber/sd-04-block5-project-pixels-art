@@ -11,15 +11,15 @@ section {
 }
 
 .color {
-  width: 80px;
-  height: 200px;
   border: 1px solid rgb(0, 0, 0);
+  height: 200px;
+  width: 80px;
 }
 
 .black {
   background-color: black;
-  border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .red {
@@ -28,8 +28,8 @@ section {
 
 .blue {
   background-color: blue;
-  border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .green {
@@ -37,7 +37,8 @@ section {
 }
 
 .pixel {
-  width: 40px;
-  height: 40px;
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(0, 0, 0);
+  height: 40px;
+  width: 40px;
 }

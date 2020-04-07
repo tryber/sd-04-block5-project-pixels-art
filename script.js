@@ -13,3 +13,15 @@ for (let i = 0; i <= 4  ; i++) {
   pixelBoard.appendChild(pixelRow);
     
 }
+
+let selectedColor = null;
+const colorPalette = document.querySelectorAll('.color');
+colorPalette.forEach((color) => {
+  color.addEventListener('click', function(e) {
+    if (selectedColor) {
+      selectedColor.classList.remove('selected');
+    }
+      selectedColor = color;
+      selectedColor.classList.add('selected');
+  });
+});
