@@ -1,13 +1,20 @@
 body {
   text-align: center;
 }
+.black {
+  background-color: black;
+}
 .color-palette {
   list-style-type: none;
   display: inline;
 }
 .color {
-  padding: 5px;
-  border: ipx solid black;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+.pink{
+  background-color: rgb(230, 47, 160);
 }
 .pixel-board {
   border: 1px solid black;
@@ -15,4 +22,13 @@ body {
 }
 .pixel {
   padding: 5px;
+}
+.purple {
+  background-color: blueviolet;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
 }
