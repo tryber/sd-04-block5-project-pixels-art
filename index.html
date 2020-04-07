@@ -61,11 +61,19 @@
     </div>
     <div id = "pixel-board"></div>
     <button id = "clear-board">Clear</button>
+    <form id="size-form">
+        <label for="size">Tamanho do quadro:</label>
+        <input type="number" id="board-size" name="size" min="5" max="50">
+        <input type="submit" id="generate-board">
+    </form>
 
 <script>
     let clear = document.getElementById("clear-board")
     let board = document.getElementById("pixel-board")
     let palete = document.getElementsByClassName("color")
+    let generateBoard = document.getElementById("size-form")
+
+    generateBoard.addEventListener("submit", getSize)
 
     clear.addEventListener("click", function(){
         pixels = document.getElementsByClassName("pixel");
@@ -74,6 +82,11 @@
         }
 
     })
+    function getSize(e){
+        e.preventDefault();
+        let size = document.getElementById("board-size").value
+        createTable(size, size);
+    }
     function eventToPalete(){
         for (colors of palete){
             colors.addEventListener("click", colorPallete)
