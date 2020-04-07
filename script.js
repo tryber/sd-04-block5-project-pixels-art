@@ -27,11 +27,11 @@ window.onload = () => {
     const selectedColor = document.querySelector('.selected');
     event.target.style.backgroundColor = selectedColor.style.backgroundColor;
   });
-  // clear the board
-  clearBoard.addEventListener('click', () => {
-    const pixels = document.querySelectorAll('.pixel');
-    for (let pixel of pixels) {
-      pixel.style.backgroundColor = 'white';
-    }
-  });
 };
+ // clear the board
+ clearBoard.addEventListener('click', () => {
+  const pixels = document.querySelectorAll('.pixel');
+  for (const pixel of pixels) {
+    pixel.style.backgroundColor = 'white';
+  }
+});
