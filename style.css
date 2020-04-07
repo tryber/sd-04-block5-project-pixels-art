@@ -3,11 +3,11 @@
   margin: 0;
 }
 
-#title {
+.title {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#color-palette {
+.color-palette {
     margin: auto;
 }
 
@@ -18,23 +18,23 @@
   width: 50px;
 }
 
-#black {
+.black {
   background: black;
 }
 
-#red {
+.red {
   background: red;
 }
 
-#green {
+.green {
   background: green;
 }
 
-#blue {
+.blue {
   background: blue;
 }
 
-#pixel-board {
+.pixel-board {
   display: grid;
   grid-template-columns: 40px 40px 40px 40px 40px;
   margin-top: 60px;
@@ -45,6 +45,6 @@
   border: 1px solid black;
   float: left;
   height: 40px;
-  margin: 0px 0px;
+  margin: 0;
   width: 40px
 }

@@ -1,26 +1,24 @@
 
 window.onload = () => {
   // variables
-  const color_palette = document.getElementById('color-palette');
-  const pixel_board = document.getElementById('pixel-board');
-  const clear_board = document.getElementById('clear-board');
+  const colorPalette = document.getElementById('color-palette');
+  const pixelBoard = document.getElementById('pixel-board');
+  const clearBoard = document.getElementById('clear-board');
 
-  color_palette.addEventListener('click', (event) => {
+  colorPalette.addEventListener('click', (event) => {
     document.querySelector('.selected').classList.remove('selected');
     event.target.classList.add('selected');
-   
   });
 
-  pixel_board.addEventListener('click', (event) => {
+  pixelBoard.addEventListener('click', (event) => {
       event.target.style.backgroundColor = document.querySelector('.selected').id;
   });
 
-  clear_board.addEventListener('click', () => { 
+  clearBoard.addEventListener('click', () => {
       var pixel = document.querySelectorAll('.pixel');
-      
       for (const key in pixel) {
-              pixel[key].style.backgroundColor = 'white';
-              pixel_board.style.backgroundColor = 'white';
-      }
+       pixel[key].style.backgroundColor = 'white';
+       pixelBoard.style.backgroundColor = 'white';
+    }
   });
 };
