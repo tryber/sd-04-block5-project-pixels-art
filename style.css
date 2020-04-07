@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#title{
+  font-family: "Arial";
+  font-size: 30px;
+}
+
+.color{
+  background-color: red;
+  height: 40px;
+  width: 40px;
+  float: left;
+}
