@@ -13,29 +13,95 @@
             width: 40px;
         }
 
+        .color{
+            border: solid black 1px;
+            float: left;
+            height: 39px;
+            width: 39px;
+        }
+
         #pixel-board{
             display: table;
+            left:0
         }
+        
+        #black{
+            background-color: black;
+        }
+
+        #red{
+            background-color: red;
+        }
+
+        #blue{
+            background-color: blue;
+        }
+
+        #green{
+            background-color: green;
+        }
+
+        .main{
+            position:relative;
+        }
+
+        #color-palette{
+            display:table;
+        }
+        
     </style>
 </head>
 <body>
-    <h1 id = "title">Paleta de Cores</h1>
-    <div ></div>
-    <div id = "pixel-board"></div>
+    <div class = "main">
+        <h1 id = "title">Paleta de Cores</h1>
+        <div id = "color-palette">
+            <div class = "color" id = "black"></div>
+            <div class = "color" id = "red"></div>
+            <div class = "color" id = "blue"></div>
+            <div class = "color" id = "green"></div>
+        </div>
+        <div id = "pixel-board"></div>
+    </div>
 <script>
     let board = document.getElementById("pixel-board")
+    let palete = document.getElementsByClassName("color")
+    function eventToPalete(){
+        for (colors of palete){
+            colors.addEventListener("click", colorPallete)
+        }
+    }
     function createTable(i=5, j=5){
         for (let m = 0; m < i; m+=1){
             for (let n = 0; n < j; n+=1){
                 let pixel = document.createElement("div")
                 pixel.className = "pixel"
+                pixel.addEventListener("click", colorPallete)
                 board.appendChild(pixel);
-                console.log("div appended")
             }
             board.appendChild(document.createElement("br"))
         }
     }
+    function colorPallete(e){
+        if (e.target.className == "color"){
+            getColor(e);
+        } else if(e.target.className == "pixel"){
+            printPixel(e);
+        }
+    }
+    function getColor(event){
+        removeSelected();
+        event.target.classList.add("selected");
+    }
+    function printPixel(event){
+        console.log(event.target.className + "é um pixel")
+    }
+    function removeSelected(){
+        for (colors of palete){
+            colors.classList.remove("selected")
+        }
+    }
     createTable();
+    eventToPalete();
 </script>
 </body>
 </html>
