@@ -11,5 +11,8 @@
     "browser": true,
     "node": true,
     "jest": true
-  }
+  },
+  "plugins": [
+    "html",
+  ]
 }

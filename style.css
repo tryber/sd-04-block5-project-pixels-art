@@ -1,0 +1,47 @@
+/* Flexbox */
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-self: center;
+}
+
+.color {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  border: 2px solid black;
+}
+
+/* Colors */
+.aqua {
+  background: aquamarine;
+}
+
+.black {
+  background: black;
+}
+
+.olive {
+  background: olive;
+}
+
+.salmon {
+  background: salmon;
+}
+
+/* General Styling */
+h1 {
+  text-align: center;
+}
+
+td {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
