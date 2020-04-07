@@ -1,29 +1,35 @@
 .black {
   background-color: black;
 }
+
 .color {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
-.pink{
+
+.pink {
   background-color: rgb(230, 47, 160);
 }
+
 .pixel-board {
   border-collapse: collapse;
   border: 1px solid black;
   height: 204px;
   width: 204px;
 }
+
 .pixel {
   border: 1px solid black;
   height: 40px;
   width: 40px;
 }
+
 .purple {
   background-color: blueviolet;
 }
+
 .yellow {
   background-color: yellow;
 }
