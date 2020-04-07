@@ -15,8 +15,7 @@
   border: 1px solid black;
   float: left;
   height: 50px;
-  margin: 4px;
-  width: 50px
+  width: 50px;
 }
 
 #black {
@@ -37,7 +36,7 @@
 
 #pixel-board {
   display: grid;
-  grid-template-columns: 45px 45px 45px 45px 45px;
+  grid-template-columns: 40px 40px 40px 40px 40px;
   margin-top: 60px;
 }
 
@@ -46,6 +45,6 @@
   border: 1px solid black;
   float: left;
   height: 40px;
-  margin: 1px 2px;
+  margin: 0px 0px;
   width: 40px
 }
