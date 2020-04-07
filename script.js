@@ -18,3 +18,9 @@ window.onload = () => {
     event.target.style.backgroundColor = selectedColor.style.backgroundColor;
   });
 };
+function clearBoard() {
+  const pixels = document.querySelectorAll(".pixel");
+  for (pixel of pixels) {
+    pixel.style.backgroundColor = "white"
+  }
+}
