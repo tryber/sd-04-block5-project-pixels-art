@@ -34,11 +34,11 @@
 #pixel-board {
     display: grid;
     margin-top: 60px;
-    grid-template-columns: 55px 55px 55px 55px 55px;
+    grid-template-columns: 45px 45px 45px 45px 45px;
 }
 .pixel{
-    width:50px; 
-    height:50px; 
+    width:39px; 
+    height:39px; 
     margin:1px 2px;
     background-color: white;
     border:1px solid black; 
