@@ -35,6 +35,7 @@
 }
 
 .pixel {
+  background-color: rgb white;
   border: 1px black solid;
   display: inline-block;
   height: 40px;
