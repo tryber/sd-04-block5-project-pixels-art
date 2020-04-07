@@ -1,7 +1,7 @@
 let selectedColor = null;
 const colorPalette = document.querySelectorAll('.color');
 colorPalette.forEach((color) => {
-  if (color.classList.contains('black')) {
+  if (color.classList.contains('firstColor')) {
     color.classList.add('selected');
     selectedColor = color;
   } else {
