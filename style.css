@@ -1,0 +1,28 @@
+.color{
+    border: 4px groove black;
+    float: left;
+    height: 40px;
+    margin: 3px 3px 3px 3px;
+    width: 40px;
+}
+.colorPaint{
+    border: 2px dashed black;
+    float: left;
+    height: 20px;
+    margin: 26px 3px 3px 3px;
+    width: 20px;
+}
+.pixel{
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    float: left;
+}
+.pixel-board{
+    background-color: white;
+    border: 2px solid black;
+    height: 210px;
+    margin: 3px 3px 3px 3px;
+    width: 210px;
+}
