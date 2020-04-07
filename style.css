@@ -1,6 +1,7 @@
 .pixel{
     border: solid black 1px;
     display: table-column;
+    float: left;
     height: 40px;
     width: 40px;
 }
@@ -16,6 +17,10 @@
     display: table;
     left: 0;
     width: auto;
+}
+
+.black{
+    background-color: black;
 }
 
 .row{
