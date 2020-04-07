@@ -34,3 +34,19 @@ h1{
 .color4{
     background-color: green;
 }
+
+.pixel-board{
+    height: 200px;
+    margin: auto;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.pixel{
+    background-color: white;
+    border: 1px solid black;
+    display: inline;
+    float: left;
+    height: 38px;
+    width: 38px;
+}
