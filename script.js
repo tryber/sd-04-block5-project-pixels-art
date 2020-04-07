@@ -35,7 +35,7 @@ function createBoard(pixels) {
         pixel.style.backgroundColor = getComputedStyle(selectedColor).backgroundColor;
       });
       pixel.addEventListener('dblclick', () => {
-        pixel.style.backgroundColor = 'rgb(255, 255, 255)';
+        pixel.style.backgroundColor = 'white';
       });
       pixelRow.appendChild(pixel);
     }
@@ -49,7 +49,7 @@ const clearBtn = document.querySelector('#clear-board');
 clearBtn.addEventListener('click', () => {
   const pixels = document.querySelectorAll('.pixel');
   pixels.forEach((pixel) => {
-    pixel.style.backgroundColor = 'rgb(255, 255, 255)';
+    pixel.style.backgroundColor = 'white';
   });
 });
 
@@ -63,4 +63,14 @@ generateBtn.addEventListener('click', () => {
   } else {
     createBoard(boardSize);
   }
+});
+
+const hideBtn = document.querySelector('#hide-board');
+hideBtn.addEventListener('click', () => {
+  const pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((pixel) => {
+    if (getComputedStyle(pixel).backgroundColor === 'rgb(255, 255, 255)') {
+      pixel.style.visibility = 'hidden';
+    }
+  });
 });
