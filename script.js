@@ -41,3 +41,11 @@
   for (let index = 0; index < pixelSelected.length; index += 1) {
     paintPixel(index);
   }
+
+  const clearButton = document.getElementById('clear-board');
+  clearButton.addEventListener('click', function () {
+    const pixelBoard = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixelBoard.length; index += 1) {
+      pixelBoard[index].style.backgroundColor = 'white';
+    }
+  });
