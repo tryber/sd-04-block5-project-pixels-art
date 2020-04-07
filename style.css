@@ -1,3 +1,6 @@
-.color {
-   border: 1px solid rgb(0 , 0 , 0); 
+div.color {
+    border: 1px solid rgb(0 , 0 , 0);
+    height: 55px;
+    width: 55px;
+    display: inline-block;
 }
