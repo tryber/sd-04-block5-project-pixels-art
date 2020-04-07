@@ -10,8 +10,7 @@ indigoPixel.style.backgroundColor = 'indigo';
 const greenPixel = document.getElementById('green');
 greenPixel.style.backgroundColor = 'green';
 
-let selectedColor = 'black';
-blackPixel.className = 'selected';
+let selectedColor = blackPixel.style.backgroundColor;
 
 function colorSelect(colorPixel) {
   selectedColor = colorPixel.style.backgroundColor;
