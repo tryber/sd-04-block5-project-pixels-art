@@ -28,7 +28,7 @@ function createBoard(pixels) {
   for (let i = 0; i < pixels; i += 1) {
     const pixelRow = document.createElement('div');
     pixelRow.className = 'pixel-row flex';
-    for (let i = 0; i < pixels; i += 1) {
+    for (let ia = 0; ia < pixels; ia += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.addEventListener('click', () => {
