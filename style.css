@@ -5,18 +5,17 @@
   display: inline-block;
 }
 
-#color1 {
-  background-color: black;
+.pixel-board {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#color2 {
-  background-color: rgb(27, 26, 85);
-}
-
-#color3 {
-  background-color: rgb(24, 104, 24);
-}
-
-#color4 {
-  background-color: rgb(131, 12, 32);
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  display: flex;
+  flex-wrap: wrap;
 }
