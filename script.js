@@ -5,7 +5,7 @@ let boardSizeInput;
 
 function clearBoard() {
   const allPixels = document.getElementsByClassName('pixel');
-  for (const i in allPixels) {
+  for (let i = 0; i < allPixels.length; i += 1) {
     allPixels[i].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
