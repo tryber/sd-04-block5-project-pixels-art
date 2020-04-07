@@ -17,11 +17,14 @@ for (let i = 0; i <= 4  ; i++) {
 let selectedColor = null;
 const colorPalette = document.querySelectorAll('.color');
 colorPalette.forEach((color) => {
+  if (color.classList.contains('black')) {
+    color.classList.add('selected');
+  } 
   color.addEventListener('click', function(e) {
     if (selectedColor) {
       selectedColor.classList.remove('selected');
     }
+      color.classList.add('selected');
       selectedColor = color;
-      selectedColor.classList.add('selected');
   });
 });
