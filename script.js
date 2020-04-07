@@ -6,7 +6,6 @@ function randomColors() {
     arrayColors[i] = `#${randomColor}`;
   }
 }
-
 window.onload = () => {
   randomColors();
   // variables
@@ -35,24 +34,4 @@ window.onload = () => {
       pixels[i].style.backgroundColor = 'white';
     }
   });
-  const generateBoard = document.getElementById('generate-board')
-  generateBoard.addEventListener('click', () => {
-    const pixels = document.querySelectorAll('.pixel');
-    const pixelBoard = document.getElementById('pixel-board');
-    for (let i = 0; i < pixels.length; i += 1) {
-      pixelBoard.removeChild(pixels[i]);
-    }
-    let size = document.getElementById('board-size').value;
-    if (size < 5)
-      size = 5;
-    if (size > 50)
-      size = 50;
-    pixelBoard.style.height = size * 42 + 'px';
-    pixelBoard.style.width = size * 42 + 'px';
-    for (let i = 0; i < size * size; i += 1) {
-      const newPixel = document.createElement('div');
-      newPixel.classList.add('pixel');
-      pixelBoard.appendChild(newPixel);
-    }
-  })
 };
