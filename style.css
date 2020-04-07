@@ -4,10 +4,8 @@ body {
 .black {
   background-color: black;
 }
-.color-palette {
-  display: inline;
-}
 .color {
+  display: inline-block;
   border: 1px solid black;
   width: 40px;
   height: 40px;
@@ -19,8 +17,8 @@ body {
   border: 1px solid black;
   border-collapse: collapse;
 }
-.pixel {
-  padding: 5px;
+th td .pixel {
+  padding: 40px;
 }
 .purple {
   background-color: blueviolet;
