@@ -1,5 +1,5 @@
-let pixelsPallete = document.querySelectorAll('.color')
-for(let i=0; i<pixelsPallete.length; i++){
+const pixelsPallete = document.querySelectorAll('.color');
+for(let i = 0; i < pixelsPallete.length; i=i+1){ 
     pixelsPallete[i].addEventListener('click', () => {
         if(!pixelsPallete[i].classList.contains('selected')){
             removeClass()
@@ -10,7 +10,7 @@ for(let i=0; i<pixelsPallete.length; i++){
 }
 
 function removeClass(){
-    for(let i=0; i<pixelsPallete.length; i++){
+    for(let i=0; i<pixelsPallete.length; i++){ 
         pixelsPallete[i].classList.remove('selected')
     }
 }
