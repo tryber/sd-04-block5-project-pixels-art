@@ -35,3 +35,6 @@ window.onload = () => {
     }
   });
 };
+// window.onload = () => {
+//   const inputValue = document.getElementById("board-size").value;
+// }
