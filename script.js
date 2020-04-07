@@ -3,6 +3,7 @@ let pixelBoard;
 window.onload = function () {
   colors = document.getElementsByClassName("color");
   colors[0].className += " selected";
+  colors[0].style.backgroundColor = "black";
   randomizePallet();
   pixelBoard = document.getElementById("pixel-board");
   addGrid(5, 5);
