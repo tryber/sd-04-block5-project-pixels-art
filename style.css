@@ -14,3 +14,9 @@
 .pixel-board {
   border-collapse: collapse;
 }
+
+.selected {
+  border: 1px solid black;
+  height: 41px;
+  width: 41px;
+}
