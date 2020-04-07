@@ -5,7 +5,6 @@ body {
   background-color: black;
 }
 .color-palette {
-  list-style-type: none;
   display: inline;
 }
 .color {
