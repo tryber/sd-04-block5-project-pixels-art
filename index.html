@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paleta de Cores</title>
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1 id="title" class="title">Paleta de Cores</h1>
-
+    <h1 id="title">Paleta de Cores</h1>
     <div id="color-palette" class="color-palette">
-        <div class="color selected black" id="black"></div>
-        <div class="color red" id="red"></div>
-        <div class="color green" id="green"></div>
-        <div class="color blue" id="blue"></div>
-        <input id="board-size" class="board-size" type="text">
-        <button id="generate-board" class="generate-board">Gerar Board</button>
-
+        <div class="color black selected"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
     </div>
-
+    <br>
+    <input type="number" placeholder="Tamanho (N x N)" id="board-size">
+    <button id="generate-board">Gerar</button>
     <div id="pixel-board" class="pixel-board">
         <div class="pixel"></div>
         <div class="pixel"></div>
@@ -49,8 +43,9 @@
         <div class="pixel"></div>
         <div class="pixel"></div>
     </div>
-    <button id="clear-board">clear</button>
+    <br>
+    <button id="clear-board">Limpar</button>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
