@@ -1,25 +1,25 @@
-.c1 {
+#color1 {
   background-color: black;
   height: 50px;
   width: 50px;
   display: inline-block
 }
 
-.c2 {
+#color2 {
   background-color: yellow;
   height: 50px;
   width: 50px;
   display: inline-block
 }
 
-.c3 {
+#color3 {
   background-color: red;
   height: 50px;
   width: 50px;
   display: inline-block
 }
 
-.c4 {
+#color4 {
   background-color: blue;
   height: 50px;
   width: 50px;
