@@ -1,7 +1,6 @@
 .pixel{
     border: solid black 1px;
     display: table-column;
-    float: left;
     height: 40px;
     width: 40px;
 }
@@ -13,26 +12,10 @@
     width: 39px;
 }
 
-#pixel-board{
+.pixel-board{
     display: table;
     left: 0;
     width: auto;
-}
-
-#black{
-    background-color: black;
-}
-
-#red{
-    background-color: red;
-}
-
-#blue{
-    background-color: blue;
-}
-
-#green{
-    background-color: green;
 }
 
 .row{
@@ -44,6 +27,6 @@
     position:relative;
 }
 
-#color-palette{
+.color-palette{
     display:table;
 }
