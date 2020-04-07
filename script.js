@@ -5,7 +5,7 @@ window.onload = function () {
   const color4 = document.querySelector('#color4');
   const boardPixel = document.querySelectorAll('.pixel');
   let thatColor = 'black';
-  let selected = "selected";
+  let selected;
   color1.addEventListener ('click', function() {
     thatColor = color1.classList[1];
     selected = color1.classList.add('selected');
@@ -38,8 +38,8 @@ window.onload = function () {
   for (let i = 0; i < boardPixel.length; i += 1) {
     const pixel = boardPixel[i];
     pixel.addEventListener ('click', function() {
-    //  pixel.style.backgroundColor = "red";
-      pixel.classList.add(thatColor);
+    pixel.style.backgroundColor = thatColor;
+    // pixel.classList.add(thatColor);
     });
   }
 };
