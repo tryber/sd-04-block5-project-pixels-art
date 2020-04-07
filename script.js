@@ -1,73 +1,58 @@
-let color = 'black';
-const colors = ['red', 'green', 'blue', 'pink', 'yellow', 'brown', 'purple'];
-const buttonsArray = document.getElementsByClassName('color');
-let pixelBoard = document.querySelectorAll('.pixel');
-
-window.onload = function () {
-  let a = 0;
-  let b = 0;
-  let c = 0;
-  while (a === b || a === c || b === c) {
-    a = Math.floor(Math.random() * 7);
-    b = Math.floor(Math.random() * 7);
-    c = Math.floor(Math.random() * 7);
+// random colors
+const arrayColors = ['black'];
+function randomColors() {
+  for (let i = 1; i < 4; i += 1) {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    arrayColors[i] = `#${randomColor}`;
   }
-  buttonsArray[1].classList.add(colors[a]);
-  buttonsArray[2].classList.add(colors[b]);
-  buttonsArray[3].classList.add(colors[c]);
+}
+window.onload = () => {
+  randomColors();
+  // variables
+  const elementsColor = document.getElementsByClassName('color');
+  const palette = document.getElementById('color-palette');
+  const pixelBoard = document.getElementById('pixel-board');
+  const clearBoard = document.getElementById('clear-board');
+  // paint the elements background
+  for (let i = 0; i < elementsColor.length; i += 1) {
+    elementsColor[i].style.backgroundColor = arrayColors[i];
+  }
+  // remove and add class selected
+  palette.addEventListener('click', (event) => {
+    document.querySelector('.selected').classList.remove('selected');
+    event.target.classList.add('selected');
+  });
+  // paint the pixel board with the color that have the selected class
+  pixelBoard.addEventListener('click', (event) => {
+    const selectedColor = document.querySelector('.selected');
+    event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+  });
+  // clear the board
+  clearBoard.addEventListener('click', () => {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = 'white';
+    }
+  });
+  // Generate board
+  const generateBoard = document.getElementById('generate-board')
+  generateBoard.addEventListener('click', () => {
+    const pixels = document.querySelectorAll('.pixel');
+    const pixelBoard = document.getElementById('pixel-board');
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixelBoard.removeChild(pixels[i]);
+    }
+    let size = document.getElementById('board-size').value;
+    if (size < 5)
+      size = 5;
+    if (size > 50)
+      size = 50;
+    pixelBoard.style.height = size * 42 + 'px';
+    pixelBoard.style.width = size * 42 + 'px';
+    for (let i = 0; i < size * size; i += 1) {
+      const newPixel = document.createElement('div');
+      newPixel.classList.add('pixel');
+      pixelBoard.appendChild(newPixel);
+    }
+  })
 };
-
-function updateBoard() {
-  pixelBoard = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixelBoard.length; i += 1) {
-    const pixel = pixelBoard[i];
-    const pixelHandler = function () {
-      pixel.style.backgroundColor = color;
-    };
-    pixel.addEventListener('click', pixelHandler);
-  }
-}
-
-const inputSize = document.getElementById('board-size');
-const buttonSize = document.getElementById('generate-board');
-
-buttonSize.addEventListener('click', () => {
-  const board = document.getElementById('pixel-board');
-  board.innerHTML = '';
-  let N = inputSize.value;
-  if (N < 5) N = 5;
-  if (N > 50) N = 50;
-  for (let i = 0; i < N * N; i += 1) {
-    const div = document.createElement('div');
-    div.className = 'pixel';
-    board.appendChild(div);
-  }
-  let string = '';
-  for (let i = 0; i < N; i += 1) {
-    if (i === N - 1) string += '40px';
-    else string += '40px ';
-  }
-  board.style.gridTemplateColumns = string;
-
-  updateBoard();
-});
-
-updateBoard();
-
-for (let i = 0; i < buttonsArray.length; i += 1) {
-  const btn = buttonsArray[i];
-  const btnHandler = function () {
-    color = btn.classList[1];
-    document.getElementsByClassName('selected')[0].classList.remove('selected');
-    btn.classList.add('selected');
-  };
-  btn.addEventListener('click', btnHandler);
-}
-
-const cleatBtn = document.getElementById('clear-board');
-cleatBtn.addEventListener('click', () => {
-  pixelBoard = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixelBoard.length; i += 1) {
-    pixelBoard[i].style.backgroundColor = 'white';
-  }
-});
