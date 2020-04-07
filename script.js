@@ -1,10 +1,18 @@
-window.onload = function () {
-  const color1 = document.querySelector('#color1');
-  const color2 = document.querySelector('#color2');
-  const color3 = document.querySelector('#color3');
-  const color4 = document.querySelector('#color4');
-  const boardPixel = document.querySelectorAll('.pixel');
-  let thatColor = 'black';
+const color1 = document.querySelector('#color1');
+const color2 = document.querySelector('#color2');
+const color3 = document.querySelector('#color3');
+const color4 = document.querySelector('#color4');
+const boardPixel = document.querySelectorAll('.pixel');
+let thatColor = 'black';
+
+function clearColor() {
+  for (let i = 0; i < boardPixel.length; i += 1) {
+    const pixel = boardPixel[i];
+    pixel.style.backgroundColor = "white";
+    console.log('teste');
+  }
+};
+window.onload = function () { 
   let selected;
   color1.addEventListener ('click', function() {
     thatColor = color1.classList[1];
