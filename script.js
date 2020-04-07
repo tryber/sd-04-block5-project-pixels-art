@@ -20,9 +20,7 @@ window.onload = () => {
       
       for (const key in pixel) {
               pixel[key].style.backgroundColor = 'white';
+              pixel_board.style.backgroundColor = 'white';
       }
-      
-      pixel_board.style.backgroundColor = 'white';
   });
- 
 };
