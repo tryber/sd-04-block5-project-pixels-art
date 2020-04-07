@@ -1,5 +1,5 @@
 body {
-  background-color: wheat;
+  background-color: whitesmoke;
 }
 .color {
   border: 2px solid black;
@@ -21,4 +21,14 @@ body {
 
 #amarelo {
   background-color: yellow;
+}
+
+.pixelboard {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
 }
