@@ -8,3 +8,13 @@
     border: 1px solid black;
     display: inline-block;
 }
+.pixel{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: -4px
+}
+.line{
+    margin-top: -5px;
+}
