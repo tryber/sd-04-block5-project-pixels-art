@@ -23,7 +23,8 @@ body {
   width: 45px;
   height: 45px;
   display: inline-block;
-  border: 2px solid black;
+  border: 1px solid black;
+  margin: 5px;
 }
 .board {
   display: inline-block;
