@@ -1,0 +1,39 @@
+.color{
+    height: 40px;
+    width: 40px;
+    border: 1px solid;
+    border-color: black;
+    display: inline;
+    margin: 5px;
+    float: left;
+    visibility: visible;
+}
+
+#color1{
+    
+}
+
+#color2{
+   
+}
+
+#color3{
+    
+}
+
+#color4{
+   
+}
+
+#color-palette{
+    height: 60px;
+    width: 400px;
+}
+
+.pixel{
+    height: 40px;
+    width: 40px;
+    border: 1px solid;
+    float: left;    
+}
+
