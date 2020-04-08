@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paleta de Cores</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1 id="title">Paleta de Cores</h1>
+  <div id="color-palette" class="color-palette">
+    <div class="color selected"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+  </div>
+
+  <form>
+    <label for="board-size">input a integer number:</label>
+    <input type="number" id="board-size" max="50" min="5">
+  </form>
+  <button id="generate-board">change board size</button>
+
+  <div id="pixel-board" class="pixel-board">
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+  </div>
+
+  <button id="clear-board">clear</button>
+
+  <script>
+    // Generate board
+    const generateBoard = document.getElementById('generate-board')
+    generateBoard.addEventListener('click', () => {
+      const pixels = document.querySelectorAll('.pixel');
+      const pixelBoard = document.getElementById('pixel-board');
+      for (let i = 0; i < pixels.length; i += 1) {
+        pixelBoard.removeChild(pixels[i]);
+      }
+      let size = document.getElementById('board-size').value;
+      if (size < 5)
+        size = 5;
+      if (size > 50)
+        size = 50;
+      pixelBoard.style.height = size * 42 + 'px';
+      pixelBoard.style.width = size * 42 + 'px';
+      for (let i = 0; i < size * size; i += 1) {
+        const newPixel = document.createElement('div');
+        newPixel.classList.add('pixel');
+        pixelBoard.appendChild(newPixel);
+      }
+    })
+  </script>
+
+</body>
+
+</html>
