@@ -23,12 +23,10 @@ const selecaoTabela = function (e) {
 };
 function colorSelect(e) {
   e.target.style.backgroundColor = selectedColor;
-  e.target.style.borderColor = selectedColor;
 }
 function clearBoard() {
   for (let i = 0; i < pixelColor.length; i += 1) {
     pixelColor[i].style.backgroundColor = 'white';
-    pixelColor[i].style = pixelColor;
   }
 }
 sessionStorage.setItem('color', 'black');
