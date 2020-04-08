@@ -11,13 +11,13 @@ for (let i = 0; i < 25; i += 1){
 
 
 // Funçoes
-localStorage.setItem("black", 'black');
+localStorage.setItem("color", 'black');
 
 function saveColor(n) {
   let color = n;
-  console.log(color);
   localStorage.removeItem("color")
   localStorage.setItem("color", color);
+
 }
 
 function clearBoard() {
@@ -33,15 +33,19 @@ function changeColor(j) {
 // Criando os event Listener
 black.addEventListener('click', function() {
   saveColor('black');
+  black.className = 'color black selected';
 })
 purple.addEventListener('click', function() {
   saveColor('blueviolet');
+  purple.className = 'color purple selected'
 })
 pink.addEventListener('click', function() {
   saveColor('rgb(230, 47, 160)');
+  pink.className = 'color pink selected'
 })
 yellow.addEventListener('click', function() {
   saveColor('yellow');
+  yellow.className = ' color yellow selected'
 })
 clearButton.addEventListener('click', clearBoard());
 
