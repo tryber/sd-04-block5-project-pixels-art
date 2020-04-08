@@ -52,7 +52,7 @@ function createTable(i = 5, j = 5) {
     for (let n = 0; n < j; n += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      pixel.style.backgroundColor = "white";
+      pixel.style.backgroundColor = 'white';
       pixel.addEventListener('click', colorPallete);
       lastRow.appendChild(pixel);
     }
@@ -65,17 +65,30 @@ function addRandomColors() {
   }
 }
 
+function resize (size) {
+  if (size < 5){
+    size = 5;
+  } else if (size > 50){
+    size = 50;
+  }
+  let pixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.width = size+'px';
+    pixels[i].style.height = size+'px';
+  }
+}
+
 function newTable(e) {
   e.preventDefault();
   const size = document.getElementById('board-size').value;
-  deleteTable();
-  createTable(size, size);
+  //deleteTable();
+  resize(size);
 }
 
 generateBoard.addEventListener('submit', newTable);
 
 clear.addEventListener('click', function () {
-  const pixels = document.getElementsByClassName('pixel');
+  let pixels = document.getElementsByClassName('pixel');
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = 'white';
   }
