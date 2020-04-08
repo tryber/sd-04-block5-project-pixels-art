@@ -9,26 +9,28 @@ window.onload = () => {
     let countEqual = 0;
     let newRandom = true;
 
-    for (let i = 1; i <= 3; i += 1) {
-    while (newRandom === true) {
-        randomic = Math.floor(Math.random() * 3) + 1;
-        countEqual = 0;
-        for (let j = 1; j <= arrayRandom.length; j += 1) {
-            if (randomic === arrayRandom[j]) {
-                countEqual += 1;
+    function randomColors(){
+        for (let i = 1; i <= 3; i += 1) {
+        while (newRandom === true) {
+            randomic = Math.floor(Math.random() * 3) + 1;
+            countEqual = 0;
+            for (let j = 1; j <= arrayRandom.length; j += 1) {
+                if (randomic === arrayRandom[j]) {
+                    countEqual += 1;
+                }
+            }
+            if (countEqual === 0) {
+                    newRandom = false;
             }
         }
-        if (countEqual === 0) {
-                newRandom = false;
+        arrayRandom[i] = randomic;
+        newRandom = true;
         }
     }
-    arrayRandom[i] = randomic;
-    newRandom = true;
-    }
 
-    console.log(arrayRandom);
+    randomColors();
+
     for (let i = 0; i < arrayColors.length; i += 1) {
-    console.log(arrayColors[arrayRandom[i]]);
     pixelsPallete[i].style.backgroundColor = arrayColors[arrayRandom[i]];
     }
 
