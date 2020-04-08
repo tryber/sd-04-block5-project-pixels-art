@@ -1,5 +1,6 @@
 const paleta = document.querySelectorAll('.color'); // Manipula as cores da paleta.
-const btnLimpar = document.getElementById('clear-board');
+const btnLimpar = document.getElementById('clear-board'); // Manipula botão de limpar.
+const btnGerar = document.getElementById('generate-board'); // Manipula botão de gerar quadro.
 let pixel = document.querySelectorAll('.pixel'); // Manipula o quadro de pixels.
 let selectedColor = 'black'; // Cor selecionada. Por padrão preto.
 
@@ -52,7 +53,7 @@ function removeSelected () {
 	document.querySelector('.selected').classList.remove('selected');
 }
 
-function eventoBotao () {
+function eventoLimpador () {
 	btnLimpar.addEventListener('click', function () {
 		for (let p = 0; p < pixel.length; p+=1) {
 			pixel[p].style.backgroundColor = 'white';
@@ -60,10 +61,17 @@ function eventoBotao () {
 	})
 }
 
+function eventoGerador () {
+	btnGerar.addEventListener('click', function (event) {
+		alert();
+	});
+}
+
 window.onload = function () {
 	carregaCores ();
 	configuraPixels ();
 	adcionaEventPaleta ();
 	adicionaEventPixel ();
-	eventoBotao ();
+	eventoLimpador ();
+	eventoGerador ();
 }

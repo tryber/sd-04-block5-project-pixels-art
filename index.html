@@ -15,7 +15,15 @@
             <div class="color"></div>
             <div class="color"></div>
         </div>
-        <button id="clear-board">Apagar quadro</button>
+        <fieldset>
+            <legend>Opções</legend>
+            <label>Apagar tudo:</label>
+            <button id="clear-board">Limpar quadro</button>
+            <br>
+            <label for="board-size">Número de pixels:</label>
+            <input id="board-size" type="number" placeholder="pixels" min="5" max="50">
+            <button id="generate-board">Gerar quadro</button>
+        </fieldset>
         <br>
         <div id="pixel-board" class="pixelboard">
             <div class="pixel"></div>
