@@ -11,7 +11,9 @@ for (let i = 0; i < 25; i += 1) {
 
 
 // Funçoes
-localStorage.setItem('color', 'black');
+window.onload = function () {
+  saveColor('black');
+}
 
 function saveColor(n) {
   const color = n;
