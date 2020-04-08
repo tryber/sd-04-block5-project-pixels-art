@@ -7,6 +7,7 @@ const pixelBoard = document.getElementById('pixel-board');
 function createPixels(n) {
   if (n < 5) n = 5;
   if (n > 50) n = 50;
+  removeElemets();
   const boardWidth = 42 * n;
   pixelBoard.style.height = `${boardWidth}px`;
   pixelBoard.style.width = `${boardWidth}px`;
@@ -16,7 +17,15 @@ function createPixels(n) {
     pixelBoard.appendChild(div);
   }
 }
+function removeElemets(){
+  let el = document.querySelectorAll('.pixel')
+  for (let i = pixelBoard.childNodes.length -1; i >= 0; i -= 1) {
+    el[i].remove();
+  }
+}
 let n = 5;
+createPixels(n);
+n = 7;
 createPixels(n);
 const colorPalette = document.getElementById('color-palette');
 function addRemove(event) {
