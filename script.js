@@ -26,3 +26,13 @@ function changeColor(event) {
 pixelBoard.addEventListener('click', function () {
   changeColor(event);
 });
+const clearButton = document.getElementById('clear-board');
+const pixels = document.getElementsByClassName('pixel');
+function clearPixels(pxs) {
+  for (let i = 0; i < pxs.length; i += 1) {
+    pxs[i].style.backgroundColor = 'white';
+  }
+}
+clearButton.addEventListener('click', function () {
+  clearPixels(pixels);
+});
