@@ -11,10 +11,6 @@ for (let i = 0; i < 25; i += 1) {
 
 
 // Funçoes
-window.onload = function () {
-  saveColor('black');
-}
-
 function saveColor(n) {
   const color = n;
   localStorage.removeItem('color');
@@ -29,6 +25,10 @@ function clearBoard() {
 
 function changeColor(j) {
   pixel[j].style.backgroundColor = localStorage.getItem('color');
+}
+
+window.onload = function () {
+  saveColor('black');
 }
 
 // Criando os event Listener
