@@ -7,24 +7,28 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id="title">Paleta de Cores</h1>
-
-        <div id="color-palette">
-            <div class="color selected"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-        </div>
-        <fieldset>
-            <legend>Opções</legend>
-            <label>Apagar tudo:</label>
-            <button id="clear-board">Limpar quadro</button>
-            <br>
-            <label for="board-size">Número de pixels:</label>
-            <input id="board-size" type="number" placeholder="pixels" min="5" max="50">
-            <button id="generate-board">Gerar quadro</button>
-        </fieldset>
+        <header>
+            <h1 id="title">Paleta de Cores</h1>
+            <!-- Paleta de cores -->
+            <div id="color-palette">
+                <div class="color selected"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+                <div class="color"></div>
+            </div>
+            <!-- Área de opções -->
+            <fieldset>
+                <legend>Opções</legend>
+                <label>Apagar tudo:</label>
+                <button id="clear-board">Limpar quadro</button>
+                <br>
+                <label for="board-size">Número de pixels:</label>
+                <input id="board-size" type="number" placeholder="Digite quantos pixels você quer">
+                <button id="generate-board">Gerar quadro</button>
+            </fieldset>
+        </header>
         <br>
+        <!-- Quadro de pixels -->
         <div id="pixel-board" class="pixelboard">
             <div class="pixel"></div>
             <div class="pixel"></div>

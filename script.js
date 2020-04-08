@@ -1,14 +1,16 @@
 const paleta = document.querySelectorAll('.color'); // Manipula as cores da paleta.
 const btnLimpar = document.getElementById('clear-board'); // Manipula botão de limpar.
 const btnGerar = document.getElementById('generate-board'); // Manipula botão de gerar quadro.
-const pixel = document.querySelectorAll('.pixel'); // Manipula o quadro de pixels.
+const quadro = document.getElementById('pixel-board'); // Manipula o quadro.
+let pixel = document.querySelectorAll('.pixel'); // Manipula os pixels.
+const opcaoUsuario = document.getElementById('board-size');
 let selectedColor = 'black'; // Cor selecionada. Por padrão preto.
 
 function carregaCores () { // Define as cores da paleta.
   for (let number = 0; number < paleta.length; number+=1) {
     switch (number) {
       case 0:
-				paleta[number].style.backgroundColor = 'black';
+		paleta[number].style.backgroundColor = 'black';
         break;
       case 1:
         paleta[number].style.backgroundColor = 'red';
@@ -61,10 +63,51 @@ function eventoLimpador () {
 	})
 }
 
-function eventoGerador () {
-	btnGerar.addEventListener('click', function (event) {
-		alert(); // Aqui vou pensar na lógica ainda.
+function eventoGerador () {//Primeiro apaga os pixels.
+	btnGerar.addEventListener('click', function () {
+		let usuarioNumber = verificaEntrada(Number(opcaoUsuario.value));
+		alert(usuarioNumber);
+		let numeroPixels = calculaPixels(usuarioNumber);
+		let largura = altura = (usuarioNumber * 40) + (usuarioNumber * 2);
+		mudaTamanhoQuadro (largura, altura);
+		apagaPixels();//Apaga os pixels.
+		gerarPixels(numeroPixels);
+		pixel = document.querySelectorAll('.pixel');
+		adicionaEventPixel ();
 	});
+}
+
+function mudaTamanhoQuadro (l, a) {
+	quadro.style.height = a + 'px';
+	quadro.style.width = l + 'px';
+}
+
+function gerarPixels (numero) {//Gera novos pixels
+	for(let n = 0; n < numero; n+=1) {
+		let pix = document.createElement('div');
+		pix.className = 'pixel';
+		pix.style.backgroundColor = 'white';
+		quadro.appendChild(pix);
+	}
+}
+
+function apagaPixels () {//Função chamada para apagar os pixels.
+	for(let p = 0; p < pixel.length; p+=1) {
+		quadro.removeChild(pixel[p]);
+	}
+}
+
+function verificaEntrada (entrada) {//Verifica entrado do usuário.
+	if (entrada < 5) {
+		entrada = 5;
+	} else if (entrada > 50) {
+		entrada = 50;
+	}
+	return entrada;
+}
+
+function calculaPixels (numero) {//Calcula número de pixels.
+	return numero * numero;
 }
 
 window.onload = function () {
