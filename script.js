@@ -10,8 +10,8 @@ purpleColor.style.background = "purple";
 redColor.style.background = "red";
 greenColor.style.background = "green";
 
-clearBoard.addEventListener("click", function(){
-  for (i = 0; i < pixelBoard.length; i += 1){
+clearBoard.addEventListener("click", function () {
+  for (i = 0; i < pixelBoard.length; i += 1) {
     pixelBoard[i].style.background = "white";
   }
 });
@@ -21,12 +21,30 @@ function saveColor(n) {
   localStorage.removeItem('color');
   localStorage.setItem('color', color);
 }
+
 window.onload = function () {
   saveColor("black");
   black.className = "color selected";
 };
 
+let colors = document.getElementsByClassName("color");
 
+for (let i = 0; i < colors.length; i += 1) {
+  colors[i].addEventListener('click', function (event) {
+    let colorsValue = event.target.style.backgroundColor;
+    let colorsClassValue = colors[i].className;
+    for (let i = 0; i < colors.length; i += 1) {                 // loop to remove class .selected to all
+      colors[i].classList.remove("selected");
+    }
+    colors[i].classList.add("selected");//add the class selected to the clicked 
+  })
+}
 
-
-
+let pixels = document.querySelectorAll(".pixel");
+for (let i = 0; i < pixels.length; i += 1) {                      //loop to add color to clicked pixel
+  pixels[i].addEventListener('click', function (event) {
+    let selectedColor = document.querySelector(".selected");
+    let colorsSelected = selectedColor.style.backgroundColor;
+    pixels[i].style.backgroundColor = colorsSelected;
+  })
+}
