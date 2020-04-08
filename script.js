@@ -1,14 +1,17 @@
+// criação da paleta de cores
 const palletChilds = document.getElementsByClassName('color');
 const colors = ['black', 'red', 'green', 'blue'];
 for (let i = 0; i < palletChilds.length; i += 1) {
   palletChilds[i].style.backgroundColor = colors[i];
 }
+// remove os pixels da div pixelboard
 function removeElemets() {
   const el = document.querySelectorAll('.pixel');
   for (let i = el.length - 1; i >= 0; i -= 1) {
     el[i].remove();
   }
 }
+// função para criar os pixels
 const pixelBoard = document.getElementById('pixel-board');
 function createPixels(n) {
   if (n < 5) n = 5;
@@ -24,7 +27,7 @@ function createPixels(n) {
   }
 }
 let numOfColums = 5;
-createPixels(numOfColums);
+createPixels(numOfColums); // chamada da função para a criação dos 25 pixels 
 const colorPalette = document.getElementById('color-palette');
 function addRemove(event) {
   document.querySelector('.selected').classList.remove('selected');
@@ -33,13 +36,16 @@ function addRemove(event) {
 colorPalette.addEventListener('click', function () {
   addRemove(event);
 });
+// função que muda as cores do pixels 
 function changeColor(event) {
   const selected = document.querySelector('.selected');
   event.target.style.backgroundColor = selected.style.backgroundColor;
 }
+// event listener para mudar as cores dos pixels 
 pixelBoard.addEventListener('click', function () {
   changeColor(event);
 });
+// declaraçao de varias e função para limpar os pixels
 const clearButton = document.getElementById('clear-board');
 const pixels = document.getElementsByClassName('pixel');
 function clearPixels(pxs) {
@@ -47,6 +53,8 @@ function clearPixels(pxs) {
     pxs[i].style.backgroundColor = 'white';
   }
 }
+// event listener para limpar os pixels 
 clearButton.addEventListener('click', function () {
   clearPixels(pixels);
 });
+
