@@ -4,18 +4,10 @@ const palete = document.getElementsByClassName('color');
 const generateBoard = document.getElementById('size-form');
 
 function printPixel(event) {
-  let colorSelected = document.getElementsByClassName('selected')[0];
-  color = window.getComputedStyle(colorSelected, null).getPropertyValue('background-color');
-  event.target.style.backgroundColor = color
-};
-
-function colorPallete(e) {
-  if (e.target.className === 'color' || e.target.className === 'color black') {
-    getColor(e);
-  } else if (e.target.className === 'pixel') {
-    printPixel(e);
-  }
-};
+  const colorSelected = document.getElementsByClassName('selected')[0];
+  let color = window.getComputedStyle(colorSelected, null).getPropertyValue('background-color');
+  event.target.style.backgroundColor = color;
+}
 
 function eventToPalete() {
   for (let i = 0; i < palete.length; i += 1) {
@@ -25,22 +17,31 @@ function eventToPalete() {
 
 function removeSelected() {
   for (let i = 0; i < palete.length; i += 1) {
-    palete[i].classList.remove('selected')
+    palete[i].classList.remove('selected');
   }
-};
+}
 
 function getColor(event) {
   removeSelected();
-  event.target.classList.add("selected");
-};
+  event.target.classList.add('selected');
+}
 
 function randomColor() {
-  return rgbvalue = Math.floor(Math.random()*256)
-};
+  let rgbValue = Math.floor(Math.random() * 256)
+  return rgbValue;
+}
+
+function colorPallete(e) {
+  if (e.target.className === 'color' || e.target.className === 'color black') {
+    getColor(e);
+  } else if (e.target.className === 'pixel') {
+    printPixel(e);
+  }
+}
 
 function deleteTable() {
   board.innerHTML = ''
-};
+}
 
 function createTable(i = 5, j = 5) {
   for (let m = 0; m < i; m += 1){
@@ -55,7 +56,7 @@ function createTable(i = 5, j = 5) {
       lastRow.appendChild(pixel);
     }
   }
-};
+}
 
 function addRandomColors() {
   for (let i = 1; i < palete.length; i += 1) {
@@ -68,7 +69,7 @@ function newTable(e) {
   const size = document.getElementById('board-size').value;
   deleteTable();
   createTable(size, size);
-};
+}
 
 generateBoard.addEventListener('submit', newTable);
 
