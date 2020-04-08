@@ -30,8 +30,8 @@ window.onload = function () {
 const colors = document.getElementsByClassName('color');
 for (let i = 0; i < colors.length; i += 1) {
   colors[i].addEventListener('click', function () {
-    for (let i = 0; i < colors.length; i += 1) {
-      colors[i].classList.remove('selected');
+    for (let j = 0; j < colors.length; j += 1) {
+      colors[j].classList.remove('selected');
     }
     colors[i].classList.add('selected');
   });
