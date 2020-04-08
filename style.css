@@ -21,3 +21,20 @@ body{
 .pixel{
     background-color: white;
 }
+.container-button{
+    margin: 10px;
+}
+button{
+    background-color: rgb(68, 94, 109); 
+    border: none;
+    color: white;
+    margin-right: 50px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px
+}
+button:focus{
+    background-color: grey;
+}
