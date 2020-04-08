@@ -1,10 +1,8 @@
 .main {
   background-color: rgb(187, 186, 186);
-  padding-bottom: 20px;
-  padding: 5px 10px;
   margin: auto;
   margin-top: 20px;
-  max-width: 2000px;
+  padding: 10px 30px;
 }
 
 h1 {
@@ -41,10 +39,10 @@ h1 {
 }
 
 .pixel-board {
+  background-color: greenyellow;
   margin: auto;
   margin-top: 15px;
   width: 210px;
-  background-color: greenyellow;
 }
 
 .pixel {
@@ -71,10 +69,8 @@ h1 {
   width: 100%;
 }
 
-.pixels-gen{
+.pixels-gen {
   margin: auto;
   margin-top: 20px;
   text-align: center;
-  /* width: 500px; */
-  /* background-color: green; */
 }
