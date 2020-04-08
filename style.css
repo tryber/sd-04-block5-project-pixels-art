@@ -11,13 +11,13 @@
 }
 
 .pixelboard, .pixel {
-	border: 1px solid black;
+  border: 1px solid black;
 }
 
 .pixel {
-	display: block;
-	float: left;
-	height: 40px;
-	margin: 0px;
-	width: 40px;
+  display: block;
+  float: left;
+  height: 40px;
+  margin: 0;
+  width: 40px;
 }

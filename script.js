@@ -1,7 +1,7 @@
 const paleta = document.querySelectorAll('.color'); // Manipula as cores da paleta.
 const btnLimpar = document.getElementById('clear-board'); // Manipula botão de limpar.
 const btnGerar = document.getElementById('generate-board'); // Manipula botão de gerar quadro.
-let pixel = document.querySelectorAll('.pixel'); // Manipula o quadro de pixels.
+const pixel = document.querySelectorAll('.pixel'); // Manipula o quadro de pixels.
 let selectedColor = 'black'; // Cor selecionada. Por padrão preto.
 
 function carregaCores () { // Define as cores da paleta.
