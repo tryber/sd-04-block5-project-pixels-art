@@ -16,8 +16,8 @@
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 42px;
-  width: 42px;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel-board {
