@@ -1,3 +1,4 @@
+
 .color {
   border: 1px solid black;
   display: inline-block;
@@ -31,6 +32,9 @@
   background-color: yellow;
 }
 
-.selected {
-  outline: 2px solid red;
+table {
+  border-spacing: 0;
+  margin: auto;
+  padding: 0;
 }
+
