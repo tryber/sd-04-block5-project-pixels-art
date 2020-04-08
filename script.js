@@ -29,7 +29,8 @@ function changeColor(j) {
 
 window.onload = function () {
   saveColor('black');
-}
+  black.className = 'color black selected';
+};
 
 // Criando os event Listener
 black.addEventListener('click', function () {
