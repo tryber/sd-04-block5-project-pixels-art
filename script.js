@@ -1,14 +1,13 @@
 const paleta = document.querySelectorAll('.color'); // Manipula as cores da paleta.
+const btnLimpar = document.getElementById('clear-board');
 let pixel = document.querySelectorAll('.pixel'); // Manipula o quadro de pixels.
-let elemento = document.querySelector('.selected'); // Elemento com a cor selecionada.
-let selectedColor; // Cor selecionada.
+let selectedColor = 'black'; // Cor selecionada. Por padrão preto.
 
 function carregaCores () { // Define as cores da paleta.
   for (let number = 0; number < paleta.length; number+=1) {
     switch (number) {
       case 0:
 				paleta[number].style.backgroundColor = 'black';
-				selectedColor = elemento.style.backgroundColor; // Cor padrão selecionada (Preto).
         break;
       case 1:
         paleta[number].style.backgroundColor = 'red';
@@ -53,9 +52,18 @@ function removeSelected () {
 	document.querySelector('.selected').classList.remove('selected');
 }
 
+function eventoBotao () {
+	btnLimpar.addEventListener('click', function () {
+		for (let p = 0; p < pixel.length; p+=1) {
+			pixel[p].style.backgroundColor = 'white';
+		}
+	})
+}
+
 window.onload = function () {
 	carregaCores ();
 	configuraPixels ();
 	adcionaEventPaleta ();
 	adicionaEventPixel ();
+	eventoBotao ();
 }
