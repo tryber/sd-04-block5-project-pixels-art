@@ -7,11 +7,12 @@
 }
 
 .pixel {
-  background-color: white;
   border: 1px solid black;
+  border-spacing: 0;
   display: inline-block;
   height: 40px;
-  margin: 1px;
+  margin: auto;
+  padding: 0;
   width: 40px;
 }
 
@@ -33,6 +34,5 @@
 
 table {
   border-spacing: 0;
-  margin: auto;
   padding: 0;
 }

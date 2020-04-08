@@ -20,12 +20,6 @@ function colorSelect(e) {
   e.target.style.backgroundColor = selectedColor;
   e.target.style.borderColor = selectedColor;
 }
-// for para cada quadradinho
-for (let i = 0; i < colorSelected.length; i += 1) {
-  colorSelected[i].addEventListener('click', selecaoTabela);
-}
-// chamando a funcao pelo click
-pixelBoard.addEventListener('click', colorSelect);
 
 function clearBoard() {
   for (let i = 0; i < pixelColor.length; i += 1) {
@@ -33,4 +27,14 @@ function clearBoard() {
     pixelColor[i].style = pixelColor;
   }
 }
-clear.addEventListener('click', clearBoard);
+window.onload = function () {
+  sessionStorage.setItem('color', 'black');
+  // for para cada quadradinho
+  for (let i = 0; i < colorSelected.length; i += 1) {
+    colorSelected[i].addEventListener('click', selecaoTabela);
+  }
+// Chamando a função clearBoard
+  clear.addEventListener('click', clearBoard);
+// chamando a funcao pelo click
+  pixelBoard.addEventListener('click', colorSelect);
+};
