@@ -57,3 +57,29 @@ header span {
   visibility: visible;
   width: 40px;
 }
+
+input {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  border: 1px solid #f1f1f1;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 10px;
+  text-align: center;
+  transition: background-color 0.3s ease-in;
+  width: 5%;
+}
+
+input:hover {
+  background-color: rgb(249 , 249 , 249);
+}
+
+input:focus {
+  background-color: crimson;
+  color: white;
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: white;
+}
