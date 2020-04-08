@@ -5,53 +5,52 @@ const pink = document.getElementsByClassName('color')[2];
 const yellow = document.getElementsByClassName('color')[3];
 const clearButton = document.getElementById('clear-board');
 const pixel = [];
-for (let i = 0; i < 25; i += 1){
+for (let i = 0; i < 25; i += 1) {
   pixel[i] = document.getElementsByClassName('pixel')[i];
 }
 
 
 // Funçoes
-localStorage.setItem("color", 'black');
+localStorage.setItem('color', 'black');
 
 function saveColor(n) {
   let color = n;
-  localStorage.removeItem("color")
-  localStorage.setItem("color", color);
+  localStorage.removeItem('color');
+  localStorage.setItem('color', color);
 
 }
 
 function clearBoard() {
-  for (let k = 0; k < 25; k += 1){
-    pixel[k].style.backgroundColor = "white";
+  for (let k = 0; k < 25; k += 1) {
+    pixel[k].style.backgroundColor = 'white';
   }
 }
 
 function changeColor(j) {
-  pixel[j].style.backgroundColor = localStorage.getItem("color");
+  pixel[j].style.backgroundColor = localStorage.getItem('color');
 }
 
 // Criando os event Listener
-black.addEventListener('click', function() {
+black.addEventListener('click', function () {
   saveColor('black');
   black.className = 'color black selected';
-})
-purple.addEventListener('click', function() {
+});
+purple.addEventListener('click', function () {
   saveColor('blueviolet');
   purple.className = 'color purple selected'
-})
-pink.addEventListener('click', function() {
+});
+pink.addEventListener('click', function () {
   saveColor('rgb(230, 47, 160)');
   pink.className = 'color pink selected'
-})
-yellow.addEventListener('click', function() {
+});
+yellow.addEventListener('click', function () {
   saveColor('yellow');
   yellow.className = ' color yellow selected'
-})
+});
 clearButton.addEventListener('click', clearBoard());
 
 for (let j = 0; j < 25; j += 1) {
   pixel[j].addEventListener('click', function() {
     changeColor(j);
-  })
-  console.log(pixel[j]);
+  });
 }
