@@ -6,70 +6,70 @@ body {
 }
 
 header {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
 
 section {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 3px 3px 10px black;
-    margin: auto;
-    padding: 15px;
-    width: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px black;
+  margin: auto;
+  padding: 15px;
+  width: 250px;
 }
 
 footer {
-    color: white;
-    font-style: italic;
-    text-align: center;
+  color: white;
+  font-style: italic;
+  text-align: center;
 }
 
 .color-palette {
-    font-size: 15px;
-    padding: 5px;
-    text-align: center;
-    width: 250px;
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+  width: 250px;
 }
 
 .color {
-    border: 1px solid black;
-    border-radius: 20%;
-    box-shadow: -1px 1px black;
-    display: inline-block;
-    height: 40px;
-    margin: 5px;
-    width: 40px;
+  border: 1px solid black;
+  border-radius: 20%;
+  box-shadow: -1px 1px black;
+  display: inline-block;
+  height: 40px;
+  margin: 5px;
+  width: 40px;
 }
 
 .firstColor {
-    background-color: black;
+  background-color: black;
 }
 
 .secondColor {
-    background-color: blue;
+  background-color: blue;
 }
 
 .thirdColor {
-    background-color: red;
+  background-color: red;
 }
 
 .fourthColor {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 .pixel-board {
-    background-color: white;
-    height: 210px;
-    margin: auto;
-    width: 210px;
+  background-color: white;
+  height: 210px;
+  margin: auto;
+  width: 210px;
 }
 
 .pixel {
-    background: white;
-    border: 1px solid black;
-    float: left;
-    height: 40px;
-    text-align: center;
-    width: 40px;
+  background: white;
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  text-align: center;
+  width: 40px;
 }
