@@ -3,10 +3,18 @@ const vermelho = document.querySelector('.vermelho');
 const azul = document.querySelector('.azul');
 const amarelo = document.querySelector('.amarelo');
 
+function getRandomColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i += 1) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 preto.style.backgroundColor = 'black';
-vermelho.style.backgroundColor = 'red';
-azul.style.backgroundColor = 'blue';
-amarelo.style.backgroundColor = 'yellow';
+vermelho.style.backgroundColor = getRandomColor();
+azul.style.backgroundColor = getRandomColor();
+amarelo.style.backgroundColor = getRandomColor();
 
 const colorSelected = document.getElementsByClassName('color');
 const pixelBoard = document.getElementById('pixel-board');
@@ -35,3 +43,4 @@ for (let i = 0; i < colorSelected.length; i += 1) {
 }
 clear.addEventListener('click', clearBoard);
 pixelBoard.addEventListener('click', colorSelect);
+// funçao para cor aleatoria:
