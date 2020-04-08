@@ -30,7 +30,7 @@ pixelBoard.addEventListener('click', colorSelect);
 function clearBoard() {
   for (let i = 0; i < pixelColor.length; i += 1) {
     pixelColor[i].style.backgroundColor = 'white';
-    pixelColor[i].style.borderColor = 'black'
+    pixelColor[i].style = pixelColor;
   }
 }
 clear.addEventListener('click', clearBoard);
