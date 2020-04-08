@@ -33,14 +33,28 @@ footer {
 }
 
 .color {
-  background-color: black;
   border: 1px solid black;
   border-radius: 20%;
-  box-shadow: -1px 1px black;
   display: inline-block;
   height: 40px;
   margin: 5px;
   width: 40px;
+}
+
+.firstColor {
+  background-color: black;
+}
+
+.secondColor {
+  background-color: blue;
+}
+
+.thirdColor {
+  background-color: red;
+}
+
+.fourthColor {
+  background-color: yellow;
 }
 
 .pixel-board {
@@ -55,6 +69,5 @@ footer {
   border: 1px solid black;
   float: left;
   height: 40px;
-  text-align: center;
   width: 40px;
 }
