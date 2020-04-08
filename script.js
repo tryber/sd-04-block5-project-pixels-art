@@ -52,6 +52,7 @@ function createTable(i = 5, j = 5) {
     for (let n = 0; n < j; n += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
+      pixel.style.backgroundColor = "white";
       pixel.addEventListener('click', colorPallete);
       lastRow.appendChild(pixel);
     }
@@ -76,7 +77,7 @@ generateBoard.addEventListener('submit', newTable);
 clear.addEventListener('click', function () {
   const pixels = document.getElementsByClassName('pixel');
   for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = '';
+    pixels[i].style.backgroundColor = 'white';
   }
 });
 
