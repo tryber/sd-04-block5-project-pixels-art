@@ -47,6 +47,7 @@ function generateGrid(size) {
   for (let y = 0; y < (size * size); y += 1) {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
+    pixel.style.backgroundColor = 'rgb(255, 255, 255)';
     pixel.addEventListener('click', paintPixel);
     pixelBoard.appendChild(pixel);
   }
@@ -71,8 +72,8 @@ window.onload = function () {
   colors = document.getElementsByClassName('color');
   pixelBoard = document.getElementById('pixel-board');
   boardSizeInput = document.getElementById('board-size');
+  generateGrid(5);
   selectColor(colors[0]);
   colorSelected.style.backgroundColor = 'black';
   randomizePallet();
-  generateGrid(5);
 };
