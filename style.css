@@ -2,9 +2,11 @@
 .pixel {
     width: 40px;
     height: 40px;
-    border-color: black;    
+    border-color: black;
     border: solid;
-    display: inline-block;      
+    display: inline-table;
+    margin: 1px;
+    background-color: white;
 }
 .color {
     width: 40px;
@@ -13,10 +15,10 @@
     border-color: black;
     border: solid;
     display: inline-block;
-    padding: 4px;    
+    padding: 4px;
 }
 #pixel-board {
-    max-width: 250px;    
+    max-width: 270px;
 }
 #preto{
     background-color: black;
