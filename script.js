@@ -1,3 +1,13 @@
+const preto = document.querySelector('.preto');
+const vermelho = document.querySelector('.vermelho');
+const azul = document.querySelector('.azul');
+const amarelo = document.querySelector('.amarelo');
+
+preto.style.backgroundColor = 'black';
+vermelho.style.backgroundColor = 'red';
+azul.style.backgroundColor = 'blue';
+amarelo.style.backgroundColor = 'yellow';
+
 const colorSelected = document.getElementsByClassName('color');
 const pixelBoard = document.getElementById('pixel-board');
 const pixelColor = document.getElementsByClassName('pixel');
