@@ -8,7 +8,7 @@ const pixelBoard = document.getElementsByClassName('pixel');
 blackColor.style.background = 'black';
 purpleColor.style.background = 'purple';
 redColor.style.background = 'red';
-greenColor.style.background ='green';
+greenColor.style.background = 'green';
 
 clearBoard.addEventListener('click', function () {
   for (let i = 0; i < pixelBoard.length; i += 1) {
@@ -30,9 +30,7 @@ window.onload = function () {
 const colors = document.getElementsByClassName('color');
 for (let i = 0; i < colors.length; i += 1) {
   colors[i].addEventListener('click', function (event) {
-    const colorsValue = event.target.style.backgroundColor;
-    const colorsClassValue = colors[i].className;
-    for (let i = 0; i < colors.length; i += 1) {
+    for (i = 0; i < colors.length; i += 1) {
       colors[i].classList.remove('selected');
     }
     colors[i].classList.add('selected');
@@ -41,7 +39,7 @@ for (let i = 0; i < colors.length; i += 1) {
 
 const pixels = document.getElementsByClassName('pixel');
 for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', function () {
+  pixels[i].addEventListener('click', function () {
     const selectedColor = document.querySelector('.selected');
     const colorsSelected = selectedColor.style.backgroundColor;
     pixels[i].style.backgroundColor = colorsSelected;
