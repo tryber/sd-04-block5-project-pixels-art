@@ -50,6 +50,9 @@ clearBtn.addEventListener('click', () => {
   const pixels = document.querySelectorAll('.pixel');
   pixels.forEach((pixel) => {
     pixel.style.backgroundColor = 'white';
+    if (getComputedStyle(pixel).visibility === 'hidden') {
+      pixel.style.visibility = 'visible';
+    }
   });
 });
 
@@ -70,7 +73,11 @@ hideBtn.addEventListener('click', () => {
   const pixels = document.querySelectorAll('.pixel');
   pixels.forEach((pixel) => {
     if (getComputedStyle(pixel).backgroundColor === 'rgb(255, 255, 255)') {
-      pixel.style.visibility = 'hidden';
+      if (getComputedStyle(pixel).visibility === 'hidden') {
+        pixel.style.visibility = 'visible';
+      } else {
+        pixel.style.visibility = 'hidden';
+      }
     }
   });
 });

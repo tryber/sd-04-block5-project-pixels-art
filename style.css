@@ -11,7 +11,6 @@ section {
 h1 {
   font-size: 2em;
   font-weight: 800;
-  
 }
 
 header span {
@@ -55,5 +54,6 @@ header span {
   background-color: white;
   border: 1px solid black;
   height: 40px;
+  visibility: visible;
   width: 40px;
 }
