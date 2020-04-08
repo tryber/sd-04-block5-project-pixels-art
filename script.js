@@ -5,14 +5,8 @@ const generateBoard = document.getElementById('size-form');
 
 function printPixel(event) {
   const colorSelected = document.getElementsByClassName('selected')[0];
-  let color = window.getComputedStyle(colorSelected, null).getPropertyValue('background-color');
+  const color = window.getComputedStyle(colorSelected, null).getPropertyValue('background-color');
   event.target.style.backgroundColor = color;
-}
-
-function eventToPalete() {
-  for (let i = 0; i < palete.length; i += 1) {
-    palete[i].addEventListener('click', colorPallete);
-  }
 }
 
 function removeSelected() {
@@ -27,7 +21,7 @@ function getColor(event) {
 }
 
 function randomColor() {
-  let rgbValue = Math.floor(Math.random() * 256)
+  const rgbValue = Math.floor(Math.random() * 256);
   return rgbValue;
 }
 
@@ -39,20 +33,26 @@ function colorPallete(e) {
   }
 }
 
+function eventToPalete() {
+  for (let i = 0; i < palete.length; i += 1) {
+    palete[i].addEventListener('click', colorPallete);
+  }
+}
+
 function deleteTable() {
-  board.innerHTML = ''
+  board.innerHTML = '';
 }
 
 function createTable(i = 5, j = 5) {
-  for (let m = 0; m < i; m += 1){
-    let row = document.createElement("div")
-    row.className = "row"
+  for (let m = 0; m < i; m += 1) {
+    const row = document.createElement('div');
+    row.className = 'row';
     board.appendChild(row);
-    let lastRow = document.querySelector(".row:last-child")
+    const lastRow = document.querySelector('.row:last-child');
     for (let n = 0; n < j; n += 1) {
-      let pixel = document.createElement("div")
-      pixel.className = "pixel"
-      pixel.addEventListener('click', colorPallete)
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixel.addEventListener('click', colorPallete);
       lastRow.appendChild(pixel);
     }
   }
@@ -74,9 +74,9 @@ function newTable(e) {
 generateBoard.addEventListener('submit', newTable);
 
 clear.addEventListener('click', function() {
-  let pixels = document.getElementsByClassName('pixel');
-  for (pixel of pixels) {
-    pixel.style.backgroundColor='';
+  const pixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < pixels.length; i++) {
+    pixels[i].style.backgroundColor='';
   }
 });
 
