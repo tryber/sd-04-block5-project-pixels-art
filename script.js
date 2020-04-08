@@ -41,5 +41,5 @@ colorGreen.addEventListener('click', function(){
 
     pixelBoard.addEventListener('click', function (event) {
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
-    event.target.style.backgroundColor = selectedColor;
+     event.target.style.backgroundColor = selectedColor;
     });
