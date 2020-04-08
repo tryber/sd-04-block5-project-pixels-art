@@ -33,6 +33,7 @@ footer {
 }
 
 .color {
+  background-color: black;
   border: 1px solid black;
   border-radius: 20%;
   box-shadow: -1px 1px black;
@@ -40,22 +41,6 @@ footer {
   height: 40px;
   margin: 5px;
   width: 40px;
-}
-
-.firstColor {
-  background-color: black;
-}
-
-.secondColor {
-  background-color: blue;
-}
-
-.thirdColor {
-  background-color: red;
-}
-
-.fourthColor {
-  background-color: yellow;
 }
 
 .pixel-board {
