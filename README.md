@@ -46,7 +46,7 @@ O título deverá ficar dentro de uma tag `h1` com o **id** `title`.
 
 A paleta deverá listar todas as cores disponíveis para utilização, lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores".
 
-A paleta de cores deve possuir o **id** `color-palette`, ao passo que cada cor individual da paleta de cores deve possuir a **classe** `color`.
+A paleta de cores deve possuir o **id** ` `, ao passo que cada cor individual da paleta de cores deve possuir a **classe** `color`.
 
 A cor de fundo de cada elemento da paleta deverá ser a cor que o elemento representa.
 
