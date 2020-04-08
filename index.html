@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-</head>
+    </head>
 
 <body>
 
@@ -17,12 +16,20 @@
 
 
         <!--REQUISITO 2 - PALETA------------------------------------------------------------------------------------------------------------------>
-        <section id="color-palette" class="palete">
-            <div class="color"></div><div class="color"></div><div class="color"></div><div class="color"></div>
+        <section id="color-palette" class="color-palette">
+            <div class="color selected" id="black"></div>
+            <div class="color" id="olive"></div>
+            <div class="color" id="red"></div>
+            <div class="color" id="navy"></div>
         </section>
         <!--REQUISITO 2 - PALETA------------------------------------------------------------------------------------------------------------------>
     </header>
     <br><br><br>
+
+
+
+
+        <!--PIXEL BOARD----------------------------------------------------------------------------------------->
         <div>
             <table id="pixel-board" class="pixel-board">
                 <tr>
@@ -62,8 +69,12 @@
                 </tr>
             </table>
         </div>
+        <!--PIXEL BOARD----------------------------------------------------------------------------------------->
+
         <br>
+        <!--BUTTON RESET---------------------------------------------------------------------------------------->
         <button id="clear-board" class="clear-board">- Clear Board -</button>
+        <!--BUTTON RESET---------------------------------------------------------------------------------------->
 
 
 
@@ -79,6 +90,7 @@
 
 
   </div>
-  <script src="script.js"></script>
+  
 </body>
+<script src="script.js"></script>
 </html>
