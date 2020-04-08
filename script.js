@@ -3,6 +3,12 @@ const colors = ['black', 'red', 'green', 'blue'];
 for (let i = 0; i < palletChilds.length; i += 1) {
   palletChilds[i].style.backgroundColor = colors[i];
 }
+function removeElemets() {
+  const el = document.querySelectorAll('.pixel');
+  for (let i = el.length - 1; i >= 0; i -= 1) {
+    el[i].remove();
+  }
+}
 const pixelBoard = document.getElementById('pixel-board');
 function createPixels(n) {
   if (n < 5) n = 5;
@@ -17,16 +23,8 @@ function createPixels(n) {
     pixelBoard.appendChild(div);
   }
 }
-function removeElemets(){
-  let el = document.querySelectorAll('.pixel')
-  for (let i = pixelBoard.childNodes.length -1; i >= 0; i -= 1) {
-    el[i].remove();
-  }
-}
-let n = 5;
-createPixels(n);
-n = 7;
-createPixels(n);
+let numOfColums = 5;
+createPixels(numOfColums);
 const colorPalette = document.getElementById('color-palette');
 function addRemove(event) {
   document.querySelector('.selected').classList.remove('selected');
