@@ -4,7 +4,7 @@ const pixels = document.querySelectorAll('.pixel');
 const resetBtn = document.getElementById('clear-board');
 let arrayColors = ['black', 'red', 'blue', 'green','pink','gray'];
 let randomic = 0;
-let arrayRandom = [0];
+let arrayRandom = [0, 1.5, 2.9, 3.5, 4.3, 5.2, 6.3];
 let countEqual = 0;
 let newRandom = true;
 
@@ -26,7 +26,7 @@ for (let i = 1; i <= 3; i += 1) {
 }
 
 console.log(arrayRandom);
-for (let i = 0; i < arrayRandom.length; i += 1) {
+for (let i = 0; i < 4; i += 1) {
   console.log(arrayColors[arrayRandom[i]]);
   pixelsPallete[i].style.backgroundColor = arrayColors[arrayRandom[i]];
 }
