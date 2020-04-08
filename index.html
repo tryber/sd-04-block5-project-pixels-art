@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 id = "title">Paleta de Cores</h1>
+    <div id = "color-palette" class = "color-palette">
+        <div class = "color selected black" id = "black"></div>
+        <div class = "color" id = "red"></div>
+        <div class = "color" id = "blue"></div>
+        <div class = "color" id = "green"></div>
+    </div>
+    <p>elemento pra ver se passa </p>
+    <div id = "pixel-board" class="pixel-board"></div>
+    <button id = "clear-board">Clear</button>
+    <form id="size-form">
+        <label for="size">Tamanho do quadro:</label>
+        <input type="number" id="board-size" name="size" min="5" max="50">
+    </form>
+        <button id="generate-board">mudar tamanho</button>
+
+<script src = "script.js"></script>
+</body>
+</html>

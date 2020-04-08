@@ -1,0 +1,35 @@
+.pixel {
+  border: solid black 1px;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.color {
+  border: solid black 1px;
+  float: left;
+  height: 39px;
+  width: 39px;
+}
+
+.pixel-board {
+  display: table;
+  width: auto;
+}
+
+.black {
+  background-color: black;
+}
+
+.row {
+  display: table-row;
+  width: auto;
+}
+
+.main {
+  position: relative;
+}
+
+.color-palette {
+  display: table;
+}
