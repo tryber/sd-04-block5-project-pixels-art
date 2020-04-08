@@ -14,10 +14,9 @@ for (let i = 0; i < 25; i += 1) {
 localStorage.setItem('color', 'black');
 
 function saveColor(n) {
-  let color = n;
+  const color = n;
   localStorage.removeItem('color');
   localStorage.setItem('color', color);
-
 }
 
 function clearBoard() {
@@ -37,20 +36,20 @@ black.addEventListener('click', function () {
 });
 purple.addEventListener('click', function () {
   saveColor('blueviolet');
-  purple.className = 'color purple selected'
+  purple.className = 'color purple selected';
 });
 pink.addEventListener('click', function () {
   saveColor('rgb(230, 47, 160)');
-  pink.className = 'color pink selected'
+  pink.className = 'color pink selected';
 });
 yellow.addEventListener('click', function () {
   saveColor('yellow');
-  yellow.className = ' color yellow selected'
+  yellow.className = ' color yellow selected';
 });
 clearButton.addEventListener('click', clearBoard);
 
 for (let j = 0; j < 25; j += 1) {
-  pixel[j].addEventListener('click', function() {
+  pixel[j].addEventListener('click', function () {
     changeColor(j);
   });
 }
