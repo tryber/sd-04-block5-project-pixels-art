@@ -11,3 +11,13 @@ for (let i = 0; i < 5; i += 1) {
     pixelBoard.appendChild(div);
   }
 }
+
+const colorPalette = document.getElementById('color-palette');
+function addRemove(event) {
+  document.querySelector('.selected').classList.remove('selected');
+  event.target.classList.add('selected');
+}
+
+colorPalette.addEventListener('click', function(){
+  addRemove(event);
+});
