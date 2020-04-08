@@ -73,10 +73,10 @@ function newTable(e) {
 
 generateBoard.addEventListener('submit', newTable);
 
-clear.addEventListener('click', function() {
+clear.addEventListener('click', function () {
   const pixels = document.getElementsByClassName('pixel');
-  for (let i = 0; i < pixels.length; i++) {
-    pixels[i].style.backgroundColor='';
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = '';
   }
 });
 
