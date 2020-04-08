@@ -17,10 +17,11 @@
 .color {
     width: 80px;
     height: 80px;
+    border: 1px solid black;
     display: inline-block;
 }
 
-.pixels {
+.pixel {
     width: 80px;
     height: 80px;
     border: 1px solid black;

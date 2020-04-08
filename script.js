@@ -5,7 +5,7 @@ colorBlue = document.querySelector("#color-blue");
 colorGreen = document.querySelector("#color-green");
 
 pixelBoard = document.querySelector("#pixel-board")
-pixel = document.querySelector(".pixels");
+pixel = document.querySelector(".pixel");
 
 
 // colorBlack.addEventListener('click', function(){
