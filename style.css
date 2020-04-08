@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(70,142, 236);
+    background-color: rgb(119, 128, 139);
     font: normal 15pt Arial;
     }
 
@@ -12,13 +12,62 @@ section {
     background-color: white;
     border-radius: 10px;
     padding: 15px;
-    width: 500px;
+    width: 250px;
     margin: auto;
-    box-shadow: 3px 3px 10px rgba(0,0,0,363)
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.8)
 }
 
 footer {
     color: white;
     text-align: center;
     font-style: italic;
+}
+  
+.color-palette {
+    font-size: 15px;
+    padding: 5px;
+    text-align: center;
+    width: 250px;
+}
+
+.color {
+    border: 1px solid black;
+    border-radius: 20%;
+    box-shadow: -1px 1px black;
+    display: inline-block;
+    height: 40px;
+    margin: 5px;
+    width: 40px;
+}
+
+.color#first {
+    background-color: black;
+}
+
+.color#second {
+    background-color: blue;
+}
+
+.color#third {
+    background-color: red;
+}
+
+.color#fourth {
+    background-color: yellow;
+}
+
+.pixel-board {
+    background-color: white;
+    height: 210px;
+    width: 210px;
+    margin: auto;
+}
+
+.pixel {
+    background: white;
+    border: 1px solid black;
+    float: left;
+    height: 40px;
+    text-align: center;
+    width: 40px;
 }
