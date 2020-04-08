@@ -2,25 +2,28 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable require-jsdoc */
 let selectedColor = null;
-const colorPalette = document.querySelectorAll('.color');
-colorPalette.forEach((color) => {
-  if (color.classList.contains('firstColor')) {
-    color.classList.add('selected');
-    selectedColor = color;
-  } else {
-    const red = Math.round(Math.random() * 255);
-    const green = Math.round(Math.random() * 255);
-    const blue = Math.round(Math.random() * 255);
-    color.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
-  }
-  color.addEventListener('click', () => {
-    if (selectedColor) {
-      selectedColor.classList.remove('selected');
+function setColotPalette() {
+  const colorPalette = document.querySelectorAll('.color');
+  colorPalette.forEach((color) => {
+    if (color.classList.contains('firstColor')) {
+      color.classList.add('selected');
+      selectedColor = color;
+    } else {
+      const red = Math.round(Math.random() * 255);
+      const green = Math.round(Math.random() * 255);
+      const blue = Math.round(Math.random() * 255);
+      color.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     }
-    color.classList.add('selected');
-    selectedColor = color;
+    color.addEventListener('click', () => {
+      if (selectedColor) {
+        selectedColor.classList.remove('selected');
+      }
+      color.classList.add('selected');
+      selectedColor = color;
+    });
   });
-});
+}
+setColotPalette();
 
 function createBoard(pixels) {
   const pixelBoard = document.querySelector('#pixel-board');
@@ -82,4 +85,34 @@ hideBtn.addEventListener('click', () => {
       }
     }
   });
+});
+
+const generatePaletteBtn = document.querySelector('#generate-palette');
+generatePaletteBtn.addEventListener('click', () => {
+  let numberOfColors = document.querySelector('#palette-size').value;
+  if (numberOfColors > 10) {
+    numberOfColors = 10;
+  } else if (numberOfColors <= 0) {
+    numberOfColors = 5;
+  }
+  // Clean the actual color palette
+  document.querySelector('#color-palette').innerHTML = '';
+  // Generate new color palette
+  for (let i = 0; i < numberOfColors; i += 1) {
+    const colorElement = document.createElement('div');
+    const lastColor = numberOfColors - 1;
+    switch (true) {
+      case i === 0:
+        colorElement.className = 'color firstColor';
+        break;
+      case i === lastColor:
+        colorElement.className = 'color lastColor';
+        break;
+      default:
+        colorElement.className = 'color';
+        break;
+    }
+    document.querySelector('#color-palette').appendChild(colorElement);
+  }
+  setColotPalette();
 });
