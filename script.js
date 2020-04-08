@@ -67,7 +67,7 @@ function addRandomColors() {
 
 function newTable(e) {
   e.preventDefault();
-  let size = document.getElementById("board-size").value
+  let size = document.getElementById('board-size').value;
   if (size < 5) {
     size = 5;
   } else if (size > 50) {
