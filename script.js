@@ -17,6 +17,17 @@ function saveColor(n) {
   localStorage.setItem('color', color);
 }
 
+function selected(c) {
+  let colorsArray = ['black','purple','pink','yellow'];
+  for (let i = 0; i < 4; i += 1) {
+    if ( c != colorsArray[i]) {
+      colorsArray[i].className = 'color ' + colorsArray[i] + ' selected';
+    }else {
+      colorsArray[i].className = 'color ' + colorsArray[i] + ' selected';
+    }
+  }
+}
+
 function clearBoard() {
   for (let k = 0; k < 25; k += 1) {
     pixel[k].style.backgroundColor = 'white';
@@ -29,25 +40,25 @@ function changeColor(j) {
 
 window.onload = function () {
   saveColor('black');
-  black.className = 'color black selected';
+  selected('black');
 };
 
 // Criando os event Listener
 black.addEventListener('click', function () {
   saveColor('black');
-  black.className = 'color black selected';
+  selected('black');
 });
 purple.addEventListener('click', function () {
   saveColor('blueviolet');
-  purple.className = 'color purple selected';
+  selected('purple');
 });
 pink.addEventListener('click', function () {
   saveColor('rgb(230, 47, 160)');
-  pink.className = 'color pink selected';
+  selected('pink');
 });
 yellow.addEventListener('click', function () {
   saveColor('yellow');
-  yellow.className = ' color yellow selected';
+  selected('yellow');
 });
 clearButton.addEventListener('click', clearBoard);
 
