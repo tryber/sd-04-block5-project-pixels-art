@@ -3,36 +3,35 @@ const board = document.getElementById('pixel-board');
 const palete = document.getElementsByClassName('color');
 const generateBoard = document.getElementById('size-form');
 
-function eventToPalete() {
-  for (let i = 0; i < palete.length; i += 1) {
-    console.log(i)
-    palete[i].addEventListener('click', colorPallete)
-  }
-}
-
-function colorPallete(e) {
-  if (e.target.className == "color" || e.target.className == "color black") {
-    getColor(e);
-  } else if (e.target.className === "pixel") {
-    printPixel(e);
-  }
-};
-
-function getColor(event) {
-  removeSelected();
-  event.target.classList.add("selected");
-};
-
 function printPixel(event) {
   let colorSelected = document.getElementsByClassName('selected')[0];
   color = window.getComputedStyle(colorSelected, null).getPropertyValue('background-color');
   event.target.style.backgroundColor = color
 };
 
-function removeSelected() {
-  for (colors of palete) {
-    colors.classList.remove('selected')
+function colorPallete(e) {
+  if (e.target.className === 'color' || e.target.className === 'color black') {
+    getColor(e);
+  } else if (e.target.className === 'pixel') {
+    printPixel(e);
   }
+};
+
+function eventToPalete() {
+  for (let i = 0; i < palete.length; i += 1) {
+    palete[i].addEventListener('click', colorPallete);
+  }
+}
+
+function removeSelected() {
+  for (let i = 0; i < palete.length; i += 1) {
+    palete[i].classList.remove('selected')
+  }
+};
+
+function getColor(event) {
+  removeSelected();
+  event.target.classList.add("selected");
 };
 
 function randomColor() {
