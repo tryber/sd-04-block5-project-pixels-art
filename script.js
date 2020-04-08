@@ -4,13 +4,14 @@ colorRed = document.querySelector("#color-red");
 colorBlue = document.querySelector("#color-blue");
 colorGreen = document.querySelector("#color-green");
 
+colorGreen.style.backgroundColor = 'green';
+colorRed.style.backgroundColor = 'red';
+colorBlue.style.backgroundColor = 'blue';
+colorBlack.style.backgroundColor = 'black';
+
 pixelBoard = document.querySelector("#pixel-board")
 pixel = document.querySelector(".pixel");
-console.log(pixel)
-function saveColor (cor){
-    let corSelec = cor;
-    return corSelec;
-};
+
 function apagaClass(){
 colorBlack.className = 'color';
 colorRed.className = 'color'; 
@@ -19,31 +20,26 @@ colorGreen.className = 'color';
 };
 
 colorBlack.addEventListener('click', function(){ 
-    let colorSelected = colorBlack.style.backgroundColor;
-    saveColor(colorSelected);
     apagaClass();
     colorBlack.className = 'color selected';
 });
 
 colorRed.addEventListener('click', function(){
-    let colorSelected = colorRed.style.backgroundColor;
-    saveColor(colorSelected);
     apagaClass();
     colorRed.className = 'color selected';
 });
 
 colorBlue.addEventListener('click', function(){
-    let colorSelected = colorBlue.style.backgroundColor;
-    saveColor(colorSelected);
     apagaClass();
     colorBlue.className = 'color selected';
 });
 
 colorGreen.addEventListener('click', function(){
-    let colorSelected = colorGreen.style.backgroundColor;
-    saveColor(colorSelected);
     apagaClass();
     colorGreen.className = 'color selected';
 });
 
-
+    pixelBoard.addEventListener('click', function (event) {
+    const selectedColor = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = selectedColor;
+    });
