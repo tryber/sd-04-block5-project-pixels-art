@@ -1,25 +1,20 @@
 /* eslint-disable no-loop-func */
 /* eslint-disable no-param-reassign */
 /* eslint-disable require-jsdoc */
-let selectedColor = null;
 function setColotPalette() {
   const colorPalette = document.querySelectorAll('.color');
   colorPalette.forEach((color) => {
     if (color.classList.contains('firstColor')) {
       color.classList.add('selected');
-      selectedColor = color;
     } else {
       const red = Math.round(Math.random() * 255);
       const green = Math.round(Math.random() * 255);
       const blue = Math.round(Math.random() * 255);
       color.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     }
-    color.addEventListener('click', () => {
-      if (selectedColor) {
-        selectedColor.classList.remove('selected');
-      }
-      color.classList.add('selected');
-      selectedColor = color;
+    color.addEventListener('click', (e) => {
+      document.querySelector('.selected').classList.remove('selected');
+      e.target.classList.add('selected');
     });
   });
 }
@@ -32,15 +27,16 @@ function createBoard(pixels) {
     const pixelRow = document.createElement('div');
     pixelRow.className = 'pixel-row flex center';
     for (let ia = 0; ia < pixels; ia += 1) {
-      const pixel = document.createElement('div');
-      pixel.className = 'pixel';
-      pixel.addEventListener('click', () => {
-        pixel.style.backgroundColor = getComputedStyle(selectedColor).backgroundColor;
+      const newPixel = document.createElement('div');
+      newPixel.className = 'pixel';
+      newPixel.addEventListener('click', (e) => {
+        const selectedColor = document.querySelector('.selected');
+        e.target.style.backgroundColor = getComputedStyle(selectedColor).backgroundColor;
       });
-      pixel.addEventListener('dblclick', () => {
-        pixel.style.backgroundColor = 'white';
+      newPixel.addEventListener('dblclick', (e) => {
+        e.target.style.backgroundColor = 'white';
       });
-      pixelRow.appendChild(pixel);
+      pixelRow.appendChild(newPixel);
     }
     pixelBoard.appendChild(pixelRow);
   }
