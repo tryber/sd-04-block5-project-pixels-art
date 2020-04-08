@@ -3,48 +3,43 @@ const board = document.getElementById('pixel-board');
 const palete = document.getElementsByClassName('color');
 const generateBoard = document.getElementById('size-form');
 
-function addRandomColors() {
-  for (let i = 1; i < palete.length; i += 1){
-    palete[i].style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`
+function eventToPalete() {
+  for (let i = 0; i < palete.length; i += 1) {
+    console.log(i)
+    palete[i].addEventListener('click', colorPallete)
   }
 }
 
-function eventToPalete() {
-    for (colors of palete){
-        colors.addEventListener('click', colorPallete)
-    }
-}
-
-function colorPallete (e) {
-  if (e.target.className == "color"){
+function colorPallete(e) {
+  if (e.target.className == "color" || e.target.className == "color black") {
     getColor(e);
-  } else if(e.target.className == "pixel"){
+  } else if (e.target.className === "pixel") {
     printPixel(e);
   }
 };
 
-function getColor (event) {
+function getColor(event) {
   removeSelected();
   event.target.classList.add("selected");
 };
 
-function printPixel (event) {
+function printPixel(event) {
   let colorSelected = document.getElementsByClassName('selected')[0];
   color = window.getComputedStyle(colorSelected, null).getPropertyValue('background-color');
   event.target.style.backgroundColor = color
 };
 
-function removeSelected () {
-  for (colors of palete){
+function removeSelected() {
+  for (colors of palete) {
     colors.classList.remove('selected')
   }
 };
 
-function randomColor () {
+function randomColor() {
   return rgbvalue = Math.floor(Math.random()*256)
 };
 
-function deleteTable () {
+function deleteTable() {
   board.innerHTML = ''
 };
 
@@ -54,7 +49,7 @@ function createTable(i = 5, j = 5) {
     row.className = "row"
     board.appendChild(row);
     let lastRow = document.querySelector(".row:last-child")
-    for (let n = 0; n < j; n += 1){
+    for (let n = 0; n < j; n += 1) {
       let pixel = document.createElement("div")
       pixel.className = "pixel"
       pixel.addEventListener('click', colorPallete)
@@ -63,11 +58,17 @@ function createTable(i = 5, j = 5) {
   }
 };
 
+function addRandomColors() {
+  for (let i = 1; i < palete.length; i += 1) {
+    palete[i].style.backgroundColor = `rgb(${randomColor()}, ${randomColor()}, ${randomColor()})`;
+  }
+}
+
 function newTable(e) {
-  e.preventDefault ();
+  e.preventDefault();
   const size = document.getElementById('board-size').value;
-  deleteTable ();
-  createTable (size, size);
+  deleteTable();
+  createTable(size, size);
 };
 
 generateBoard.addEventListener('submit', newTable);
