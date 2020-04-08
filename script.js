@@ -1,7 +1,7 @@
 const clear = document.getElementById('clear-board');
 const board = document.getElementById('pixel-board');
 const palete = document.getElementsByClassName('color');
-const generateBoard = document.getElementById('size-form');
+const generateBoard = document.getElementById('generate-board');
 
 function printPixel(event) {
   const colorSelected = document.getElementsByClassName('selected')[0];
@@ -65,33 +65,19 @@ function addRandomColors() {
   }
 }
 
-function resize(size) {
+function newTable(e) {
+  e.preventDefault();
+  let size = document.getElementById("board-size").value
   if (size < 5) {
     size = 5;
   } else if (size > 50) {
     size = 50;
   }
-
-const pixels = document.getElementsByClassName('pixel');
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.width = `${size}px`;
-    pixels[i].style.height = `${size}px`;
-  }
-} 
-
-function newTable(e) {
-  e.preventDefault();
-  const size = document.getElementById("board-size").value
-  if (size < 5) {
-    size = 5
-  } else if (size > 50){
-    size = 50
-  }
   deleteTable();
   createTable(size, size);
 }
 
-generateBoard.addEventListener('submit', newTable);
+generateBoard.addEventListener('click', newTable);
 
 clear.addEventListener('click', function () {
   const pixels = document.getElementsByClassName('pixel');
