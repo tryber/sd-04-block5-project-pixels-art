@@ -63,7 +63,7 @@ function eventoLimpador () {
 
 function eventoGerador () {
 	btnGerar.addEventListener('click', function (event) {
-		alert();
+		alert(); // Aqui vou pensar na lógica ainda.
 	});
 }
 
