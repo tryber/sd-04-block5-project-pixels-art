@@ -9,20 +9,47 @@ header {
 }
 
 section {
-  background: white;
+  background: rgb(63, 61, 61);;
   border-radius: 10px;
-  padding: 15px;
-  width: 500px;
-  margin: auto;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0, 363);
+  margin-left: 30%;
+  float: left;
+  width: auto;
 }
 
 footer {
   color: white;
-  text-align: center;
+  margin: 10% 43%;
   font-style: italic;
+  text-align: center;
 }
 
 .titulo {
   color: red;
+}
+
+.color {
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0, 363);
+  float: left;
+  height: 40px;
+  margin: auto;
+  padding: 15px;
+  width: 40px;
+}
+
+.preto {
+  background: black;
+}
+
+.verde {
+  background: rgb(4, 243, 44);
+}
+
+.laranja {
+  background: rgb(241, 119, 4);
+}
+
+.amarelo {
+  background: rgb(247, 222, 3);
 }
