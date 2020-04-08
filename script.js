@@ -16,6 +16,16 @@ clearBoard.addEventListener("click", function(){
   }
 });
 
+function saveColor(n) {
+  let color = n;
+  localStorage.removeItem('color');
+  localStorage.setItem('color', color);
+}
+window.onload = function () {
+  saveColor("black");
+  black.className = "color selected";
+};
+
 
 
 
