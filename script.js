@@ -38,11 +38,11 @@ function eventToPalete() {
     palete[i].addEventListener('click', colorPallete);
   }
 }
-
+/*
 function deleteTable() {
   board.innerHTML = '';
 }
-
+*/
 function createTable(i = 5, j = 5) {
   for (let m = 0; m < i; m += 1) {
     const row = document.createElement('div');
@@ -65,30 +65,30 @@ function addRandomColors() {
   }
 }
 
-function resize (size) {
-  if (size < 5){
+function resize(size) {
+  if (size < 5) {
     size = 5;
-  } else if (size > 50){
+  } else if (size > 50) {
     size = 50;
   }
-  let pixels = document.getElementsByClassName('pixel');
+  const pixels = document.getElementsByClassName('pixel');
   for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.width = size+'px';
-    pixels[i].style.height = size+'px';
+    pixels[i].style.width = `${size}px`;
+    pixels[i].style.height = `${size}px`;
   }
 }
 
 function newTable(e) {
   e.preventDefault();
   const size = document.getElementById('board-size').value;
-  //deleteTable();
+  // deleteTable();
   resize(size);
 }
 
 generateBoard.addEventListener('submit', newTable);
 
 clear.addEventListener('click', function () {
-  let pixels = document.getElementsByClassName('pixel');
+  let const = document.getElementsByClassName('pixel');
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = 'white';
   }
