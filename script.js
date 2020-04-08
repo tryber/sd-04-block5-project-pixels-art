@@ -18,11 +18,11 @@ function saveColor(n) {
 }
 
 function selected(c) {
-  let colorsArray = ['black','purple','pink','yellow'];
+  const colorsArray = ['black', 'purple', 'pink', 'yellow'];
   for (let i = 0; i < 4; i += 1) {
-    if ( c != colorsArray[i]) {
+    if (c !== colorsArray[i]) {
       colorsArray[i].className = 'color ' + colorsArray[i] + ' selected';
-    }else {
+    } else {
       colorsArray[i].className = 'color ' + colorsArray[i] + ' selected';
     }
   }
