@@ -1,7 +1,9 @@
 body {
-    background-color: rgb(119, 128, 139);
-    font: normal 15pt Arial;
-    }
+    background-color:  rgb(119, 128, 139);
+        font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+}
 
 header {
     color: white;
@@ -11,18 +13,19 @@ header {
 section {
     background-color: white;
     border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0 ,0 ,0.8);
     padding: 15px;
-    width: 250px;
     margin: auto;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.8)
+    width: 250px;
+
 }
 
 footer {
     color: white;
-    text-align: center;
     font-style: italic;
+    text-align: center;
 }
-  
+
 .color-palette {
     font-size: 15px;
     padding: 5px;
@@ -40,27 +43,27 @@ footer {
     width: 40px;
 }
 
-.color#first {
+.firstColor {
     background-color: black;
 }
 
-.color#second {
+.secondColor {
     background-color: blue;
 }
 
-.color#third {
+.thirdColor {
     background-color: red;
 }
 
-.color#fourth {
+.fourthColor {
     background-color: yellow;
 }
 
 .pixel-board {
     background-color: white;
     height: 210px;
-    width: 210px;
     margin: auto;
+    width: 210px;
 }
 
 .pixel {
