@@ -50,6 +50,12 @@ resetBtn.addEventListener('click', () => {
 
 document.getElementById('generate-board').addEventListener('click', () => {
     let size = parseInt(boardSize.value)
+    if (size < 5){
+        size = 5
+    }
+    if (size > 50){
+        size = 50
+    }
     let insertDivsLine = ''
     let insertDivsColumn = ''
     for (let i = 1; i <= size; i++) {
@@ -60,4 +66,5 @@ document.getElementById('generate-board').addEventListener('click', () => {
     }
     pixelBoard.innerHTML = insertDivsColumn + insertDivsLine
     pixelBoard.style.width = (42 * size) + 'px'
+    document.getElementById('main').style.width = pixelBoard.style.width
 })

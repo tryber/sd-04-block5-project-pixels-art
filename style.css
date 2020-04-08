@@ -1,9 +1,10 @@
 .main {
   background-color: rgb(187, 186, 186);
   padding-bottom: 20px;
-  padding-top: 5px;
+  padding: 5px 10px;
   margin: auto;
   margin-top: 20px;
+  max-width: 2000px;
 }
 
 h1 {
@@ -74,6 +75,6 @@ h1 {
   margin: auto;
   margin-top: 20px;
   text-align: center;
-  width: 500px;
+  /* width: 500px; */
   /* background-color: green; */
 }
