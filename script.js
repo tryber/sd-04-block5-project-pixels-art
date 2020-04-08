@@ -52,7 +52,7 @@ pixelBoard.addEventListener('click', function (event) {
   document.getElementById('pixel-board').style.backgroundColor = 'white';
 });
 
-const botao = document.querySelector('.botao');
+const botao = document.querySelector('#clear-board');
 const pixel = document.querySelectorAll('.pixel');
 botao.addEventListener('click', function () {
   document.getElementById('pixel-board').style.backgroundColor = 'white';
