@@ -39,7 +39,7 @@ for (let i = 0; i < colors.length; i += 1) {
 
 const pixels = document.getElementsByClassName('pixel');
 for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', function () {
+  pixels[i].addEventListener('click', function () {
     const selectedColor = document.querySelector('.selected');
     const colorsSelected = selectedColor.style.backgroundColor;
     pixels[i].style.backgroundColor = colorsSelected;
