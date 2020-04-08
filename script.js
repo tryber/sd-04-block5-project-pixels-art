@@ -14,6 +14,19 @@ window.onload = function(){
     })
 
 }
+
+
+//loop to clear all pixels
+let clearboard = document.querySelector("#clear-board"); 
+    clearboard.addEventListener('click',function(event){
+    console.log("click");
+    for (let i=0; i<pixels.length; i+=1){
+    pixels[i].style.backgroundColor = 'white';
+    }
+})
+
+
+}
 let pixels = document.querySelectorAll(".pixel"); 
 //loop to add color to clicked pixel
 for (let i=0; i<pixels.length; i+=1){
@@ -26,5 +39,3 @@ for (let i=0; i<pixels.length; i+=1){
 })
 
 }
-}
-
