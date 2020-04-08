@@ -4,13 +4,20 @@ for (let i = 0; i < palletChilds.length; i += 1) {
   palletChilds[i].style.backgroundColor = colors[i];
 }
 const pixelBoard = document.getElementById('pixel-board');
-for (let i = 0; i < 5; i += 1) {
-  for (let j = 0; j < 5; j += 1) {
+function createPixels(n) {
+  if (n < 5) n = 5;
+  if (n > 50) n = 50;
+  const boardWidth = 42 * n;
+  pixelBoard.style.height = `${boardWidth}px`;
+  pixelBoard.style.width = `${boardWidth}px`;
+  for (let i = 0; i < (n * n); i += 1) {
     const div = document.createElement('div');
     div.className = 'pixel';
     pixelBoard.appendChild(div);
   }
 }
+let n = 5;
+createPixels(n);
 const colorPalette = document.getElementById('color-palette');
 function addRemove(event) {
   document.querySelector('.selected').classList.remove('selected');
