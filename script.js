@@ -88,7 +88,7 @@ function newTable(e) {
 generateBoard.addEventListener('submit', newTable);
 
 clear.addEventListener('click', function () {
-  let const = document.getElementsByClassName('pixel');
+  const pixels = document.getElementsByClassName('pixel');
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = 'white';
   }
