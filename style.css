@@ -1,29 +1,29 @@
 body {
-  background-color: pink;
+  background-color: white;
 }
 
-#color-palette {
+.color-palette {
   position: relative;
   top: 25px;
 }
 
-#firstColor {
+.firstColor {
   background-color: black;
 }
 
-#secondColor {
+.secondColor {
   background-color: green;
 }
 
-#thirdColor {
+.thirdColor {
   background-color: blue;
 }
 
-#fourthColor {
+.fourthColor {
   background-color: red;
 }
 
-#pixel-board {
+.pixel-board {
   display: grid;
   grid-template-columns: 45px 45px 45px 45px 45px;
   grid-template-rows: 45px 45px 45px 45px 45px;
@@ -44,4 +44,10 @@ body {
   display: inline-block;
   height: 50px;
   width: 50px;
+}
+
+.botao {
+  left: 15px;
+  position: relative;
+  top: 70px;
 }
