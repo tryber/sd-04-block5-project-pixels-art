@@ -75,8 +75,10 @@ hideBtn.addEventListener('click', () => {
     if (getComputedStyle(pixel).backgroundColor === 'rgb(255, 255, 255)') {
       if (getComputedStyle(pixel).visibility === 'hidden') {
         pixel.style.visibility = 'visible';
+        hideBtn.innerHTML = 'Ocultar Board';
       } else {
         pixel.style.visibility = 'hidden';
+        hideBtn.innerHTML = 'Exibir Board';
       }
     }
   });
