@@ -18,3 +18,15 @@
 #pixel-board {
     max-width: 250px;    
 }
+#preto{
+    background-color: black;
+}
+#verde {
+    background-color: darkgreen;
+}
+#azul {
+    background-color: darkblue;
+}
+#vermelho {
+    background-color: darkred;
+}
