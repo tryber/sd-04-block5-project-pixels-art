@@ -8,7 +8,7 @@ const selecaoTabela = function (e) {
   selectedColor = window.getComputedStyle(e.target).getPropertyValue('background-color');
   for (let i = 0; i < colorSelected.length; i += 1) {
     colorSelected[i].classList.remove('selected');
-    colorSelected[i].e.target.classList.add('selected');
+    e.target.classList.add('selected');
   }
 };
 function colorSelect(e) {
