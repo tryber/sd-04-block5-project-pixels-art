@@ -1,12 +1,10 @@
-body, html {
+body , html {
   background-color: #0fa36b;
   text-align: center;
   width: 100%;
 }
 
-table{
-  margin-bottom: 10px;
-  margin-top: 10px;
+table {
   margin: auto;
 }
 
@@ -27,11 +25,11 @@ table{
   width: 40px;
 }
 
-.pixel-board{
+.pixel-board {
   border-collapse: collapse;
 }
 
-.clear-board{
+.clear-board {
   margin-bottom: 10px;
   margin-top: 10px;
 }
