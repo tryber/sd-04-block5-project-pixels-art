@@ -16,13 +16,13 @@ function addRemove(event) {
   document.querySelector('.selected').classList.remove('selected');
   event.target.classList.add('selected');
 }
-colorPalette.addEventListener('click', function(){
+colorPalette.addEventListener('click', function () {
   addRemove(event);
 });
 function changeColor(event) {
-  let selected = document.querySelector('.selected');
+  const selected = document.querySelector('.selected');
   event.target.style.backgroundColor = selected.style.backgroundColor;
 }
-pixelBoard.addEventListener('click', function(){
+pixelBoard.addEventListener('click', function () {
   changeColor(event);
-})
+});
