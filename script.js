@@ -5,12 +5,11 @@ const color4 = document.querySelector('.color4');
 const pixelBoard = document.querySelector('.pixel-board');
 const palette = document.querySelector('.color-palette');
 const pixelAll = document.getElementsByClassName('pixel');
-var atual = color1;
 
 function getRandomColor() {
-  var letters = '0123456789ABCDEF';
-  var color = '#';
-  for (var i = 0; i < 6; i++) {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i += 1) {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
@@ -26,8 +25,6 @@ function selected(div) {
 }
 selected(color1);
 
-const cor = document.querySelector('.selected');
-
 palette.addEventListener('click', function (e) {
   document.querySelector('.selected').classList.remove('selected');
   e.target.classList.add('selected');
@@ -36,17 +33,14 @@ palette.addEventListener('click', function (e) {
 pixelBoard.addEventListener('click', function (e) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
   e.target.style.backgroundColor = selectedColor;
-  });
+});
 
-  const clear = document.querySelector('.clear-board');
+const clear = document.querySelector('.clear-board');
 
-  function clearPixels() {
-    for (i=0 ; i < pixelAll.length ; i++ ) {
-    pixelAll[i].style.backgroundColor = "white";
-    };
-  };
+function clearPixels() {
+  for (let i = 0; i < pixelAll.length; i += 1) {
+    pixelAll[i].style.backgroundColor = 'white';
+  }
+}
 
-  clear.addEventListener('click', clearPixels);
-  
-
-
+clear.addEventListener('click', clearPixels);
