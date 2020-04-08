@@ -38,11 +38,11 @@ function eventToPalete() {
     palete[i].addEventListener('click', colorPallete);
   }
 }
-/*
+
 function deleteTable() {
   board.innerHTML = '';
 }
-*/
+
 function createTable(i = 5, j = 5) {
   for (let m = 0; m < i; m += 1) {
     const row = document.createElement('div');
@@ -71,18 +71,24 @@ function resize(size) {
   } else if (size > 50) {
     size = 50;
   }
-  const pixels = document.getElementsByClassName('pixel');
+
+const pixels = document.getElementsByClassName('pixel');
   for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.width = `${size}px`;
     pixels[i].style.height = `${size}px`;
   }
-}
+} 
 
 function newTable(e) {
   e.preventDefault();
-  const size = document.getElementById('board-size').value;
-  // deleteTable();
-  resize(size);
+  const size = document.getElementById("board-size").value
+  if (size < 5) {
+    size = 5
+  } else if (size > 50){
+    size = 50
+  }
+  deleteTable();
+  createTable(size, size);
 }
 
 generateBoard.addEventListener('submit', newTable);
