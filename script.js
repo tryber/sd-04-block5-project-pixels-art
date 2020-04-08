@@ -10,7 +10,7 @@ const boardSize = document.getElementById('board-size');
 function randomColors() {
   for (let i = 1; i <= 3; i += 1) {
       randomic = Math.floor(Math.random() * 1531334);
-      arrayColors[i] = '#' + randomic;
+      arrayColors[i] = `#${randomic}`;
   }
 }
 
@@ -58,13 +58,13 @@ document.getElementById('generate-board').addEventListener('click', () => {
   }
   let insertDivsLine = '';
   let insertDivsColumn = '';
-  for (let i = 1; i <= size; i++) {
-      insertDivsColumn += `<div class="pixel"></div>`;
-      for(let j = 1; j < size; j++) {
-          insertDivsLine += `<div class="pixel"></div>`;
+  for (let i = 1; i <= size; i += 1) {
+      insertDivsColumn += '<div class="pixel"></div>';
+      for (let j = 1; j < size; j += 1) {
+          insertDivsLine += '<div class="pixel"></div>';
       }
   }
   pixelBoard.innerHTML = insertDivsColumn + insertDivsLine;
-  pixelBoard.style.width = (42 * size) + 'px';
+  pixelBoard.style.width = `${(42 * size)}px`;
   document.getElementById('main').style.width = pixelBoard.style.width;
 });
