@@ -47,7 +47,7 @@ yellow.addEventListener('click', function () {
   saveColor('yellow');
   yellow.className = ' color yellow selected'
 });
-clearButton.addEventListener('click', clearBoard());
+clearButton.addEventListener('click', clearBoard);
 
 for (let j = 0; j < 25; j += 1) {
   pixel[j].addEventListener('click', function() {
