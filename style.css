@@ -10,6 +10,7 @@ body{
     margin-left: 63px;
     display: flex;
     padding-left: 2px;
+    
 }
 
 .pixel-board{
@@ -18,17 +19,18 @@ body{
 }
 
 .color{
-    height: 41px; /* pq tem a borda*/
-    width: 41px;
+    height: 40px; /* pq tem a borda*/
+    width: 40px;
     padding-top: 5px;
     border: 1px solid black;
+  
 
 }
 .pixel{
   
-  border: 1px black solid;
-  height: 41px;
-  width: 41px;
+  border: 1px solid black ;
+  height: 40px;
+  width: 40px;
   margin: 1px black; 
   
 }
