@@ -41,17 +41,16 @@ thirdColor.addEventListener('click', function () {
 });
 
 function paintPixel() {
-const pixelSelected = document.querySelectorAll('.pixel'); 
-  for (let index = 0; index < pixelSelected.length; index += 1) { 
-pixelSelected[index].addEventListener('click', function () { 
-    const selectedColor = document.querySelector('.selected');
-    pixelSelected[index].style.backgroundColor = 
-      selectedColor.style.backgroundColor;
-  });
+  const pixelSelected = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixelSelected.length; index += 1) {
+    pixelSelected[index].addEventListener('click', function () {
+      const selectedColor = document.querySelector('.selected');
+      pixelSelected[index].style.backgroundColor =
+        selectedColor.style.backgroundColor;
+    });
+  }
 }
-}
- paintPixel();
-  
+paintPixel();
 
 // Clear pixel board
 const clearButton = document.getElementById('clear-board');
@@ -67,11 +66,6 @@ const inputSize = document.getElementById('board-size');
 const generateButton = document.getElementById('generate-board');
 
 function createTable() {
-  if (inputSize.value < 5 || inputSize.value > 50) {
-    if(inputSize.value < 5) inputSize.value = 5;
-    if(inputSize.value > 50) inputSize.value = 50;
-    return alert("Insert a value between 5 and 50!");
-  }
   document.getElementById('pixel-board').children[0].remove();
   const newTbody = document.createElement('tbody');
   document.getElementById('pixel-board').appendChild(newTbody);
@@ -86,7 +80,15 @@ function createTable() {
       createdTr.appendChild(newTd);
     }
   }
-  paintPixel();
+  return paintPixel();
 }
 
-generateButton.addEventListener('click', createTable);
+generateButton.addEventListener('click', () => {
+  if (inputSize.value < 5 || inputSize.value > 50) {
+    if (inputSize.value < 5) inputSize.value = 5;
+    if (inputSize.value > 50) inputSize.value = 50;
+    alert('Insert a value between 5 and 50!');
+  } else {
+    createTable();
+  }
+});
