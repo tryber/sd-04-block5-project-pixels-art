@@ -27,7 +27,8 @@ function createPixels(n) {
   }
 }
 let numOfColums = 5;
-createPixels(numOfColums); // chamada da função para a criação dos 25 pixels 
+createPixels(numOfColums); // chamada da função para a criação dos 25 pixels
+// declaração de variavel e função para adicionar e remover elemento selecionado
 const colorPalette = document.getElementById('color-palette');
 function addRemove(event) {
   document.querySelector('.selected').classList.remove('selected');
@@ -36,12 +37,12 @@ function addRemove(event) {
 colorPalette.addEventListener('click', function () {
   addRemove(event);
 });
-// função que muda as cores do pixels 
+// função que muda as cores do pixels
 function changeColor(event) {
   const selected = document.querySelector('.selected');
   event.target.style.backgroundColor = selected.style.backgroundColor;
 }
-// event listener para mudar as cores dos pixels 
+// event listener para mudar as cores dos pixels
 pixelBoard.addEventListener('click', function () {
   changeColor(event);
 });
@@ -53,8 +54,13 @@ function clearPixels(pxs) {
     pxs[i].style.backgroundColor = 'white';
   }
 }
-// event listener para limpar os pixels 
+// event listener para limpar os pixels
 clearButton.addEventListener('click', function () {
   clearPixels(pixels);
 });
-
+const generateButton = document.getElementById('generate-board');
+const inputBoardSize = document.getElementById('board-size');
+generateButton.addEventListener('click', function () {
+  numOfColums = inputBoardSize.value;
+  createPixels(numOfColums);
+});
