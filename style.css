@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+.color {
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+.pixel-board {
+  line-height: 0;
+  margin: auto;
+}
+
+.pixel {
+  border: 1px solid;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
