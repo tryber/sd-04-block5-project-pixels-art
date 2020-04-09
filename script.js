@@ -1,48 +1,51 @@
-function blackColor() {
-  document.getElementById('firstColor').className = 'color selected';
-}
+let firstColor = document.getElementById("firstColor");
+let secondColor = document.getElementById("secondColor");
+let thirdColor = document.getElementById("thirdColor");
+let fourthColor = document.getElementById("fourthColor");
 
-window.onload = blackColor;
+firstColor.style.backgroundColor = "black";
+secondColor.style.backgroundColor = "blue";
+thirdColor.style.backgroundColor = "yellow";
+fourthColor.style.backgroundColor = "red";
 
-const firstColor = document.getElementById('firstColor');
-firstColor.addEventListener('click', function () {
-  document.getElementById('firstColor').className = 'color selected';
-  document.getElementById('secondColor').className = 'color';
-  document.getElementById('thirdColor').className = 'color';
-  document.getElementById('fourthColor').className = 'color';
-  document.querySelector('.selected').style.backgroundColor = 'black';
+window.addEventListener("load", function() {
+  firstColor.classList.add("colorSelected");
 });
 
-const secondColor = document.getElementById('secondColor');
-secondColor.addEventListener('click', function () {
-  document.getElementById('firstColor').className = 'color';
-  document.getElementById('thirdColor').className = 'color';
-  document.getElementById('fourthColor').className = 'color';
-  secondColor.className = 'color selected';
-  document.querySelector('.selected').style.backgroundColor = 'blue';
-});
+function firstColorSelected() {
+  let color = document.querySelector(".colorSelected");
+    if (color) {
+      color.classList.remove("colorSelected");
+      firstColor.classList.add("colorSelected");
+    }
+};
 
-const thirdColor = document.getElementById('thirdColor');
-thirdColor.addEventListener('click', function () {
-  document.getElementById('firstColor').className = 'color';
-  document.getElementById('secondColor').className = 'color';
-  document.getElementById('fourthColor').className = 'color';
-  thirdColor.className = 'color selected';
-  document.querySelector('.selected').style.backgroundColor = 'red';
-});
+function secondColorSelected() {
+  let color = document.querySelector(".colorSelected");
+    if (color) {
+      color.classList.remove("colorSelected");
+      secondColor.classList.add("colorSelected");
+    } 
+};
 
-const fourthColor = document.getElementById('fourthColor');
-fourthColor.addEventListener('click', function () {
-  document.getElementById('firstColor').className = 'color';
-  document.getElementById('secondColor').className = 'color';
-  document.getElementById('thirdColor').className = 'color';
-  fourthColor.className = 'color selected';
-  document.querySelector('.selected').style.backgroundColor = 'yellow';
-});
+function thirdColorSelected() {
+  let color = document.querySelector(".colorSelected");
+    if (color) {
+      color.classList.remove("colorSelected");
+      thirdColor.classList.add("colorSelected");
+    } 
+};
 
-const pixelBoard = document.querySelector('#pixel-board');
-pixelBoard.addEventListener('click', function (event) {
-  const selectedColor = document.querySelector('.selected').style.backgroundColor;
-  event.target.style.backgroundColor = selectedColor;
-  document.getElementById('pixel-board').style.backgroundColor = 'white';
+function fourthColorSelected() {
+  let color = document.querySelector(".colorSelected");
+    if (color) {
+      color.classList.remove("colorSelected");
+      fourthColor.classList.add("colorSelected");
+    } 
+};
+
+let pixelBoard = document.getElementById("pixel-board");
+
+pixelBoard.addEventListener("click", function(changeColor) {
+  changeColor.target.style.backgroundColor = document.querySelector(".colorSelected").style.backgroundColor;
 });
