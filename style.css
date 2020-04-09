@@ -1,0 +1,28 @@
+.color-palette {
+  font-size: 15px;
+  padding: 5px;
+  text-align: center;
+  width: 250px;
+}
+
+.color {
+  border: 1px solid black;
+  border-radius: 20%;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  background-color: white;
+  height: 210px;
+  width: 210px;
+}
+
+.pixel {
+  background: white;
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
