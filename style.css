@@ -1,12 +1,11 @@
 .color{
-    height: 40px;
-    width: 40px;
     border: 1px solid;
     border-color: black;
-    display: inline;
-    margin: 5px;
     float: left;
-    visibility: visible;
+    height: 41px;
+    margin: 5px;
+    width: 41px;
+    visibility: visible;   
 }
 
 #color-palette{
@@ -15,9 +14,17 @@
 }
 
 .pixel{
-    height: 40px;
-    width: 40px;
+    height: 41px;
+    width: 41px;
     border: 1px solid;
     float: left;    
 }
 
+.pixel-board{
+    width: 300;
+    height: 250px;
+}
+
+.pixel{
+    background-color: white;
+}
