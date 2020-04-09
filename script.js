@@ -1,6 +1,20 @@
 // criação da paleta de cores
 const palletChilds = document.getElementsByClassName('color');
 const colors = ['black', 'red', 'green', 'blue'];
+// função de gerar uma cor aleatoria;
+function randomColors() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i += 1) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+// alterando colors para as cores aleatorias
+for (let i = 1; i < colors.length; i += 1) {
+  colors[i] = randomColors();
+}
+// colondo as cores na paleta de cores
 for (let i = 0; i < palletChilds.length; i += 1) {
   palletChilds[i].style.backgroundColor = colors[i];
 }
