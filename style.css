@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .color {
   background-color: black;
   border: 1px solid black;
@@ -9,12 +13,13 @@
 
 .pixel-board {
   line-height: 0;
+  margin: auto;
 }
 
 .pixel {
   border: 1px solid;
   display: inline-block;
   height: 40px;
-  margin: 0;
+  margin: -1px;
   width: 40px;
 }
