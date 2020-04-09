@@ -1,0 +1,25 @@
+#color-palette {
+  border-spacing: 5px;
+}
+
+td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  padding: 25px;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
