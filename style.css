@@ -1,39 +1,23 @@
-#black {
-    background-color: rgb(0, 0, 0);
-}
-
-#red {
-    background-color: rgb(255, 0, 0);
-}
-
-#green {
-    background-color: rgb(0, 255, 0);
-}
-
-#blue {
-    background-color: rgb(0, 0, 255);
-}
-
 .color {
-    border: 1px solid rgb(0, 0, 0);
-    height: 40px;
-    width: 40px;
+  border: 1px solid rgb(0, 0, 0);
+  height: 40px;
+  width: 40px;
 }
 
 .selected {
-    border: 1px solid rgb(0, 0, 0);
-    height: 40px;
-    width: 40px;
+  border: 1px solid rgb(0, 0, 0);
+  height: 40px;
+  width: 40px;
 }
 
 #pixel-board {
-    border-collapse:collapse ;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .pixel {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
-    height: 40px;
-    width: 37px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  height: 40px;
+  width: 37px;
 }
