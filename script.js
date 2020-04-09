@@ -1,48 +1,55 @@
-let black = document.querySelector(".black");
-let blue = document.querySelector(".blue");
-let pink = document.querySelector(".pink");
-let gray = document.querySelector(".gray");
+// Variables
+let palette = document.querySelectorAll(".color")
+let box1 = document.querySelectorAll(".color")[0];
+let box2 = document.querySelectorAll(".color")[1];
+let box3 = document.querySelectorAll(".color")[2];
+let box4 = document.querySelectorAll(".color")[3];
+pixelBoard = document.getElementById("pixel-board");
+
+// Creating palette box
+box1.style.backgroundColor = "black";
+box2.style.backgroundColor = "lightblue";
+box3.style.backgroundColor = "pink";
+box4.style.backgroundColor = "orange";
+
 // Select black when the page load
 window.addEventListener("load", function() {
-  black.classList.add("selected");
+  box1.classList.add("selected");
 });
-let palette = document.querySelectorAll(".color")
-
-
-function blackSelected() {
-    let item = document.querySelector(".color.selected");
+// Selecting box1
+function box1Selected() {
+    let item = document.querySelector(".selected");
     if (item) {
       item.classList.remove("selected");
-      black.classList.add("selected");
+      box1.classList.add("selected");
     }
-  console.log(palette);
 };
-
-function blueSelected() {
-  let item = document.querySelector(".color.selected");
+// Selecting box2
+function box2Selected() {
+  let item = document.querySelector(".selected");
     if (item) {
       item.classList.remove("selected");
-      blue.classList.add("selected");
+      box2.classList.add("selected");
     } 
-  console.log(palette);
 };
-function pinkSelected() {
-  let item = document.querySelector(".color.selected");
+// Selecting box3
+function box3Selected() {
+  let item = document.querySelector(".selected");
     if (item) {
       item.classList.remove("selected");
-      pink.classList.add("selected");
+      box3.classList.add("selected");
     } 
-  console.log(palette);
 };
-function graySelected() {
-  let item = document.querySelector(".color.selected");
+// Selecting box4
+function box4Selected() {
+  let item = document.querySelector(".selected");
     if (item) {
       item.classList.remove("selected");
-      gray.classList.add("selected");
+      box4.classList.add("selected");
     } 
-  console.log(palette);
 };
 
-
-
-
+// Painting pixel
+pixelBoard.addEventListener("click", function(event) {
+  event.target.style.backgroundColor = document.querySelector(".selected").style.backgroundColor;
+});

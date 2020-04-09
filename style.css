@@ -7,18 +7,6 @@ body {
   text-align: center;
   padding: 5px;
 }
-.black {
-  background-color: black;
-}
-.blue {
-  background-color: lightblue;
-}
-.pink {
-  background-color: pink;
-}
-.gray {
-  background-color: rgb(95, 94, 92);
-}
 .color {
   width: 45px;
   height: 45px;
@@ -41,5 +29,4 @@ body {
   height: 40px;
   background-color: white;
   float: left;
-
 }
