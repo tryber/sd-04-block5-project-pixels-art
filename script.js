@@ -5,6 +5,7 @@ const colBlue = document.getElementById('blue');
 const colGreen = document.getElementById('green');
 const colGroup = document.getElementsByClassName('color');
 const pixGroup = document.getElementsByClassName('pixel');
+const butClean = document.getElementById('clear-board');
 
 function colorization() {
   colBlack.style.backgroundColor = colBlack.id;
@@ -31,6 +32,12 @@ function selPalette(e) {
   e.target.className = 'color selected';
 }
 
+function cleanPainting() {
+  for (i = 0; i < pixGroup.length; i += 1) {
+    pixGroup[i].style.backgroundColor = 'white';
+  }
+}
+
 for (i = 0; i < pixGroup.length; i += 1) {
   pixGroup[i].addEventListener('click', colSelected);
 }
@@ -38,6 +45,8 @@ for (i = 0; i < pixGroup.length; i += 1) {
 for (i = 0; i < colGroup.length; i += 1) {
   colGroup[i].addEventListener('click', selPalette);
 }
+
+butClean.addEventListener('click', cleanPainting);
 
 window.onload = function () {
   colorization();

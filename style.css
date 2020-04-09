@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(159, 194, 194);
+}
+
 .col-pal {
   border-spacing: 5px;
 }
@@ -16,4 +20,8 @@
   border: 1px solid black;
   height: 41px;
   width: 41px;
+}
+
+button {
+  margin-top: 10px;
 }
