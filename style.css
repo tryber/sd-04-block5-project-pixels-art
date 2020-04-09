@@ -2,10 +2,18 @@
   border-spacing: 5px;
 }
 
-td {
-  border: 1px solid black;
+.pix-boa {
   border-collapse: collapse;
+}
+
+.color {
+  border: 1px solid black;
   padding: 25px;
+}
+
+.pixel {
+  border: 1px solid black;
+  padding: 5px;
 }
 
 .black {
