@@ -4,7 +4,7 @@ const colBlue = document.getElementById('blue');
 const colGreen = document.getElementById('green');
 
 window.onload = function () {
-  selection();
+  this.selection();
 };
 
 function selection() {
