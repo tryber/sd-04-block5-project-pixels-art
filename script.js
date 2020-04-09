@@ -13,9 +13,8 @@ window.addEventListener("load", function() {
   firstColor.classList.add('colorSelected');
 })
 
-const color = document.querySelector('.colorSelected');
-
 function firstColorSelected() {
+  const color = document.querySelector('.colorSelected');
   if (color) {
     color.classList.remove('colorSelected');
     firstColor.classList.add('colorSelected');
@@ -23,6 +22,7 @@ function firstColorSelected() {
 }
 
 function secondColorSelected() {
+  const color = document.querySelector('.colorSelected');
   if (color) {
     color.classList.remove('colorSelected');
     secondColor.classList.add('colorSelected');
@@ -30,6 +30,7 @@ function secondColorSelected() {
 }
 
 function thirdColorSelected() {
+  const color = document.querySelector('.colorSelected');
   if (color) {
     color.classList.remove('colorSelected');
     thirdColor.classList.add('colorSelected');
@@ -37,6 +38,7 @@ function thirdColorSelected() {
 }
 
 function fourthColorSelected() {
+  const color = document.querySelector('.colorSelected');
   if (color) {
     color.classList.remove('colorSelected');
     fourthColor.classList.add("colorSelected");
