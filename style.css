@@ -10,6 +10,22 @@
   display: inline-block;
 }
 
-.black {
-  background-color: rgba(0, 0, 0, 1);
+#black {
+  background-color: rgb(0, 0, 0);
+}
+#red {
+  background-color: rgba(255, 0, 0, 1);
+}
+#blue {
+  background-color: rgba(0, 0, 255, 1);
+}
+#yellow {
+  background-color: rgba(255, 255, 0, 1);
+}
+#pixel-board {
+}
+.pixel {
+  border: 1px solid rgb(0, 0, 0);
+  width: 40px;
+  height: 40px;
 }
