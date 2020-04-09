@@ -14,22 +14,22 @@
   width: 40px;
 }
 
-#pixel-board {
+.pixel-board {
   max-width: 270px;
 }
 
-#preto {
+.preto {
   background-color: black;
 }
 
-#verde {
+.verde {
   background-color: green;
 }
 
-#azul {
+.azul {
   background-color: blue;
 }
 
-#vermelho {
+.vermelho {
   background-color: red;
 }
