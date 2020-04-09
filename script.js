@@ -54,17 +54,18 @@ function adcionaEventPaleta() { // Adiciona evento click em cada cor da paleta.
     selectedColor = event.target.style.backgroundColor;
     removeSelected();
     event.target.classList.add('selected');
-  }
+  };
   for (let p = 0; p < paleta.length; p += 1) { // For que percorre todos os div .pixel.
     paleta[p].addEventListener('click', config);
   }
 }
 
 function adicionaEventPixel() {
+  const config = function () {
+    event.target.style.backgroundColor = selectedColor;
+  };
   for (let p = 0; p < pixel.length; p += 1) {
-    pixel[p].addEventListener('click', (event) => {
-      event.target.style.backgroundColor = selectedColor;
-    });
+    pixel[p].addEventListener('click', config);
   }
 }
 
