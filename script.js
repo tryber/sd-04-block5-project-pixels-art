@@ -1,7 +1,7 @@
-let colBlack = document.getElementById("black");
-let colRed = document.getElementById("red");
-let colBlue = document.getElementById("blue");
-let colGreen = document.getElementById("green");
+const colBlack = document.getElementById('black');
+const colRed = document.getElementById('red');
+const colBlue = document.getElementById('blue');
+const colGreen = document.getElementById('green');
 
 window.onload = function () {
   selection();
@@ -12,6 +12,6 @@ function selection() {
   colRed.style.backgroundColor = colRed.id;
   colBlue.style.backgroundColor = colBlue.id;
   colGreen.style.backgroundColor = colGreen.id;
-};
+}
 
-//console.log(colBlack);
+// console.log(colBlack);
