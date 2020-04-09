@@ -22,10 +22,21 @@
 }
 
 .pixel {
-    width: 36px;
-    height: 36px;
-    border: 1px solid black;
-    display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: block;
+    float:left;
     margin: -5px -2px;
     background-color: rgb(255, 255, 255);
+}
+
+.pixel-board, .pixel {
+	border: 1px solid black;
+}
+
+.pixel-board {
+  height: 200px;
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
 }
