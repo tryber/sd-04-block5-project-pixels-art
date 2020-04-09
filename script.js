@@ -50,12 +50,12 @@ function removeSelected() {
 }
 
 function adcionaEventPaleta() { // Adiciona evento click em cada cor da paleta.
-	for (let p = 0; p < paleta.length; p += 1) { // For que percorre todos os div .pixel.
-		let config = function () {
-			selectedColor = event.target.style.backgroundColor;
-      removeSelected();
-      event.target.classList.add('selected');
-		}
+  const config = function () {
+    selectedColor = event.target.style.backgroundColor;
+    removeSelected();
+    event.target.classList.add('selected');
+  }
+  for (let p = 0; p < paleta.length; p += 1) { // For que percorre todos os div .pixel.
     paleta[p].addEventListener('click', config);
   }
 }
