@@ -1,3 +1,4 @@
+// Randomize palette colors
 function randomColor() {
   const hexa = '0123456789ABCDEF';
   let color = '#';
@@ -39,19 +40,20 @@ thirdColor.addEventListener('click', function () {
   thirdColor.classList.add('selected');
 });
 
-const pixelSelected = document.querySelectorAll('.pixel');
-function paintPixel(index) {
-  pixelSelected[index].addEventListener('click', function () {
+function paintPixel() {
+const pixelSelected = document.querySelectorAll('.pixel'); 
+  for (let index = 0; index < pixelSelected.length; index += 1) { 
+pixelSelected[index].addEventListener('click', function () { 
     const selectedColor = document.querySelector('.selected');
-    pixelSelected[index].style.backgroundColor =
+    pixelSelected[index].style.backgroundColor = 
       selectedColor.style.backgroundColor;
   });
 }
-
-for (let index = 0; index < pixelSelected.length; index += 1) {
-  paintPixel(index);
 }
+ paintPixel();
+  
 
+// Clear pixel board
 const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', function () {
   const pixelBoard = document.querySelectorAll('.pixel');
@@ -59,3 +61,32 @@ clearButton.addEventListener('click', function () {
     pixelBoard[index].style.backgroundColor = 'white';
   }
 });
+
+// Generate new pixel board
+const inputSize = document.getElementById('board-size');
+const generateButton = document.getElementById('generate-board');
+
+function createTable() {
+  if (inputSize.value < 5 || inputSize.value > 50) {
+    if(inputSize.value < 5) inputSize.value = 5;
+    if(inputSize.value > 50) inputSize.value = 50;
+    return alert("Insert a value between 5 and 50!");
+  }
+  document.getElementById('pixel-board').children[0].remove();
+  const newTbody = document.createElement('tbody');
+  document.getElementById('pixel-board').appendChild(newTbody);
+  const createdTbody = document.getElementById('pixel-board').children[0];
+  for (let index = 0; index < inputSize.value; index += 1) {
+    const newTr = document.createElement('tr');
+    createdTbody.appendChild(newTr);
+    const createdTr = document.getElementsByTagName('tbody')[1].children[index];
+    for (let indexY = 0; indexY < inputSize.value; indexY += 1) {
+      const newTd = document.createElement('td');
+      newTd.className = 'pixel';
+      createdTr.appendChild(newTd);
+    }
+  }
+  paintPixel();
+}
+
+generateButton.addEventListener('click', createTable);
