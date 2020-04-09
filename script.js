@@ -1,6 +1,4 @@
-//function eraseColor(event){
 
-//}
 
 window.onload = function(){
 
