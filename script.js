@@ -49,11 +49,9 @@ for (let i = 0; i < selectedPx.length; i += 1) {
 
 //  botão clear
 const clearButton = document.getElementById('clear-board');
-clearButton.style.lineHeight = '10px';
-function clearBoard() {
+clearButton.addEventListener('click', function () {
   const pixelBoard = document.querySelectorAll('.pixel');
   for (let i = 0; i <= pixelBoard.length; i += 1) {
     pixelBoard[i].style.backgroundColor = 'white';
   }
-}
-clearButton.addEventListener('click', clearBoard);
+});
