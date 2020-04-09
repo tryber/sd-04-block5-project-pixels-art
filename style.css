@@ -2,15 +2,15 @@
   text-align: center;
 }
 
-#title {
+h1 {
   border: 1px solid red;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, Times, serif;
 }
 
 .color {
   display: inline-block;
-  width: 40px;
   height: 40px;
+  width: 40px;
 }
 
 .black {
