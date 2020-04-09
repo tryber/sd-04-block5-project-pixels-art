@@ -1,30 +1,35 @@
-
 .pixel {
   background-color: white;
-  border: 1px solid rgb(0,0,0);
+  border: 1px solid black;
   display: inline-table;
   height: 40px;
   width: 40px;
 }
+
 .color {
-  border: 1px solid rgb(0,0,0);
+  border: 1px solid black;
   display: inline-block;
   height: 40px;
   padding: 4px;
   width: 40px;
 }
+
 #pixel-board {
   max-width: 270px;
 }
-#preto{
+
+#preto {
   background-color: black;
 }
+
 #verde {
   background-color: green;
 }
+
 #azul {
   background-color: blue;
 }
+
 #vermelho {
   background-color: red;
 }
