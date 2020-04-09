@@ -1,0 +1,39 @@
+
+body{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.color-palette{
+
+    margin-left: 59px;
+    display: flex;
+    padding-left: 2px;
+    
+    
+}
+
+.pixel-board{
+    display: flex;
+    margin-left: 50px;
+}
+
+.color{
+    height: 40px; /* pq tem a borda*/
+    width: 40px;
+    padding-top: 5px;
+    border: 1px solid black;
+    margin-left: 5px;
+  
+
+}
+.pixel{
+  
+  border: 1px solid black ;
+  height: 40px;
+  width: 40px;
+  margin: 1px black; 
+  background-color: rgb(255, 255, 255);
+  
+}
