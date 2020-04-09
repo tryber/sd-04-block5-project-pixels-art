@@ -11,7 +11,7 @@ function selection() {
 }
 
 window.onload = function () {
-  this.selection();
+  selection();
 };
 
 // console.log(colBlack);
