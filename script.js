@@ -51,7 +51,7 @@ function generateGrid(size) {
     pixel.addEventListener('click', paintPixel);
     pixelBoard.appendChild(pixel);
   }
-  pixelBoard.style.width = `${size * 40}px`;
+  pixelBoard.style.width = `${size * 42}px`;
 }
 
 function generateBoard() {
