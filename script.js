@@ -10,7 +10,7 @@ function carregaCores () { // Define as cores da paleta.
   for (let number = 0; number < paleta.length; number+=1) {
     switch (number) {
       case 0:
-		paleta[number].style.backgroundColor = 'black';
+				paleta[number].style.backgroundColor = 'black';
         break;
       case 1:
         paleta[number].style.backgroundColor = 'red';
@@ -25,6 +25,18 @@ function carregaCores () { // Define as cores da paleta.
         console.log('Erro: nenhuma cor adicionar para os elementos div.');
     }
   }
+}
+
+function carregaCoresAleatorio () {//Carrega cores aleatoriamente.
+	let red;
+	let green;
+	let blue;
+	for (let number = 1; number < paleta.length; number+=1) {
+		red = Number.parseInt(Math.random() * 255);
+		green = Number.parseInt(Math.random() * 255);
+		blue = Number.parseInt(Math.random() * 255);
+		paleta[number].style.backgroundColor = `rgb(${red},${green},${blue})`;
+	}
 }
 
 function configuraPixels () { // Cor de fundo dos pixels do painel é branca.
@@ -117,4 +129,5 @@ window.onload = function () {
 	adicionaEventPixel ();
 	eventoLimpador ();
 	eventoGerador ();
+	carregaCoresAleatorio ();
 }
