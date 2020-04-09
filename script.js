@@ -50,8 +50,7 @@ for (let i = 0; i < selectedPx.length; i += 1) {
 //  botão clear
 const clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', function () {
-  const pixelBoard = document.querySelectorAll('.pixel');
-  for (let i = 0; i <= pixelBoard.length; i += 1) {
-    pixelBoard[i].style.backgroundColor = 'white';
+  for (let i = 0; i <= selectedPx.length; i += 1) {
+    selectedPx[i].style.backgroundColor = 'white';
   }
 });
