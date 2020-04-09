@@ -15,29 +15,29 @@ function colorization() {
 
 function colSelected(e) {
   for (i = 0; i < colGroup.length; i += 1) {
-    if (colGroup[i].className === "color selected") {
+    if (colGroup[i].className === 'color selected') {
       e.target.style.backgroundColor = colGroup[i].id;
-    };
-  };
+    }
+  }
 }
 
 function selPalette(e) {
   for (i = 0; i < colGroup.length; i += 1) {
-    if (colGroup[i].className === "color selected") {
-      colGroup[i].className = "color";
-    };
-  };
+    if (colGroup[i].className === 'color selected') {
+      colGroup[i].className = 'color';
+    }
+  }
 
-  e.target.className = "color selected";
+  e.target.className = 'color selected';
 }
 
 for (i = 0; i < pixGroup.length; i += 1) {
-  pixGroup[i].addEventListener("click", colSelected);
-};
+  pixGroup[i].addEventListener('click', colSelected);
+}
 
 for (i = 0; i < colGroup.length; i += 1) {
-  colGroup[i].addEventListener("click", selPalette);
-};
+  colGroup[i].addEventListener('click', selPalette);
+}
 
 window.onload = function () {
   colorization();
