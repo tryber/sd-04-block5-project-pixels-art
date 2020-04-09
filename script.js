@@ -10,7 +10,8 @@ colorBlue.style.backgroundColor = 'blue';
 colorBlack.style.backgroundColor = 'black';
 
 pixelBoard = document.querySelector("#pixel-board")
-pixel = document.querySelector(".pixel");
+pixel = document.querySelectorAll(".pixel");
+
 
 function apagaClass(){
 colorBlack.className = 'color';
@@ -43,3 +44,12 @@ colorGreen.addEventListener('click', function(){
     const selectedColor = document.querySelector('.selected').style.backgroundColor;
      event.target.style.backgroundColor = selectedColor;
     });
+
+//BONUS 1
+let botaoLimpa = document.querySelector('#clear-board');
+
+botaoLimpa.addEventListener('click', function(){
+ for (i=0; i < pixel.length; i++) {
+    pixel[i].style.backgroundColor = 'white';
+ }})
+
