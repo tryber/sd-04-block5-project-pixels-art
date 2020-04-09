@@ -2,36 +2,33 @@
 body{
     margin: 0;
     padding: 0;
-    text-align: center;
+   
 }
 
-#color-palette{
+.color-palette{
 
-    border: 3px solid black;
-    width: 425px;
-    height: 100px;
-    margin-left: 50px;
+    margin-left: 63px;
     display: flex;
     padding-left: 2px;
 }
 
-#pixel-board{
+.pixel-board{
     display: flex;
     margin-left: 50px;
 }
 
 .color{
-    width: 105px;
-    height: 95px;
+    height: 41px; /* pq tem a borda*/
+    width: 41px;
     padding-top: 5px;
-    border: 2px solid black;
-  
+    border: 1px solid black;
+
 }
 .pixel{
   
   border: 1px black solid;
-  height: 40px;
-  width: 40px;
-  margin: 1px black;
+  height: 41px;
+  width: 41px;
+  margin: 1px black; 
   
 }
