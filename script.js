@@ -14,10 +14,11 @@ colorTwo.style.backgroundColor = 'red';
 colorThree.style.backgroundColor = 'yellow';
 colorFour.style.backgroundColor = 'green';
 
-let choiceOne = null;
+let choiceOne = 'undefined';
 
-colorOne.addEventListener('click',function(e){
-choiceOne = e.target.backgroundColor;
+colorOne.addEventListener('click',function(event){
+choiceOne = event.target.backgroundColor;
+
 console.log(choiceOne);
 
 });
