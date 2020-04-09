@@ -26,7 +26,7 @@ function secondColorSelected() {
   if (color) {
     color.classList.remove('colorSelected');
     secondColor.classList.add('colorSelected');
-  } 
+  }
 }
 
 function thirdColorSelected() {
@@ -40,11 +40,11 @@ function fourthColorSelected() {
   if (color) {
     color.classList.remove('colorSelected');
     fourthColor.classList.add("colorSelected");
-  } 
+  }
 }
 
 const pixelBoard = document.getElementById('pixel-board');
 
-pixelBoard.addEventListener('click' function (changeColor) {
+pixelBoard.addEventListener('click', function(changeColor) {
   changeColor.target.style.backgroundColor = document.querySelector('.colorSelected').style.backgroundColor;
 })
