@@ -6,6 +6,7 @@
 }
 
 .color {
+  border: 1px solid black;
   border-radius: 20%;
   display: inline-block;
   height: 40px;
