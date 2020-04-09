@@ -23,21 +23,21 @@
 }
 
 .pixel {
-    width: 40px;
+    background-color: white;
+    border: 1px black solid;
+    display: inline-block;
     height: 40px;
-    display: block;
-    float:left;
-    margin: -5px -2px;
-    background-color: rgb(255, 255, 255);
-}
+    line-height: 0;
+    width: 40px;
+  }
 
-.pixel-board, .pixel {
-	border: 1px solid black;
-}
+  .pixel-board {
+    font-size: 0;
+  }
 
-#pixel-board {
+/* #pixel-board {
   height: 210px;
   width: 210px;
   margin-right: auto;
   margin-left: auto;
-}
+} */
