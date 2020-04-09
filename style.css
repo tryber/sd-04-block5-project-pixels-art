@@ -1,3 +1,4 @@
+
 #color-black{
     background-color: black;
 }
@@ -15,8 +16,8 @@
 }
 
 .color {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
     display: inline-block;
 }
@@ -34,9 +35,9 @@
 	border: 1px solid black;
 }
 
-.pixel-board {
-  height: 200px;
-  width: 200px;
+#pixel-board {
+  height: 210px;
+  width: 210px;
   margin-right: auto;
   margin-left: auto;
 }
