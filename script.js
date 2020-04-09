@@ -1,4 +1,3 @@
-const palette = document.querySelectorAll('.color');
 const firstColor = document.querySelectorAll('.color')[0];
 const secondColor = document.querySelectorAll('.color')[1];
 const thirdColor = document.querySelectorAll('.color')[2];
