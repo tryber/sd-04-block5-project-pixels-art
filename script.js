@@ -12,19 +12,6 @@ let var4 = colorBlack.style.backgroundColor = 'black';
 pixelBoard = document.querySelector("#pixel-board")
 pixel = document.querySelectorAll(".pixel");
 
-let arrayCores = [var1, var2, var3, var4];
-
-for (i=1; i < arrayCores.length; i++){
-    const corAleatoria1 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
-    const corAleatoria2 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
-    const corAleatoria3 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
-    cor1 = document.querySelector("#color-red");
-    cor2 = document.querySelector("#color-blue");
-    cor3 = document.querySelector("#color-green");
-    cor1.style.backgroundColor = corAleatoria1;
-    cor2.style.backgroundColor = corAleatoria2;
-    cor3.style.backgroundColor = corAleatoria3;
-}
 function apagaClass(){
 colorBlack.className = 'color';
 colorRed.className = 'color'; 
@@ -59,9 +46,38 @@ colorGreen.addEventListener('click', function(){
 
 //BONUS 1
 let botaoLimpa = document.querySelector('#clear-board');
-
 botaoLimpa.addEventListener('click', function(){
  for (i=0; i < pixel.length; i++) {
     pixel[i].style.backgroundColor = 'white';
  }})
 
+//BONUS 2
+ let arrayCores = [var1, var2, var3, var4];
+ for (i=01; i < arrayCores.length; i++){
+     const corAleatoria1 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+     const corAleatoria2 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+     const corAleatoria3 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+     cor1 = document.querySelector("#color-red");
+     cor2 = document.querySelector("#color-blue");
+     cor3 = document.querySelector("#color-green");
+ 
+     cor1.style.backgroundColor = corAleatoria1;
+     cor2.style.backgroundColor = corAleatoria2;
+     cor3.style.backgroundColor = corAleatoria3;
+ };
+
+ let btnGenerateBoard = document.querySelector('#generate-board');
+ let inputBoard = document.querySelector('#board-size');
+
+ btnGenerateBoard.addEventListener('click', function(){
+     
+
+     let qtdQuadrados = inputBoard.value;
+
+     for(i=0;i < (qtdQuadrados*qtdQuadrados); i++){
+        let divPixel = document.createElement('div');
+        divPixel.setAttribute('class', 'pixel')
+        pixelBoard.appendChild(divPixel)
+     }
+
+ })

@@ -36,8 +36,7 @@
   }
 
 /* #pixel-board {
-  height: 210px;
-  width: 210px;
+  max-width: 30%;
   margin-right: auto;
   margin-left: auto;
 } */
