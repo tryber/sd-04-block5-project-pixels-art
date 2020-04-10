@@ -13,16 +13,6 @@ window.onload = () => {
     event.target.style.backgroundColor = selected.style.backgroundColor;
   });
 
-  let clear = document.getElementById('clear-board');
-  let pixels2 = document.querySelectorAll('.pixel');
-  console.log(pixels2);
-
-  clear.addEventListener('click', function () {
-    for (let i = 0; i < pixels2.length; i += 1) {
-      pixels2[i].style.backgroundColor = 'white';
-    }
-  });
-
   let generateButton = document.getElementById('generate-board')
   generateButton.addEventListener('click', boardSize);
 
@@ -41,6 +31,17 @@ window.onload = () => {
       }
     }
   }
+  
+  let clear = document.getElementById('clear-board');
+  let pixels2 = document.querySelectorAll('.pixel');
+  console.log(pixels2);
+
+  clear.addEventListener('click', function () {
+    for (let i = 0; i < pixels2.length; i += 1) {
+      pixels2[i].style.backgroundColor = 'white';
+    }
+  });
+
     randomColors();
     function randomColors() {
       for (let i = 2; i <= 4; i += 1) {
