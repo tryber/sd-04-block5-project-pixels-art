@@ -11,10 +11,14 @@ const tabCustom = document.getElementById('pixel-board');
 const butCustom = document.getElementById('generate-board');
 
 function colorization() {
+  let color1 = Math.floor(Math.random()*256);
+  let color2 = Math.floor(Math.random()*256); 
+  let color3 = Math.floor(Math.random()*256);
+
   colBlack.style.backgroundColor = colBlack.id;
-  colGroup[1].style.backgroundColor = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
-  colGroup[2].style.backgroundColor = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
-  colGroup[3].style.backgroundColor = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
+  colGroup[1].style.backgroundColor = 'rgb(' + color1 + ' , ' + color2 + ' , ' + color3 + ')';
+  colGroup[2].style.backgroundColor = 'rgb(' + color2 + ' , ' + color3 + ' , ' + color1 + ')';
+  colGroup[3].style.backgroundColor = 'rgb(' + color3 + ' , ' + color1 + ' , ' + color2 + ')';
 }
 
 function insertPixels(v) {
@@ -28,12 +32,6 @@ function insertPixels(v) {
     }
   }
 }
-
-// function randomizeColors() {
-//   for (i = 1; i <= 3; i += 1) {
-//     colGroup[i].id = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
-//   }
-// }
 
 // ------------------
 // Funções de eventos
@@ -107,5 +105,4 @@ butCustom.addEventListener('click', createPixels);
 
 window.onload = function () {
   colorization();
-  randomizeColors();
 };
