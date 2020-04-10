@@ -33,8 +33,7 @@
 .pixel {
   height: 40px;
   width: 40px;
-}
-.pixel-board table tr td{
-    border: 1px solid rgb(0 , 0 , 0);    
+  border: 1px solid rgb(0 , 0 , 0); 
+  background-color: white;
 }
 
