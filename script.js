@@ -4,20 +4,14 @@ window.onload = function(){
 
     let pixels = document.querySelector(".pixel");
 
+
 //VAIÁVEIS DAS CORES DA PALETA
     let colorOne = document.querySelector("#color1");
     let colorTwo = document.querySelector("#color2");
     let colorThree = document.querySelector("#color3");
     let colorFour = document.querySelector("#color4");
-    
+
     let pixelBoard = document.querySelector(".pixel-board");
-
-    pixels.addEventListener('change', function(){
-        pixels.style.backgroundColor='white';
-        console.log(pixels.style.backgroundColor);
-    });
-
-    let selectedColor = document.querySelector(".selected");
 
 //ESCOLHENDO AS CORES DA PALETA    
     colorOne.style.backgroundColor = 'black';
@@ -47,6 +41,8 @@ pixelBoard.addEventListener('click', function(event){
 //FUNÇÕES DE SELEÇÃO DE CORES CONFORME CLICK
     colorOne.addEventListener('click',function(event){
         var choiceOne = event.target.style.backgroundColor;
+        document.querySelector(".selected").classList.remove("selected");
+        colorOne.classList.add("selected");
     
         console.log(choiceOne);
      
@@ -60,6 +56,8 @@ pixelBoard.addEventListener('click', function(event){
 
     colorTwo.addEventListener('click',function(event){
         var choiceOne = event.target.style.backgroundColor;
+        document.querySelector(".selected").classList.remove("selected");
+        colorTwo.classList.add("selected");
     
         console.log(choiceOne);
      
@@ -73,6 +71,8 @@ pixelBoard.addEventListener('click', function(event){
 
     colorThree.addEventListener('click',function(event){
         var choiceOne = event.target.style.backgroundColor;
+        document.querySelector(".selected").classList.remove("selected");
+        colorThree.classList.add("selected");
     
         console.log(choiceOne);
      
@@ -86,6 +86,8 @@ pixelBoard.addEventListener('click', function(event){
 
     colorFour.addEventListener('click',function(event){
         var choiceOne = event.target.style.backgroundColor;
+        document.querySelector(".selected").classList.remove("selected");
+        colorFour.classList.add("selected");
     
         console.log(choiceOne);
      
