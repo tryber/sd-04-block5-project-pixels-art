@@ -11,12 +11,12 @@ const tabCustom = document.getElementById('pixel-board');
 const butCustom = document.getElementById('generate-board');
 
 function colorization() {
-  let color1 = Math.floor(Math.random() * 256);
-  let color2 = Math.floor(Math.random() * 256);
-  let color3 = Math.floor(Math.random() * 256);
+  const color1 = Math.floor(Math.random() * 256);
+  const color2 = Math.floor(Math.random() * 256);
+  const color3 = Math.floor(Math.random() * 256);
 
   colBlack.style.backgroundColor = colBlack.id;
-  colGroup[1].id = 'rgb(' + color1 + ' , ' + color2 + ' , ' + color3 + ')';
+  colGroup[1].id = `rgb(${color1} , ${color2} , ${color3})`;
   colGroup[2].id = 'rgb(' + color2 + ' , ' + color3 + ' , ' + color1 + ')';
   colGroup[3].id = 'rgb(' + color3 + ' , ' + color1 + ' , ' + color2 + ')';
 
