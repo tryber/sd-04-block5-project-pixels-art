@@ -40,18 +40,18 @@ function createPixels() {
 
   while (tabCustom.firstChild) {
     tabCustom.removeChild(tabCustom.firstChild);
-  };
+  }
 
-  if (inpValue < 5) {inpValue = 5;}
-  if (inpValue > 50) {inpValue = 50;}
+  if (inpValue < 5) { inpValue = 5; }
+  if (inpValue > 50) { inpValue = 50; }
 
   for (i = 1; i <= inpValue; i += 1) {
-    let elmTr = document.createElement('tr');
+    const elmTr = document.createElement('tr');
 
     for (j = 1; j <= inpValue; j += 1) {
-      let elmTd = document.createElement('td');     
-      elmTd.className = 'pixel-custom';      
-      
+      const elmTd = document.createElement('td');
+      elmTd.className = 'pixel-custom';
+
       elmTr.appendChild(elmTd);
       tabCustom.appendChild(elmTr);
     }
