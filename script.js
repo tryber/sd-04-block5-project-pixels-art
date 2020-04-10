@@ -29,6 +29,14 @@ function insertPixels(v) {
   }
 }
 
+function addEventInPixCustom() {
+  const pixGroupCustom = document.getElementsByClassName('pixel-custom');
+
+  for (i = 0; i < pixGroupCustom.length; i += 1) {
+    pixGroupCustom[i].addEventListener('click', colSelected);
+  }
+} 
+
 // -----------------
 // Funções de eventos
 
@@ -67,6 +75,7 @@ function createPixels() {
   if (inpValue > 50) { inpValue = 50; }
 
   insertPixels(inpValue);
+  addEventInPixCustom();
 }
 
 // -----------------
