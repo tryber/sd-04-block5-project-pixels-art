@@ -5,10 +5,16 @@ const clearBoard = document.querySelector('.clear-board');
 const boardSize = document.querySelector('.board-size');
 const pixelBoard = document.querySelector('.pixel-board');
 const generateBoard = document.querySelector('.generate-board');
-
+const pallete = document.querySelector('.color-pallete');
 
 // Color pallete
 colorPallete.forEach((element) => {
+  for (let i = 0; i < 5; i += 1) {
+    element.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  }
+
+  pallete.firstElementChild.style.backgroundColor = 'black';
+
   element.addEventListener('click', () => {
     colorPallete.forEach((color) => {
       color.classList.remove('selected');
