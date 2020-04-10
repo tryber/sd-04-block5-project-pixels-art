@@ -1,6 +1,5 @@
 body {
   background: rgb(124, 97, 243);
-  font: normal 15pt Arial;
 }
 
 header {
@@ -9,15 +8,14 @@ header {
 }
 
 section {
-
   margin-left: 30%;
-
-  width: auto;}
+  width: auto;
+}
 
 footer {
   color: white;
-  margin: 10% 43%;
   font-style: italic;
+  margin: 10% 43%;
   text-align: center;
 }
 
@@ -26,9 +24,9 @@ footer {
 }
 
 .color {
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0, 363);
+  box-shadow: 3px 3px 10px black;
   float: left;
   height: 40px;
   margin: auto;
@@ -56,13 +54,13 @@ footer {
   display: flex;
   flex-flow: row wrap;
   margin-top: 110px;
-  width: 200px;
+  width: 400px;
 }
 
 .pixel {
-  border: 1px solid rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  height: 5px;
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
   padding: 15px;
-  width: 5px;
+  width: 40px;
 }
