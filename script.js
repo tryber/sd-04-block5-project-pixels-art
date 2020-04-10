@@ -36,18 +36,11 @@ clearBoard.addEventListener('click', () => {
   });
 });
 
-// Check input value
-function checkInputValue() {
-  let sizeInput;
-  if (boardSize.value <= 5) sizeInput = 5;
-  else if (boardSize.value >= 50) sizeInput = 50;
-
-  return sizeInput;
-}
-
 // Create board
 generateBoard.addEventListener('click', () => {
-  const sizeInput = checkInputValue();
+  let sizeInput = boardSize.value;
+  if (boardSize.value <= 5) sizeInput = 5;
+  else if (boardSize.value >= 50) sizeInput = 50;
 
   while (pixelBoard.firstChild) {
     pixelBoard.removeChild(pixelBoard.lastChild);
