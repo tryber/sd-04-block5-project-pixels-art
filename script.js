@@ -22,7 +22,7 @@ function insertPixels(v) {
     const elmTr = document.createElement('tr');
     for (j = 1; j <= v; j += 1) {
       const elmTd = document.createElement('td');
-      elmTd.className = 'pixel-custom';
+      elmTd.className = 'pixel';
       elmTr.appendChild(elmTd);
       tabCustom.appendChild(elmTr);
     }
@@ -60,7 +60,7 @@ function cleanPainting() {
 // Função de adição de eventos
 
 function addEventInPixCustom() {
-  const pixGroupCustom = document.getElementsByClassName('pixel-custom');
+  const pixGroupCustom = document.getElementsByClassName('pixel');
 
   for (i = 0; i < pixGroupCustom.length; i += 1) {
     pixGroupCustom[i].addEventListener('click', colSelected);
