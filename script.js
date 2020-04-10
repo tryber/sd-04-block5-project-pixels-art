@@ -1,9 +1,9 @@
 let i;
 let j;
 const colBlack = document.getElementById('black');
-const colRed = document.getElementById('red');
-const colBlue = document.getElementById('blue');
-const colGreen = document.getElementById('green');
+// const colRed = document.getElementById('red');
+// const colBlue = document.getElementById('blue');
+// const colGreen = document.getElementById('green');
 const colGroup = document.getElementsByClassName('color');
 const pixGroup = document.getElementsByClassName('pixel');
 const butClean = document.getElementById('clear-board');
@@ -12,9 +12,9 @@ const butCustom = document.getElementById('generate-board');
 
 function colorization() {
   colBlack.style.backgroundColor = colBlack.id;
-  colRed.style.backgroundColor = colRed.id;
-  colBlue.style.backgroundColor = colBlue.id;
-  colGreen.style.backgroundColor = colGreen.id;
+  colGroup[1].style.backgroundColor = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
+  colGroup[2].style.backgroundColor = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
+  colGroup[3].style.backgroundColor = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
 }
 
 function insertPixels(v) {
@@ -28,6 +28,12 @@ function insertPixels(v) {
     }
   }
 }
+
+// function randomizeColors() {
+//   for (i = 1; i <= 3; i += 1) {
+//     colGroup[i].id = 'rgb(' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ' , ' + Math.floor(Math.random()*256) + ')';
+//   }
+// }
 
 // ------------------
 // Funções de eventos
@@ -101,4 +107,5 @@ butCustom.addEventListener('click', createPixels);
 
 window.onload = function () {
   colorization();
+  randomizeColors();
 };
