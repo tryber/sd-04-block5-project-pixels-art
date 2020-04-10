@@ -31,11 +31,9 @@ window.onload = () => {
       }
     }
   }
-  
-  let clear = document.getElementById('clear-board');
-  let pixels2 = document.querySelectorAll('.pixel');
-  console.log(pixels2);
 
+  let clear = document.getElementById('clear-board');
+  let pixels2 = document.getElementsByClassName('pixel');
   clear.addEventListener('click', function () {
     for (let i = 0; i < pixels2.length; i += 1) {
       pixels2[i].style.backgroundColor = 'white';
@@ -51,8 +49,4 @@ window.onload = () => {
         document.getElementById(`color${i}`).style.backgroundColor = 'rgb(' + r + ',' + b + ',' + g + ')';
       }
     }
-
-
-
-
 }
