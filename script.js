@@ -10,6 +10,8 @@ const butClean = document.getElementById('clear-board');
 const tabCustom = document.getElementById('pixel-board-custom');
 const butCustom = document.getElementById('generate-board');
 
+// console.log(inpValue);
+
 function colorization() {
   colBlack.style.backgroundColor = colBlack.id;
   colRed.style.backgroundColor = colRed.id;
@@ -40,8 +42,11 @@ function createPixels() {
   while (tabCustom.firstChild) {
     tabCustom.removeChild(tabCustom.firstChild);
   }
-  if (inpValue < 5) { inpValue = 5; }
-  if (inpValue > 50) { inpValue = 50; }
+  if (inpValue < 5) {
+    inpValue = 5;
+  } else if (inpValue > 50) {
+    inpValue = 50;
+  }
   for (i = 1; i <= inpValue; i += 1) {
     const elmTr = document.createElement('tr');
     for (j = 1; j <= inpValue; j += 1) {
