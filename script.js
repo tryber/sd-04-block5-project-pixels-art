@@ -1,9 +1,6 @@
 let i;
 let j;
 const colBlack = document.getElementById('black');
-// const colRed = document.getElementById('red');
-// const colBlue = document.getElementById('blue');
-// const colGreen = document.getElementById('green');
 const colGroup = document.getElementsByClassName('color');
 const pixGroup = document.getElementsByClassName('pixel');
 const butClean = document.getElementById('clear-board');
@@ -17,8 +14,8 @@ function colorization() {
 
   colBlack.style.backgroundColor = colBlack.id;
   colGroup[1].id = `rgb(${color1} , ${color2} , ${color3})`;
-  colGroup[2].id = 'rgb(' + color2 + ' , ' + color3 + ' , ' + color1 + ')';
-  colGroup[3].id = 'rgb(' + color3 + ' , ' + color1 + ' , ' + color2 + ')';
+  colGroup[2].id = `rgb(${color2} , ${color3} , ${color1})`;
+  colGroup[3].id = `rgb(${color3} , ${color1} , ${color2})`;
 
   colGroup[1].style.backgroundColor = colGroup[1].id;
   colGroup[2].style.backgroundColor = colGroup[2].id;
@@ -75,8 +72,8 @@ function addEventInPixCustom() {
   }
 }
 
-// --------------------------
-// Função de eventos + adição
+// -------------------------------------
+// Função de eventos + adição de eventos
 
 function createPixels() {
   let inpValue = document.getElementById('board-size').value;
