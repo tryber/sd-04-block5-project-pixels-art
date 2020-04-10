@@ -22,4 +22,36 @@ window.onload = () => {
       pixels2[i].style.backgroundColor = 'white';
     }
   });
+
+  let generateButton = document.getElementById('generate-board')
+  generateButton.addEventListener('click', boardSize);
+
+  function boardSize() {
+    let pixelBody = document.getElementById('pixel-body');
+    let sizeValue = document.getElementById('board-size').value;
+    pixelBody.innerHTML = '';
+    for (let j = 1; j <= sizeValue; j += 1) {
+      let tr = document.createElement('tr');
+      pixelBody.appendChild(tr);
+      for (let k = 1; k <= sizeValue; k += 1) {
+        let td = document.createElement('td');
+        td.className = 'pixel';
+        let trFind = document.querySelectorAll('tr');
+        trFind[j].appendChild(td);
+      }
+    }
+  }
+    randomColors();
+    function randomColors() {
+      for (let i = 2; i <= 4; i += 1) {
+        let r = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+        let g = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+        let b = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+        document.getElementById(`color${i}`).style.backgroundColor = 'rgb(' + r + ',' + b + ',' + g + ')';
+      }
+    }
+
+
+
+
 }

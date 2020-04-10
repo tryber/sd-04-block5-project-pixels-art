@@ -22,11 +22,15 @@
     </tbody>
   </table>
   <form>
+    <label for="board-size">Board size (between 5 and 50 pixels):</label><br>
+    <input type="number" id="board-size" name="board-size" min="5" max="50">
+    <button type="button" id="generate-board">Generate board</button>
     <button type="button" id="clear-board">Clear board</button>
+
   </form>
   <h2>Pixel Board:</h2>
   <table class="pixel-board" id="pixel-board">
-    <tbody>
+    <tbody id='pixel-body'>
       <tr>
         <td class="pixel"></td>
         <td class="pixel"></td>
