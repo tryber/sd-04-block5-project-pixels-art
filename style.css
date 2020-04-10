@@ -1,13 +1,4 @@
-body {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-main {
-  height: 500px;
-  margin: 0px auto;
-  width: 800px;
-}
+
 #color-pallete {
   display: flex;
   text-align: center;
