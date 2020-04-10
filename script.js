@@ -25,9 +25,9 @@ function clickPaint(pixel) {
 }
 
 // Board painting
-  pixels.forEach((pixel) => {
-    clickPaint(pixel);
-  });
+pixels.forEach((pixel) => {
+  clickPaint(pixel);
+});
 
 // Clear board
 clearBoard.addEventListener('click', () => {
@@ -41,18 +41,17 @@ clearBoard.addEventListener('click', () => {
 generateBoard.addEventListener('click', () => {
   const sizeInput = boardSize.value;
 
-  while(pixelBoard.firstChild) {
+  while (pixelBoard.firstChild) {
     pixelBoard.removeChild(pixelBoard.lastChild);
   }
 
-  for(let size = 0; size < sizeInput*sizeInput; size++) {
+  for (let size = 0; size < sizeInput * sizeInput; size += 1) {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
     clickPaint(pixel);
     pixelBoard.appendChild(pixel);
-  };
+  }
 
-  pixelBoard.style.display = 'grid';
   pixelBoard.style.gridTemplateColumns = `repeat(${sizeInput}, 40px)`;
   pixelBoard.style.gridTemplateRows = `repeat(${sizeInput}, 40px)`;
 });
