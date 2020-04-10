@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(159, 194, 194);
+}
+
+.col-pal {
+  border-spacing: 5px;
+}
+
+.pix-boa {
+  border-collapse: collapse;
+}
+
+.color {
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 41px;
+  width: 41px;
+}
+
+button {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
