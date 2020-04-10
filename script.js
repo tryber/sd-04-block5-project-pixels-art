@@ -28,8 +28,7 @@ window.onload = function ()
             {
                 let ele = document.createElement('div');
                 ele.setAttribute('class', 'pixel');
-                console.log(ele);
-                console.log(painel);
+                ele.style.backgroundColor = 'white';
                 painel.appendChild(ele);
             }            
         }
