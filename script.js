@@ -16,25 +16,25 @@ window.onload = function () {
   blackColor.addEventListener("click", function () {
     document.querySelector(".selected").classList.remove("selected");
     blackColor.classList.add("selected");
-    console.log(document.querySelector('.selected').style.backgroundColor);
+    // console.log(document.querySelector('.selected').style.backgroundColor);
   });
 
   redColor.addEventListener("click", function () {
     document.querySelector(".selected").classList.remove("selected");
     redColor.classList.add("selected");
-    console.log(document.querySelector('.selected').style.backgroundColor);
+    // console.log(document.querySelector('.selected').style.backgroundColor);
   });
 
   blueColor.addEventListener("click", function () {
     document.querySelector('.selected').classList.remove("selected");
     blueColor.classList.add("selected");
-    console.log(document.querySelector('.selected').style.backgroundColor);
+    // console.log(document.querySelector('.selected').style.backgroundColor);
   });
 
   greenColor.addEventListener("click", function () {
     document.querySelector('.selected').classList.remove("selected");
     greenColor.classList.add("selected");
-    console.log(document.querySelector('.selected').style.backgroundColor);
+    // console.log(document.querySelector('.selected').style.backgroundColor);
   });
 
   //variavel guarda as divs com a classe pixel
