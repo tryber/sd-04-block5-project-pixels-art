@@ -9,23 +9,23 @@
 </head>
 
 <body>
-  <header>
-    <h1 id="title">Paleta de Cores</h1>
-  </header>
-  <section>
-    <div id="color-palette">
-      <div class="color selected preto"></div>
-      <div class="color vermelho"></div>
-      <div class="color azul"></div>
-      <div class="color amarelo"></div>
-    </div>
-  </section>
-  <br><br>
-  <input id ="board-size"></input>
-  <button id ="generate-board">Clique para gerar tabela</button>
-  <br><br>
-  <section>
-    <div>
+  <div class="corpo">
+    <header>
+      <h1 id="title">Paleta de Cores</h1>
+    </header>
+    <section>
+      <div id="color-palette">
+        <div class="color selected preto"></div>
+        <div class="color vermelho"></div>
+        <div class="color azul"></div>
+        <div class="color amarelo"></div>
+      </div>
+    </section>
+    <br><br>
+    <input id="board-size"></input>
+    <button id="generate-board">Clique para gerar tabela</button>
+    <br><br>
+    <center>
       <table id="pixel-board">
         <tr>
           <td class="pixel"></td>
@@ -63,10 +63,9 @@
           <td class="pixel"></td>
         </tr>
       </table>
-    </div>
-  </section>
-  <button id="clear-board">clear</button>
+      <button id="clear-board">clear</button>
+    </center>
+  </div>
   <script src="script.js"></script>
 </body>
-
 </html>

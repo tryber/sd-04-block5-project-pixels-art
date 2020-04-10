@@ -10,11 +10,16 @@
   background-color: white;
   border: 1px solid black;
   border-spacing: 0;
-  display: inline-block;
   height: 40px;
   margin: auto;
   padding: 0;
   width: 40px;
+}
+
+.corpo {
+  height: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 /* .preto {
