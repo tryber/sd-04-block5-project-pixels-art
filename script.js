@@ -40,6 +40,7 @@ window.onload = function () {
   //variavel guarda as divs com a classe pixel
   let squareSelect = document.querySelectorAll(".pixel");
 
+  // função preenche os pixels com as cores
   function fillPixel(i) {
     squareSelect[i].addEventListener("click", function () {
       let colorSelected = document.querySelector('.selected');
@@ -49,5 +50,10 @@ window.onload = function () {
   }
   for (let i = 0; i < squareSelect.length; i++) {
     fillPixel(i);
-  }
+  };
+
+  // função para limpar os pixels preenchidos
+
+
+
 };
