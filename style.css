@@ -15,6 +15,11 @@
   height: 50px;
   margin: 10px;
   width: 50px;
+  cursor: pointer;
+}
+
+.color:hover {
+  border: 1px solid white;
 }
 
 .color:first-child {
@@ -40,9 +45,10 @@
 }
 
 .pixel-board {
-  display: grid;
-  grid-template-columns: 40px 40px 40px 40px 40px;
-  grid-template-rows: 40px 40px 40px 40px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .pixel {
@@ -66,6 +72,20 @@ button {
   font-weight: 700;
   padding: 20px;
   text-transform: uppercase;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 20px;
+  background-color: black;
+  border: 1px solid white;
+  font-size: 1.3rem;
+  color: white;
+  text-align: center;
 }
 
 body {
