@@ -7,7 +7,7 @@ const colGreen = document.getElementById('green');
 const colGroup = document.getElementsByClassName('color');
 const pixGroup = document.getElementsByClassName('pixel');
 const butClean = document.getElementById('clear-board');
-const tabCustom = document.getElementById('pixel-board-custom');
+const tabCustom = document.getElementById('pixel-board');
 const butCustom = document.getElementById('generate-board');
 
 function colorization() {
