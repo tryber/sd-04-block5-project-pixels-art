@@ -29,7 +29,7 @@ function insertPixels(v) {
   }
 }
 
-// -----------------
+// ------------------
 // Funções de eventos
 
 function colSelected(e) {
@@ -55,6 +55,20 @@ function cleanPainting() {
     pixGroup[i].style.backgroundColor = 'white';
   }
 }
+
+// ---------------------------
+// Função de adição de eventos
+
+function addEventInPixCustom() {
+  const pixGroupCustom = document.getElementsByClassName('pixel-custom');
+
+  for (i = 0; i < pixGroupCustom.length; i += 1) {
+    pixGroupCustom[i].addEventListener('click', colSelected);
+  }
+}
+
+// --------------------------
+// Função de eventos + adição
 
 function createPixels() {
   let inpValue = document.getElementById('board-size').value;
@@ -84,14 +98,6 @@ for (i = 0; i < colGroup.length; i += 1) {
 butClean.addEventListener('click', cleanPainting);
 
 butCustom.addEventListener('click', createPixels);
-
-function addEventInPixCustom() {
-  const pixGroupCustom = document.getElementsByClassName('pixel-custom');
-
-  for (i = 0; i < pixGroupCustom.length; i += 1) {
-    pixGroupCustom[i].addEventListener('click', colSelected);
-  }
-}
 
 window.onload = function () {
   colorization();
