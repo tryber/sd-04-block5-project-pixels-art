@@ -20,6 +20,8 @@ window.onload = () => {
     let pixelBody = document.getElementById('pixel-body');
     let sizeValue = document.getElementById('board-size').value;
     pixelBody.innerHTML = '';
+    if (sizeValue < 5) sizeValue = 5;
+    if (sizeValue > 50) sizeValue = 50;
     for (let j = 1; j <= sizeValue; j += 1) {
       let tr = document.createElement('tr');
       pixelBody.appendChild(tr);
@@ -34,19 +36,20 @@ window.onload = () => {
 
   let clear = document.getElementById('clear-board');
   let pixels2 = document.getElementsByClassName('pixel');
+
   clear.addEventListener('click', function () {
     for (let i = 0; i < pixels2.length; i += 1) {
       pixels2[i].style.backgroundColor = 'white';
     }
   });
 
-    randomColors();
-    function randomColors() {
-      for (let i = 2; i <= 4; i += 1) {
-        let r = Math.floor(Math.random() * (255 - 0 + 1) + 0);
-        let g = Math.floor(Math.random() * (255 - 0 + 1) + 0);
-        let b = Math.floor(Math.random() * (255 - 0 + 1) + 0);
-        document.getElementById(`color${i}`).style.backgroundColor = 'rgb(' + r + ',' + b + ',' + g + ')';
-      }
+  randomColors();
+  function randomColors() {
+    for (let i = 2; i <= 4; i += 1) {
+      let r = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+      let g = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+      let b = Math.floor(Math.random() * (255 - 0 + 1) + 0);
+      document.getElementById(`color${i}`).style.backgroundColor = 'rgb(' + r + ',' + b + ',' + g + ')';
     }
+  }
 }
