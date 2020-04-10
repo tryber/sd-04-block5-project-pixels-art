@@ -31,9 +31,10 @@
   width: 40px;
 }
 .pixel {
-  border: 1px solid rgb(0 , 0 , 0);
   height: 40px;
   width: 40px;
-  border: 1px solid rgb(0 , 0 , 0);
+}
+.pixel-board table tr td{
+    border: 1px solid rgb(0 , 0 , 0);    
 }
 
