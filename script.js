@@ -11,14 +11,18 @@ const tabCustom = document.getElementById('pixel-board');
 const butCustom = document.getElementById('generate-board');
 
 function colorization() {
-  let color1 = Math.floor(Math.random()*256);
-  let color2 = Math.floor(Math.random()*256); 
-  let color3 = Math.floor(Math.random()*256);
+  let color1 = Math.floor(Math.random() * 256);
+  let color2 = Math.floor(Math.random() * 256);
+  let color3 = Math.floor(Math.random() * 256);
 
   colBlack.style.backgroundColor = colBlack.id;
-  colGroup[1].style.backgroundColor = 'rgb(' + color1 + ' , ' + color2 + ' , ' + color3 + ')';
-  colGroup[2].style.backgroundColor = 'rgb(' + color2 + ' , ' + color3 + ' , ' + color1 + ')';
-  colGroup[3].style.backgroundColor = 'rgb(' + color3 + ' , ' + color1 + ' , ' + color2 + ')';
+  colGroup[1].id = 'rgb(' + color1 + ' , ' + color2 + ' , ' + color3 + ')';
+  colGroup[2].id = 'rgb(' + color2 + ' , ' + color3 + ' , ' + color1 + ')';
+  colGroup[3].id = 'rgb(' + color3 + ' , ' + color1 + ' , ' + color2 + ')';
+
+  colGroup[1].style.backgroundColor = colGroup[1].id;
+  colGroup[2].style.backgroundColor = colGroup[2].id;
+  colGroup[3].style.backgroundColor = colGroup[3].id;
 }
 
 function insertPixels(v) {
