@@ -24,4 +24,12 @@ body {
 
 button {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pixel-custom {
+  background-color: white;
+  border: 1px solid black;
+  height: 15px;
+  width: 15px;
 }
