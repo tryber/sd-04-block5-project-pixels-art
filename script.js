@@ -52,8 +52,15 @@ window.onload = function () {
     fillPixel(i);
   };
 
+  // variavel guarda botao de limpar a classe pixel
+  let btnClear = document.getElementById("clear-board");
+
   // função para limpar os pixels preenchidos
-
-
+  btnClear.addEventListener("click",function () {
+      for (let i = 0; i < squareSelect.length; i++) {
+          squareSelect[i].style.backgroundColor = "white";
+      }
+    
+  })
 
 };
