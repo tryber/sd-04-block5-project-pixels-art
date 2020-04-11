@@ -6,9 +6,9 @@
 
 .color-palette{
   border: 1px solid;
-  height: 50px; 
+  height: 50px;
   list-style-type: none;
-  width: 200px;    
+  width: 200px;
 }
 
 .color-palette #color-black{
@@ -27,11 +27,28 @@
   background-color: yellow;
 }
 
-li{
+.color-palette li{
+  display: inline-block;
   border: 1px solid;
-  display: inline-block;  
 }
 
-.color-palette li div{
-  display: block;
+.pixel{
+  height: 40px;
+  width: 40px;
+  margin: 1px;
+}
+
+.pixel-board{
+  border: 1px solid;
+  height: 260px;
+  width: 500px;
+}
+
+.pixel-board li{
+  display: inline-block;
+  border: 1px solid;
+}
+
+.pixel-board ul{
+  margin: 1px;
 }
