@@ -18,6 +18,7 @@ h1 {
 }
 
 .pixel {
+  display: inline-block;
   height: 40px;
   width: 40px;
   background-color: rgb(255, 255, 255);
@@ -25,8 +26,6 @@ h1 {
 }
 
 #pixel-board {
-  display: flex;
-  flex-flow: row;
   margin: auto;
   width: max-content;
   height: max-content;

@@ -5,19 +5,24 @@ window.onload = function() {
 
 function createPixelBoard() {
   let pixelBoard = document.getElementById("pixel-board");
-  let finish = 0
+  let finish = 0;
+  for(let i=0; i<5; i+=1){
   if(finish<4){
     for(let i=0; i<5; i+=1){
-      let row = document.createElement("div");
-      pixelBoard.appendChild(row);
-      }
-      pixelBoard.appendChild("br")
+      let pixel = document.createElement("div");
+      pixel.setAttribute("class", "pixel");      
+      pixelBoard.appendChild(pixel);
+    }
+      let br = document.createElement("br");
+      pixelBoard.appendChild(br);
       finish += 1;
   } else {
     for(let i=0; i<5; i+=1){
-      let row = document.createElement("div");
-      pixelBoard.appendChild(row);
+      let pixel = document.createElement("div");
+      pixel.setAttribute("class", "pixel")
+      pixelBoard.appendChild(pixel);
       }
+    }
   }
 }
 
@@ -27,7 +32,6 @@ function createPalette() {
   for(let i=0; i<4; i+=1){
     let colorUnit = document.createElement("div");
     colorUnit.setAttribute("class", "color");
-    console.log(colorUnit);
     colorPalette.appendChild(colorUnit);
   }
 
