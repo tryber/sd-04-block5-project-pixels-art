@@ -51,15 +51,16 @@ const tabela = document.getElementsByTagName('table');
 generateBoard.addEventListener('click', function () {
   tabela[0].innerHTML = '';
   let size = boardSize.value;
-  if (size > 50) {
+  if (size > 50) 
     size = 50;
-  } else if (size < 5) {
+   else if (size < 5) 
     size = 5;
-  }
-  for (let i = 0; i < boardSize.value; i += 1) {
+  
+  console.log(size)
+  for (let i = 0; i < size; i += 1) {
     const tr = document.createElement('tr');
     tabela[0].appendChild(tr);
-    for (let j = 0; j < boardSize.value; j += 1) {
+    for (let j = 0; j < size; j += 1) {
       const td = document.createElement('td');
       td.className = 'pixel';
       tr.appendChild(td);
