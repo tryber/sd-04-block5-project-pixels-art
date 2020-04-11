@@ -69,15 +69,44 @@ botaoLimpa.addEventListener('click', function(){
  let btnGenerateBoard = document.querySelector('#generate-board');
  let inputBoard = document.querySelector('#board-size');
 
- btnGenerateBoard.addEventListener('click', function(){
-     
 
+ function deletePixel(){
+
+ }
+
+ function deletePixelGerado(divPixel){
+    for(i = 0; i < divPixel.length; i++){
+       pixelBoard.removeChild(divPixel[i])
+    }
+}
+
+ btnGenerateBoard.addEventListener('click', function(){
+    console.log(pixel)
+    pixel = document.querySelectorAll(".pixel");
+    for(i = 0; i < pixel.length; i++){
+       pixelBoard.removeChild(pixel[i])
+    }
      let qtdQuadrados = inputBoard.value;
 
+     if (qtdQuadrados < 5) {
+        qtdQuadrados = 5;
+      } else if (qtdQuadrados > 50) {
+        qtdQuadrados = 50;
+      }
+     
+     let qtdQuadrad1 = qtdQuadrados * 40;
+     let qtdQuadrad2 =  qtdQuadrados * 2;
+    
+     const ladoQuadrado = qtdQuadrad1 + qtdQuadrad2;
+ 
+
+     pixelBoard.style.height = `${ladoQuadrado}px`;
+     pixelBoard.style.width = `${ladoQuadrado}px`;
+
      for(i=0;i < (qtdQuadrados*qtdQuadrados); i++){
-        let divPixel = document.createElement('div');
-        divPixel.setAttribute('class', 'pixel')
-        pixelBoard.appendChild(divPixel)
-     }
+        let pixel = document.createElement('div');
+        pixel.setAttribute('class', 'pixel')
+        pixelBoard.appendChild(pixel)
+     }   
 
  })
