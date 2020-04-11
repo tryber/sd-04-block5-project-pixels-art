@@ -17,33 +17,16 @@ h1 {
   border: 1px solid rgb(0, 0, 0);
 }
 
-.row {
-  display: flex;
-  flex-flow: row;
-  border-top: 1px black solid;
-  border-left: 1px black solid;
-  width: max-content;
-}
-
-.lastRow {
-  border-top: 1px black solid;
-  border-bottom: 1px black solid;
-  border-left: 1px black solid;
-  display: flex;
-  flex-flow: row;
-  width: max-content;
-}
-
 .pixel {
-  border-right: 1px black solid;
   height: 40px;
   width: 40px;
   background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
 }
 
 #pixel-board {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   margin: auto;
   width: max-content;
   height: max-content;
