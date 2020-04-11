@@ -53,3 +53,7 @@
 .pixel-board ul{
   margin: 1px;
 }
+
+.selected .color:first-child{
+  background-color: rgb(0,0,0);
+}
