@@ -4,29 +4,29 @@ h1 {
 }
 
 #color-palette {
-  width: max-content;
-  margin: auto;
   display: flex;
   flex-flow: row;
+  margin: auto;
+  width: max-content;
 }
 
 .color {
+  border: 1px solid rgb(0, 0, 0);
   height: 10px;
   margin: 10px;
   width: 35px;
-  border: 1px solid rgb(0, 0, 0);
 }
 
 .pixel {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
   display: inline-block;
   height: 40px;
   width: 40px;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);
 }
 
 #pixel-board {
+  height: max-content;
   margin: auto;
   width: max-content;
-  height: max-content;
 }

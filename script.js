@@ -10,7 +10,7 @@ function createPixelBoard() {
   if(finish<4){
     for(let i=0; i<5; i+=1){
       let pixel = document.createElement("div");
-      pixel.setAttribute("class", "pixel");      
+      pixel.setAttribute("class", "pixel");
       pixelBoard.appendChild(pixel);
     }
       let br = document.createElement("br");
@@ -26,10 +26,9 @@ function createPixelBoard() {
   }
 }
 
-
 function createPalette() {
   let colorPalette = document.getElementById("color-palette");
-  for(let i=0; i<4; i+=1){
+  for(let i = 0; i < 4; i += 1){
     let colorUnit = document.createElement("div");
     colorUnit.setAttribute("class", "color");
     colorPalette.appendChild(colorUnit);
@@ -40,5 +39,4 @@ function createPalette() {
   childs[2].style.backgroundColor = "blue";
   childs[3].style.backgroundColor = "yellow";
   childs[4].style.backgroundColor = "green";
-
 }
