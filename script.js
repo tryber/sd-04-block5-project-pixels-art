@@ -1,8 +1,3 @@
-window.onload = function() {
-  createPalette()
-  createPixelBoard();
-};
-
 function createPixelBoard() {
   let pixelBoard = document.getElementById("pixel-board");
   let finish = 0;
@@ -36,7 +31,55 @@ function createPalette() {
 
   let childs = colorPalette.childNodes;
   childs[1].style.backgroundColor = "black";
+  childs[1].classList.add("selected");
   childs[2].style.backgroundColor = "blue";
   childs[3].style.backgroundColor = "yellow";
   childs[4].style.backgroundColor = "green";
 }
+
+function addEvtPixels(painter){
+  var painter = painter;
+  let pixelCollection = document.getElementsByClassName("pixel");
+  for(let i = 0; i < pixelCollection.length; i+=1){
+    pixelCollection[i].addEventListener("click", function(evt){ painter.paint(evt); });
+  }
+}
+
+function addEvtPalette(){
+  let paletteCollection = document.getElementsByClassName("color");
+  for(let i = 0; i < paletteCollection.length; i+=1){
+    paletteCollection[i].addEventListener("click", function(evt){ select(evt, paletteCollection); });
+  }
+}
+
+function select(evt, paletteCollection){
+  for(let i = 0; i < paletteCollection.length; i += 1){
+  paletteCollection[i].classList.remove("selected");
+  }
+  evt.target.classList.add("selected");
+}
+
+function createPainter(){
+  let painter = {
+    color: null,
+    selectedColor(){
+      this.color = document.getElementsByClassName("selected");    
+    },
+    peekColor(){
+      console.log(this.color[0].style.backgroundColor);
+    },
+    paint(evt){
+      evt.target.style.backgroundColor = this.color[0].style.backgroundColor;
+    }
+  }
+  return painter;
+}
+
+
+createPalette();
+addEvtPalette();
+createPixelBoard();
+let marquinhos = new createPainter();
+marquinhos.selectedColor();
+addEvtPixels(marquinhos);
+
