@@ -1,0 +1,44 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 100px;
+  padding: 10px 5px 15px 15px;
+  width: 100px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  border-spacing: 0;
+  height: 40px;
+  margin: auto;
+  padding: 0;
+  width: 40px;
+}
+
+.corpo {
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+/* .preto {
+  background-color: black;
+}
+
+.vermelho {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.amarelo {
+  background-color: yellow;
+} */
+
+table {
+  border-spacing: 0;
+  padding: 0;
+}
