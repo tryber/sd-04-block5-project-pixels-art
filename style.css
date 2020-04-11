@@ -24,14 +24,14 @@ footer {
 }
 
 .color {
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 10px;
   box-shadow: 3px 3px 10px black;
   float: left;
-  height: 40px;
+  height: 60px;
   margin: auto;
-  padding: 15px;
-  width: 40px;
+  padding: 35px;
+  width: 35px;
 }
 
 .preto {
@@ -39,15 +39,15 @@ footer {
 }
 
 .verde {
-  background: rgb(4, 243, 44);
+  background: green;
 }
 
 .laranja {
-  background: rgb(241, 119, 4);
+  background: orange;
 }
 
 .amarelo {
-  background: rgb(247, 222, 3);
+  background: yellow;
 }
 
 .quadro {
@@ -63,4 +63,8 @@ footer {
   height: 40px;
   padding: 15px;
   width: 40px;
+}
+
+.selected {
+  cursor: pointer;
 }
