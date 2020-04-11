@@ -1,45 +1,34 @@
-  let preto = document.querySelector('.preto');
-  let verde = document.querySelector('.verde');
-  let laranja = document.querySelector('.laranja');
-  let amarelo = document.querySelector('.amarelo');
+  const preto = document.querySelector('.preto');
+  const verde = document.querySelector('.verde');
+  const laranja = document.querySelector('.laranja');
+  const amarelo = document.querySelector('.amarelo');
 
-  let cor = document.querySelector('.selected');
+  const cor = document.querySelector('.selected');
 
-    preto.addEventListener('click', function() {
+  preto.addEventListener('click', function () {
+    this.classList.add('selected');
+    cor.style.backgroundColor = 'black';
+  });
 
-    this.classList.add("selected")
-    cor.style.backgroundColor = "black";
-    
-  })
+  verde.addEventListener('click', function () {
+    this.classList.add('selected');
+    cor.style.backgroundColor = 'green';
+  });
 
-  verde.addEventListener('click', function() {
+  laranja.addEventListener('click', function () {
+    this.classList.add('selected');
+    cor.style.backgroundColor = 'orange';
+  });
 
-    this.classList.add("selected")
-    cor.style.backgroundColor = "green";
-    
-  })
+  amarelo.addEventListener('click', function () {
+    this.classList.add('selected');
+    cor.style.backgroundColor = 'yellow';
+  });
 
-  laranja.addEventListener('click', function() {
+  const pixels = document.getElementsByClassName('pixel');
 
-    this.classList.add("selected")
-    cor.style.backgroundColor = "orange";
-    
-  })
-
-  amarelo.addEventListener('click', function() {
-
-    this.classList.add("selected")
-    cor.style.backgroundColor = "yellow";
-    
-  })
-
-  let pixels = document.getElementsByClassName("pixel");
-
-  for(var i = 0; i < pixels.length; i++){
-
-  pixels[i].addEventListener("click", function() {
-    this.classList.add("selected")
-
-  })
+  for(let i = 0; i < pixels.length; i+=) {
+      pixels[i].addEventListener("click", function () {
+      this.classList.add("selected");
+    });
   }
- 
