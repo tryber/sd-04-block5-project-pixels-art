@@ -1,0 +1,37 @@
+.color{
+  border: 1px solid;
+  height: 40px;
+  width: 40px;
+}
+
+.color-palette{
+  border: 1px solid;
+  height: 50px; 
+  list-style-type: none;
+  width: 200px;    
+}
+
+.color-palette #color-black{
+  background-color: black;
+}
+
+.color-palette #color-red{
+  background-color: red;
+}
+
+.color-palette #color-green{
+  background-color: green;
+}
+
+.color-palette #color-yellow{
+  background-color: yellow;
+}
+
+li{
+  border: 1px solid;
+  display: inline-block;  
+}
+
+.color-palette li div{
+  display: block;
+}
