@@ -27,7 +27,7 @@
 
   const pixels = document.getElementsByClassName('pixel');
 
-  for(let i = 0; i < pixels.length; i+=) {
+  for(let i = 0; i < pixels.length; i++) {
       pixels[i].addEventListener("click", function () {
       this.classList.add("selected");
     });
