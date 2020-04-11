@@ -51,19 +51,22 @@ botaoLimpa.addEventListener('click', function(){
     pixel[i].style.backgroundColor = 'white';
  }})
 
+ function sortColor(){
+    // const corAleatoria1 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+    // const randoColorTwo = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+    // const randoColorGreen = arrayCores[Math.floor(Math.random() * arrayCores.length)];
+    const randoColorRed = Number.parseInt(Math.random() * 255, 10);
+    const randoColorBlue = Number.parseInt(Math.random() * 255, 10);
+    const randoColorGreen = Number.parseInt(Math.random() * 255, 10);
+    colorRed.style.backgroundColor = `rgb(${randoColorGreen},${randoColorRed},${randoColorBlue})`;
+    colorBlue.style.backgroundColor = `rgb(${randoColorBlue},${randoColorRed},${randoColorGreen})`;
+    colorGreen.style.backgroundColor = `rgb(${randoColorRed},${randoColorGreen},${randoColorRed})`;
+ };
+
 //BONUS 2
  let arrayCores = [var1, var2, var3, var4];
- for (i=01; i < arrayCores.length; i++){
-     const corAleatoria1 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
-     const corAleatoria2 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
-     const corAleatoria3 = arrayCores[Math.floor(Math.random() * arrayCores.length)];
-     cor1 = document.querySelector("#color-red");
-     cor2 = document.querySelector("#color-blue");
-     cor3 = document.querySelector("#color-green");
- 
-     cor1.style.backgroundColor = corAleatoria1;
-     cor2.style.backgroundColor = corAleatoria2;
-     cor3.style.backgroundColor = corAleatoria3;
+ for (i = 1; i < arrayCores.length; i++){
+    sortColor()
  };
 
  let btnGenerateBoard = document.querySelector('#generate-board');
