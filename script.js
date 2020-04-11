@@ -1,7 +1,8 @@
-let colors, corSelecionada, pixels;
+let colors, corSelecionada, pixels, btnTrash;
 
 colors = document.getElementsByClassName("color");
 pixels = document.getElementsByClassName("pixel");
+btnTrash = document.querySelector("#clear-board");
 
 colors[0].style.backgroundColor = "black";
 colors[1].style.backgroundColor = "red";
@@ -20,5 +21,11 @@ for (let i = 0; i < colors.length; i += 1) {
 for (let i = 0; i < pixels.length; i += 1) {
   pixels[i].addEventListener("click", function () {
     pixels[i].style.backgroundColor = corSelecionada; //colore os pixels com a cor selecionada
+  });
+};
+
+for (let i = 0; i < pixels.length; i += 1) {
+  btnTrash.addEventListener("click", function () {
+    pixels[i].style.backgroundColor = ""; //desfaz os pixels pintados
   });
 };
