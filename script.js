@@ -7,8 +7,11 @@ colors[1].style.backgroundColor = "red";
 colors[2].style.backgroundColor = "yellow";
 colors[3].style.backgroundColor = "blue";
 
+//Requisitos 7 e 8
 for (let i = 0; i < colors.length; i += 1) {
   colors[i].addEventListener("click", function () {
-    corSelecionada = colors[i].style.backgroundColor;
+    document.querySelector(".selected").classList.remove("selected"); //remove o .select da cor selecionada
+    colors[i].classList.add("selected"); // adiciona .selected na nova cor selecionada
+    corSelecionada = colors[i].style.backgroundColor; //ao selecionar a cor essa passa seu valor para corSelecionada
   });
 };
