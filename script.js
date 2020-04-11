@@ -6,7 +6,7 @@ window.onload = function ()
     const buttonCor4 = document.getElementById('color-block3');
     const painel = document.getElementById('pixel-board');
     let corAtual = 0;
-
+    
     IniciaPaleta();
     IniciaPainel(5, 5);
 
@@ -45,6 +45,10 @@ window.onload = function ()
                 let elemento = document.createElement('div');
                 elemento.setAttribute('class', 'pixel');
                 elemento.style.backgroundColor = 'white';
+                elemento.addEventListener('click', function(event) 
+                {
+                    Pintar(event);
+                });
                 painel.appendChild(elemento);
             }            
         }
@@ -89,6 +93,27 @@ window.onload = function ()
         {
             buttonCor4.className = 'color selected';
         }
-        console.log(corAtual);
+    }
+
+    function Pintar(event)
+    {
+        let cor;
+        if(corAtual === 0)
+        {
+            cor = buttonCor1.style.backgroundColor;
+        }
+        else if(corAtual === 1)
+        {
+            cor = buttonCor2.style.backgroundColor;
+        }
+        else if(corAtual === 2)
+        {
+            cor = buttonCor3.style.backgroundColor;
+        }
+        else if(corAtual === 3)
+        {
+            cor = buttonCor4.style.backgroundColor;
+        }
+        event.target.style.backgroundColor = cor;
     }
 }; 
