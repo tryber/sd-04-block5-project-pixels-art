@@ -51,12 +51,11 @@ const tabela = document.getElementsByTagName('table');
 generateBoard.addEventListener('click', function () {
   tabela[0].innerHTML = '';
   let size = boardSize.value;
-  if (size > 50) 
+  if (size > 50) {
     size = 50;
-   else if (size < 5) 
+  } else if (size < 5) {
     size = 5;
-  
-  console.log(size)
+  }
   for (let i = 0; i < size; i += 1) {
     const tr = document.createElement('tr');
     tabela[0].appendChild(tr);
