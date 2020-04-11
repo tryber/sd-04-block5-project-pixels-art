@@ -12,10 +12,8 @@
 #pixel-board {
   border-collapse: collapse;
 }
-th.pixel {
-  background-color: rgb(255, 255, 255);
-}
 .pixel {
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(0, 0, 0);
   width: 41px;
   height: 41px;
