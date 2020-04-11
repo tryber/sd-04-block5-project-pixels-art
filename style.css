@@ -35,8 +35,10 @@
     font-size: 0;
   }
 
-/* #pixel-board {
+#pixel-board {
   max-width: 30%;
+  width: 210px;
+  height: 210px;
   margin-right: auto;
   margin-left: auto;
-} */
+}
