@@ -8,6 +8,7 @@
 
 
 #color-palette{
+    padding: 2px;
     height: 60px;
     width: 400px;
 }
@@ -20,7 +21,7 @@
 }
 
 .pixel-board{
-    width: 300;
+    width: 200px;
     height: 250px;
 }
 
