@@ -1,0 +1,40 @@
+body{
+    text-align:center;
+}
+.color{ 
+    height: 35px;
+    width: 35px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    display: inline-flex;
+}
+.pixel{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin-left: -4px
+}
+.line{
+    margin-top: -5px;
+}
+.pixel{
+    background-color: white;
+}
+.container-button{
+    margin: 10px;
+}
+button{
+    background-color: rgb(68, 94, 109); 
+    border: none;
+    color: white;
+    margin-right: 50px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px
+}
+button:focus{
+    background-color: grey;
+}
