@@ -1,14 +1,21 @@
-const sectionPalette = document.getElementById('color-palette');
-const sectionBoard = document.getElementById('pixel-board');
-const selectedColor = document.querySelector('.selected');
-selectedColor.innerHTML = 'black';
+    const sectionPalette = document.getElementById('color-palette');
+    const sectionBoard = document.getElementById('pixel-board');
+    const paletteColor = document.getElementsByClassName('color');
+    const setColors = ['black', 'red', 'yellow', 'green'];
 
-function checkColor(e) {
-  selectedColor.innerHTML = e.target.className;
-}
-sectionPalette.addEventListener('click', checkColor);
+    for (let i = 0; i < paletteColor.length; i += 1) {
+      paletteColor[i].style.backgroundColor = setColors[i];
+    }
 
-function changeColor(e) {
-  e.target.className = selectedColor.innerHTML;
-}
-sectionBoard.addEventListener('click', changeColor);
+    function changeColor(e) {
+      document.querySelector('.selected').classList.remove('selected');
+      e.target.classList.add('selected');
+    };
+    sectionPalette.addEventListener('click', changeColor)
+
+    function setColor(e) {
+      const selectedColor = document.querySelector('.selected');
+      e.target.style.backgroundColor = selectedColor.style.backgroundColor;
+    };
+    sectionBoard.addEventListener('click', setColor);
+    

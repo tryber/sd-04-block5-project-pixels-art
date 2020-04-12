@@ -1,36 +1,27 @@
-div {
+.color {
+  background-color: black;
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
 
-.black {
-  background-color: black;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.color {
-  border: 1px solid black;
-}
-
-.grid-colors {
-  display: grid;
-  grid-template-columns: repeat(5, 40px);
-  grid-template-rows: repeat(5, 40px);
+.color-palette {
+  height: 40px;
+  padding-bottom: 15px;
+  width: 100%;
 }
 
 .pixel {
-  background-color: white;  /* border: 1px solid black; */
+  background: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
 
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: yellow;
+.pixel-board {
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(5, 40px);
+  grid-template-rows: repeat(5, 40px);
 }
