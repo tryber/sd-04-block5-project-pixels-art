@@ -14,8 +14,6 @@ window.onload = function(){
     })
 
 }
-
-
 //loop to clear all pixels
 let clearboard = document.querySelector("#clear-board"); 
     clearboard.addEventListener('click',function(event){
@@ -26,7 +24,35 @@ let clearboard = document.querySelector("#clear-board");
 })
 
 
-}
+} // END window.onload = function()
+
+	//Loop to creat the square board pixel
+	const pixelBoard = document.querySelector('#pixel-board');
+	//let boardsized = document.getElementById('board-sized');
+	const generateBoard = document.querySelector('#generate-board');
+	let n = 0; 
+	function myFunction() {
+		n = document.querySelector('#board-size').value;
+		if (n < 5) n = 5;
+		if (n > 50) n = 50;
+		document.getElementById('pixel-board').innerHTML = ""; 
+		for (i = 0; i < n; i += 1){
+			const divlineElement = document.createElement('div');
+			divlineElement.className = "line";
+			pixelBoard.appendChild(divlineElement);
+			for (j = 0; j < n; j += 1){
+				const divLine = document.querySelectorAll('.line');
+				const divPixelElement = document.createElement('div');
+				divPixelElement.className = "pixel";
+				divLine[i].appendChild(divPixelElement);
+			}
+		}
+
+
+
+
+	}
+
 let pixels = document.querySelectorAll(".pixel"); 
 //loop to add color to clicked pixel
 for (let i=0; i<pixels.length; i+=1){
@@ -34,8 +60,7 @@ for (let i=0; i<pixels.length; i+=1){
         let selectedcolor = document.querySelector(".selected");
         let colorsValueClassSelected = selectedcolor.style.backgroundColor;
         pixels[i].style.backgroundColor = colorsValueClassSelected;
-        console.log("color class selected:", colorsValueClassSelected);
-
+        // console.log("color class selected:", colorsValueClassSelected);
+        // console.log("pixels", pixels);
 })
-
 }
