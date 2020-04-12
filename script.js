@@ -1,4 +1,15 @@
-window.onload = function(){
+window.onload = function() {
+function aleatoire(num){
+	num = Math.round(Math.random()*255);
+	return num;
+}
+let colorSelector = document.querySelectorAll('.color');
+// console.log(aleatoire);
+for (let i = 1; i<4; i += 1){
+	let color1 = 'rgb('+ aleatoire() + ',' + aleatoire() + ','+ aleatoire() +')';
+colorSelector[i].style.backgroundColor = color1;
+}
+
     let colors = document.querySelectorAll(".color"); 
     for (let i=0; i<colors.length; i+=1){
     colors[i].addEventListener('click',function(event){
@@ -55,14 +66,3 @@ document.body.addEventListener('click', function (event) {
 		event.target.style.backgroundColor = colorsValueClassSelected;
 	}
 })
-
-// for (let i=0; i<pixels.length; i+=1){
-//     pixels[i].addEventListener('click',function(event){
-//         let selectedcolor = document.querySelector(".selected");
-//         let colorsValueClassSelected = selectedcolor.style.backgroundColor;
-//         pixels[i].style.backgroundColor = colorsValueClassSelected;
-//         console.log("color class selected:", colorsValueClassSelected);
-//         console.log("pixels", pixels);
-//         console.log('Hello');
-// })
-// }
