@@ -6,31 +6,41 @@ window.onload = function ()
     const buttonCor4 = document.getElementById('color-block3');
     const painel = document.getElementById('pixel-board');
     const zerar = document.getElementById('clear-board');
+    const newPainel = document.getElementById('board-size'); 
+    const buttonPainel = document.getElementById('generate-board'); 
     let corAtual = 0;
+    let coLinAtual = 5;
+    let coLinFutura = 0;
     
     IniciaPaleta();
-    IniciaPainel(5, 5);
+    IniciaPainel(coLinAtual, coLinAtual);
 
     buttonCor1.addEventListener('click', function() 
     {
         TrocaCor(event, 0);
-    })
+    });
     buttonCor2.addEventListener('click', function() 
     {
         TrocaCor(event, 1);
-    })
+    });
     buttonCor3.addEventListener('click', function() 
     {
         TrocaCor(event, 2);
-    })
+    });
     buttonCor4.addEventListener('click', function() 
     {
         TrocaCor(event, 3);
-    })
+    });
     zerar.addEventListener('click', function() 
     {
         LimpaTudo();
-    })
+    }); 
+    buttonPainel.addEventListener('click', function ()
+    {
+        console.log("oq aconteceu");
+        TiraPainel(parseInt(newPainel.value));
+    });
+  
 
     function IniciaPaleta() 
     {
@@ -124,7 +134,7 @@ window.onload = function ()
 
     function LimpaTudo()
     {
-        for (let i = 0; i < 25; i++)
+        for (let i = 0; i < (coLinAtual * coLinAtual); i++)
         {
             painel.childNodes[i].style.backgroundColor  = 'white';
         }
@@ -145,5 +155,34 @@ window.onload = function ()
             }
         }
         return cor;
+    }
+
+    function TiraPainel(elemento)
+    {
+        
+        if(elemento >= 0)
+        {
+            for (let i = 0; i < coLinAtual; i++)
+            {
+                for (let y = 0; y < coLinAtual; y++) 
+                {
+                    painel.removeChild(painel.firstChild);
+                }
+            }
+            if(elemento < 5)
+            {
+                coLinFutura = 5;
+            }
+            else if(elemento > 50)
+            {
+                coLinFutura = 50;
+            }
+            else
+            {
+                coLinFutura = elemento;
+            }
+            IniciaPainel(coLinFutura, coLinFutura);
+            coLinAtual = coLinFutura;
+        }   
     }
 }; 
