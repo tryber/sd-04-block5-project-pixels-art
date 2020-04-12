@@ -14,10 +14,9 @@ window.onload = function () {
   for (let c = 0; c < 4; c += 1) {
     for (let i = 0; i < 25; i += 1) {
       color[c].addEventListener('click', function () {
-        color[c].classList.remove('selected')
+        
         color[c-1].classList.remove('selected')
-        color[c-2].classList.remove('selected')
-        color[c-3].classList.remove('selected')
+        
         theCSSprop = window.getComputedStyle(color[c], null).getPropertyValue('background-color');
         pixel[i].addEventListener('click', function () {
           this.style.backgroundColor = theCSSprop;
