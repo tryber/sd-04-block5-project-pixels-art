@@ -1,0 +1,70 @@
+body {
+  background: rgb(124, 97, 243);
+}
+
+header {
+  color: white;
+  text-align: center;
+}
+
+section {
+  margin-left: 30%;
+  width: auto;
+}
+
+footer {
+  color: white;
+  font-style: italic;
+  margin: 10% 43%;
+  text-align: center;
+}
+
+.titulo {
+  color: red;
+}
+
+.color {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0, 363);
+  float: left;
+  height: 40px;
+  margin: auto;
+  padding: 15px;
+  width: 40px;
+}
+
+.preto {
+  background: black;
+}
+
+.verde {
+  background: green;
+}
+
+.laranja {
+  background: orange;
+}
+
+.amarelo {
+  background: yellow;
+}
+
+.quadro {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 110px;
+  width: 400px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  padding: 15px;
+  width: 40px;
+}
+
+.selected {
+  cursor: pointer;
+}
