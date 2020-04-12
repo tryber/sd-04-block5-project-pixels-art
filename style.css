@@ -1,35 +1,30 @@
-.color 
-{
+.color {
   border: 1px solid black;
   display: inline-block;
   height: 65px;
   width: 65px;
 }
 
-.pixel
-{
+.pixel {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
 }
 
-.pixel-board
-{
+.pixel-board {
+  line-height: 0;
   margin: 20px 20px 20px 20px ;
-  line-height: 0px;
 }
 
-.selected
-{
+.selected {
   border: 1px solid black;
   display: inline-block;
   height: 65px;
   width: 65px;
 }
 
-.generate-board, .clear-board
-{
+.generate-board, .clear-board {
   height: 30px;
   width: 50px;
 }

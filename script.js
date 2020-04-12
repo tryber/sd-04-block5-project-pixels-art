@@ -1,5 +1,5 @@
 window.onload = function () {
-    const buttonCor1 = document.getElementById('black-color');
+  const buttonCor1 = document.getElementById('black-color');
     const buttonCor2 = document.getElementById('color-block1');
     const buttonCor3 = document.getElementById('color-block2');
     const buttonCor4 = document.getElementById('color-block3');
@@ -146,4 +146,4 @@ window.onload = function () {
             coLinAtual = coLinFutura;
         }
     }
-}; 
+};
