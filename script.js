@@ -5,6 +5,7 @@ window.onload = function ()
     const buttonCor3 = document.getElementById('color-block2');
     const buttonCor4 = document.getElementById('color-block3');
     const painel = document.getElementById('pixel-board');
+    const zerar = document.getElementById('clear-board');
     let corAtual = 0;
     
     IniciaPaleta();
@@ -25,6 +26,10 @@ window.onload = function ()
     buttonCor4.addEventListener('click', function() 
     {
         TrocaCor(event, 3);
+    })
+    zerar.addEventListener('click', function() 
+    {
+        LimpaTudo();
     })
 
     function IniciaPaleta() 
@@ -115,5 +120,13 @@ window.onload = function ()
             cor = buttonCor4.style.backgroundColor;
         }
         event.target.style.backgroundColor = cor;
+    }
+
+    function LimpaTudo()
+    {
+        for (let i = 0; i < 25; i++)
+        {
+            painel.childNodes[i].style.backgroundColor  = 'white';
+        }
     }
 }; 
