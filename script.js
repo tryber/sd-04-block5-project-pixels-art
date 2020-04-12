@@ -6,29 +6,29 @@
   const cor = document.querySelector('.selected');
 
   preto.addEventListener('click', function () {
-    this.classList.add('selected');
+    preto.classList.add('selected');
     cor.style.backgroundColor = 'black';
   });
 
   verde.addEventListener('click', function () {
-    this.classList.add('selected');
+    verde.classList.add('selected');
     cor.style.backgroundColor = 'green';
   });
 
   laranja.addEventListener('click', function () {
-    this.classList.add('selected');
+    laranja.classList.add('selected');
     cor.style.backgroundColor = 'orange';
   });
 
   amarelo.addEventListener('click', function () {
-    this.classList.add('selected');
+    amarelo.classList.add('selected');
     cor.style.backgroundColor = 'yellow';
   });
 
   const pixels = document.getElementsByClassName('pixel');
 
-  for(let i = 0; i < pixels.length; i++) {
-      pixels[i].addEventListener("click", function () {
-      this.classList.add("selected");
-    });
+  for (let i = 0; i < pixels.length; i+=) {
+    pixels[i].addEventListener('click', function () {
+      pixels[i].classList.add('selected');
+      });
   }
