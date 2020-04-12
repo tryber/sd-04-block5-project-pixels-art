@@ -35,9 +35,9 @@ window.onload = function ()
     function IniciaPaleta() 
     {
         buttonCor1.style.backgroundColor = 'black';
-        buttonCor2.style.backgroundColor = 'rgb(255,0,0)';
-        buttonCor3.style.backgroundColor = 'rgb(0,255,0)';
-        buttonCor4.style.backgroundColor = 'rgb(0,0,255)';
+        buttonCor2.style.backgroundColor = SorteiaCor(0, 255);
+        buttonCor3.style.backgroundColor = SorteiaCor(0, 255);
+        buttonCor4.style.backgroundColor = SorteiaCor(0, 255);
     }
 
     function IniciaPainel(linha, coluna)
@@ -128,5 +128,22 @@ window.onload = function ()
         {
             painel.childNodes[i].style.backgroundColor  = 'white';
         }
+    }
+
+    function SorteiaCor (min, max)
+    {
+        let cor = 'rgb(';
+        for (let i = 0; i < 3; i++) 
+        {
+            if(i != 2)
+            {
+                cor += (Math.floor(Math.random() * (max - min)) + min) + ',';
+            }
+            else
+            {
+                cor += (Math.floor(Math.random() * (max - min)) + min) + ')';
+            }
+        }
+        return cor;
     }
 }; 
