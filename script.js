@@ -4,15 +4,13 @@ const purple = document.getElementsByClassName('color')[1];
 const pink = document.getElementsByClassName('color')[2];
 const yellow = document.getElementsByClassName('color')[3];
 const clearButton = document.getElementById('clear-board');
-const cores = document.getElementById('color-palette').childNodes
 const pixel = [];
 for (let i = 0; i < 25; i += 1) {
   pixel[i] = document.getElementsByClassName('pixel')[i];
 }
 
-
 // Funçoes
-function saveColor(n, c) {
+function saveColor(n) {
   const color = n;
   localStorage.removeItem('color');
   localStorage.setItem('color', color);
@@ -35,28 +33,28 @@ window.onload = function () {
 
 // Criando os event Listener
 black.addEventListener('click', function () {
-  saveColor('black', 'black');
+  saveColor('black');
   black.className = 'color black selected';
   purple.className = 'color purple';
   pink.className = 'color pink';
   yellow.className = 'color yellow';
 });
 purple.addEventListener('click', function () {
-  saveColor('blueviolet', 'purple');
+  saveColor('blueviolet');
   purple.className = 'color purple selected';
   black.className = 'color black';
   pink.className = 'color pink';
   yellow.className = 'color yellow';
 });
 pink.addEventListener('click', function () {
-  saveColor('rgb(230, 47, 160)', 'pink');
+  saveColor('rgb(230, 47, 160)');
   pink.className = 'color pink selected';
   black.className = 'color black';
   purple.className = 'color purple';
   yellow.className = 'color yellow';
 });
 yellow.addEventListener('click', function () {
-  saveColor('yellow', 'yellow');
+  saveColor('yellow');
   yellow.className = ' color yellow selected';
   black.className = 'color black';
   pink.className = 'color pink';
