@@ -24,9 +24,9 @@ footer {
 }
 
 .color {
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0, 363);
+  box-shadow: 3px 3px 10px black;
   float: left;
   height: 40px;
   margin: auto;
