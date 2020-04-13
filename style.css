@@ -6,32 +6,23 @@
     margin-left: 15px;
     border: 1px solid black;
     display: inline-block;    
-    width: 10%;
-    height: 80px;
+    width: 40px;
+    height: 40px;
+    margin: 1px;
 }
 #red {
     background-color: red;
-    width: 40px;
-    height: 40px;
-    margin: 1px;
+   
 }
 #black {
     background-color: black;
-    width: 40px;
-    height: 40px;
-    margin: 1px;
+   
 }
 #blue {
     background-color: blue;
-    width: 40px;
-    height: 40px;
-    margin: 1px;
 }
 #green {
     background-color: green;
-    width: 40px;
-    height: 40px;
-    margin: 1px;
 }
 #pixel-board {
     width: auto;
