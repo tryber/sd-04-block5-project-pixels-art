@@ -1,5 +1,5 @@
 .btlimpa{
-  background-color: white;
+  background-color: rgb(221, 221, 221);
   position: relative;
   float: right;
   top: -240px;
@@ -42,7 +42,7 @@
 
 .pixel{
   border: 1px solid rgb(0,0,0);
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(221, 221, 221);
   height: 40px;
   width: 40px;
   margin: 1px;
@@ -63,6 +63,6 @@
 }
 
 .selected{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(221, 221, 221;
 }
 
