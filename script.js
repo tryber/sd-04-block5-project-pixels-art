@@ -9,6 +9,17 @@ let verde = document.querySelector("#color-green");
 let amarelo = document.querySelector("#color-yellow");
 let preto = document.querySelector("#color-black");
 
+function selecaoClasse()
+{
+  let cores = document.querySelectorAll(".color-palette");
+  for(var i=0; i < cores.length; i++)
+  {
+      cores[i].className = "selected";
+      console.log(cores[i]);
+  }
+}
+
+selecaoClasse();
 
 function capturaGrid(paleta){
   //Obtêm a cor selecionada na paleta de cores
