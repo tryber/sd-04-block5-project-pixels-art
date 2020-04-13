@@ -4,6 +4,24 @@
   display: inline-block;
   height: 90px;
   width: 90px;
+  margin-right: 10px;
+  float: left;
+}
+
+.pixel {
+  border: 0.5px solid black;
+  cursor: pointer;
+  float: left;
+  height: 90px;
+  width: 90px;
+  
+}
+.colorPallet {
+  padding-bottom: 10px;
+}
+
+.clear {
+  clear: both;
 }
 
 h1 {
