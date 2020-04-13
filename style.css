@@ -1,9 +1,52 @@
 .color {
-    width: 25px;
-    height: 25px;
+    border-color: black;
     border-style: solid;
     border-width: 1px;
-    border-color: black;
-    display: inline-block;
     clear: both;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
 }
+#pixel-board{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: 40px;
+}
+.pixel {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    height: 25px;
+    margin: 0px;
+    padding: 0px;
+    width: 25px;
+
+}
+.first {
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+.seccond {
+    display: inline-block;
+    position: relative;
+    top: -8px;
+}
+.third {
+    display: inline-block;
+    position: relative;
+    top: -12px;
+}
+.fourth {
+    display: inline-block;
+    position: relative;
+    top: -16px;
+}
+.fifth {
+    display: inline-block;
+    position: relative;
+    top: -20px;
+}
+
+
