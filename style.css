@@ -39,6 +39,7 @@ h1 {
 td {
   background: white;
   border: 1px solid black;
+  cursor: pointer;
   height: 41px;
   width: 41px;
 }
