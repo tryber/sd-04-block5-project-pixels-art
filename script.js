@@ -6,7 +6,7 @@ const selectedColor = document.querySelector('.selected');
 
 // Add and Remove the Class "Selected"
 palette.addEventListener('click', function(event) {
-  selectedColor.classList.remove('selected');
+  document.querySelector('.selected').classList.remove('selected');
   event.target.classList.add('selected');
 });
 
