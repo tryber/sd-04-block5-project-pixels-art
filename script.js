@@ -85,9 +85,9 @@ function createTable() {
 
 generateButton.addEventListener('click', () => {
   if (inputSize.value < 5 || inputSize.value > 50 || inputSize.value == null) {
-    if (inputSize.value < 5) inputSize.value = 5;
-    if (inputSize.value > 50) inputSize.value = 50;
-    if(inputSize.value == null) inputSize.value = 5;
+    if (inputSize.value < 5) inputSize.value = 5; createTable();
+    if (inputSize.value > 50) inputSize.value = 50; createTable();
+    if(inputSize.value == null) inputSize.value = 5; createTable();
     //alert('Insert a value between 5 and 50!');
   } else {
     createTable();
