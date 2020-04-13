@@ -7,7 +7,7 @@
     height: 25px;
     width: 25px;
 }
-#pixel-board{
+.pixel-board{
     margin: 0px;
     padding: 0px;
     position: relative;

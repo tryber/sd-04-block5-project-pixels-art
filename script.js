@@ -19,7 +19,7 @@ white.style.backgroundColor = "white";
 
 colorPalette.addEventListener("click",function(event){
     selected = event.target.id;
-    console.log(selected);
+    event.className = "selected"
 });
 
 pixelBoard.addEventListener("click", function(event){
@@ -27,4 +27,3 @@ pixelBoard.addEventListener("click", function(event){
     targetElement.style.backgroundColor = selected;
     console.log(targetElement);
 })
-
