@@ -1,7 +1,7 @@
 //ao carregar a página seleciona a cor preto 
 window.onload =function (){
     capturaGrid(preto);
-    coresAleatorios();
+    coresAleatorios()
 }
 
 //Obtêm as cores da paleta
@@ -53,12 +53,10 @@ btlimpa.addEventListener("click", function(){
 //Bônus -2 
 //Cores aleatórias
 function coresAleatorios(){
-  
-  var cores = ["#f36", "#C3C", "fc0", "#FC6", "#9C0"]; 
   let divCroes = document.querySelectorAll(".color");
-  for (var i = 0; i < 6; i++) {
-    divCroes[1].style.backgroundColor = cores[Math.floor(Math.random() * 32)];
-    divCroes[2].style.backgroundColor = cores[Math.floor(Math.random() * 32)];
-    divCroes[3].style.backgroundColor = cores[Math.floor(Math.random() * 32)];
-  }  
+  var cores = ["#f36", "#C3C", "fc0", "#FC6", "#9C0"]; 
+  let divCores = document.querySelectorAll(".color");
+  console.log(divCroes[0].style.backgroundColor= cores[Math.floor(Math.random() * 16)]);
+  console.log(divCroes[1].style.backgroundColor= cores[Math.floor(Math.random() * 16)]);
+  console.log(divCroes[2].style.backgroundColor= cores[Math.floor(Math.random() * 16)]); 
 }
