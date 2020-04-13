@@ -14,12 +14,12 @@ window.onload = function () {
   function SorteiaCor(min, max) {
     let cor = 'rgb(';
     for (let i = 0; i < 3; i++) {
-      if (i != 2) {
-        cor += (Math.floor(Math.random() * (max - min)) + min) + ',';
-      }
-      else {
-        cor += (Math.floor(Math.random() * (max - min)) + min) + ')';
-      }
+        if (i != 2) {
+            cor += (Math.floor(Math.random() * (max - min)) + min) + ',';
+        }
+        else {
+            cor += (Math.floor(Math.random() * (max - min)) + min) + ')';
+        }
     }
     return cor;
   }
@@ -27,16 +27,16 @@ window.onload = function () {
   function Pintar(event) {
     let cor;
     if (corAtual === 0) {
-      cor = buttonCor1.style.backgroundColor;
+        cor = buttonCor1.style.backgroundColor;
     }
     else if (corAtual === 1) {
-      cor = buttonCor2.style.backgroundColor;
+        cor = buttonCor2.style.backgroundColor;
     }
     else if (corAtual === 2) {
-      cor = buttonCor3.style.backgroundColor;
+        cor = buttonCor3.style.backgroundColor;
     }
     else if (corAtual === 3) {
-      cor = buttonCor4.style.backgroundColor;
+        cor = buttonCor4.style.backgroundColor;
     }
     event.target.style.backgroundColor = cor;
   }
@@ -86,40 +86,40 @@ window.onload = function () {
       buttonCor1.className = 'color selected';
     }
     else if (corFutura === 1) {
-      buttonCor2.className = 'color selected';
+        buttonCor2.className = 'color selected';
     }
     else if (corFutura === 2) {
-      buttonCor3.className = 'color selected';
+        buttonCor3.className = 'color selected';
     }
     else if (corFutura === 3) {
-      buttonCor4.className = 'color selected';
+        buttonCor4.className = 'color selected';
     }
   }
 
   function LimpaTudo() {
     for (let i = 0; i < (coLinAtual * coLinAtual); i++) {
-      painel.childNodes[i].style.backgroundColor = 'white';
+        painel.childNodes[i].style.backgroundColor = 'white';
     }
   }
 
   function TiraPainel(elemento) {
     if (elemento >= 0) {
-      for (let i = 0; i < coLinAtual; i++) {
-        for (let y = 0; y < coLinAtual; y++) {
-            painel.removeChild(painel.firstChild);
+        for (let i = 0; i < coLinAtual; i++) {
+            for (let y = 0; y < coLinAtual; y++) {
+                painel.removeChild(painel.firstChild);
+            }
         }
-      }
-      if (elemento < 5) {
-        coLinFutura = 5;
-      }
-      else if (elemento > 50) {
-        coLinFutura = 50;
-      }
-      else {
-        coLinFutura = elemento;
-      }
-      IniciaPainel(coLinFutura, coLinFutura);
-      coLinAtual = coLinFutura;
+        if (elemento < 5) {
+            coLinFutura = 5;
+        }
+        else if (elemento > 50) {
+            coLinFutura = 50;
+        }
+        else {
+            coLinFutura = elemento;
+        }
+        IniciaPainel(coLinFutura, coLinFutura);
+        coLinAtual = coLinFutura;
     }
   }
 
