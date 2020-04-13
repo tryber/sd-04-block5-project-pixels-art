@@ -1,5 +1,5 @@
 let select = document.getElementById('color-palette');
-let color ;
+let color = 'black';
 select.addEventListener("click",function(event){
     color = String(event.target.id);
     console.log(color);
