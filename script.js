@@ -10,6 +10,8 @@ purpleColor.style.background = 'purple';
 redColor.style.background = 'red';
 greenColor.style.background = 'green';
 
+
+
 clearBoard.addEventListener('click', function () {
   for (let i = 0; i < pixelBoard.length; i += 1) {
     pixelBoard[i].style.background = 'white';
@@ -45,3 +47,25 @@ for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = colorsSelected;
   });
 }
+
+const generateBoard = document.getElementById ('generate-board');
+
+generateBoard.addEventListener ('click', function(){
+  n = document.getElementById('board-size').value;
+  if (n < 5) n = 5;
+  if (n > 50) n = 50;
+  
+  document.getElementById ('pixel-board').innerHTML = "";
+  for (let i = 0; i < n; i += 1){
+    var trPixel = document.createElement('tr');
+    trPixel.classList.add('linha');
+      for (let j = 0; j < n; j += 1){
+        var tdPixel = document.createElement('td');
+        tdPixel.classList.add('pixel');
+        trPixel.appendChild(tdPixel);
+      }
+    
+      document.getElementById ('pixel-board').appendChild (trPixel);
+  }
+  
+})
