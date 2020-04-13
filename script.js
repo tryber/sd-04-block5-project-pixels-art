@@ -84,7 +84,7 @@ function criaPixels(qtdQuadrados) {
   }
 }
 btnGenerateBoard.addEventListener('click', function () {
-  // const pixel = document.querySelectorAll('.pixel');
+  pixel = document.querySelectorAll('.pixel');
   limpaPixel(); // Limpa Pixels anteriores
   let qtdQuadrados = inputBoard.value;
 
