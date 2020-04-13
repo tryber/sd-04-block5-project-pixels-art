@@ -12,41 +12,47 @@
     padding: 0px;
     position: relative;
     top: 40px;
+    width: 200px;
+    height: 200px;
 }
 .pixel {
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    height: 25px;
+    height: 38px;
     margin: 0px;
     padding: 0px;
-    width: 25px;
+    width: 38px;
+    background-color: white;
 
 }
 .first {
     display: inline-block;
     position: relative;
-    top: -4px;
+    top: 0px;
 }
 .seccond {
     display: inline-block;
     position: relative;
-    top: -8px;
+    top: -4px;
 }
 .third {
     display: inline-block;
     position: relative;
-    top: -12px;
+    top: -8px;
 }
 .fourth {
     display: inline-block;
     position: relative;
-    top: -16px;
+    top: -12px;
 }
 .fifth {
     display: inline-block;
     position: relative;
-    top: -20px;
+    top: -16px;
+}
+body{
+    background-color: turquoise;
 }
 
 
