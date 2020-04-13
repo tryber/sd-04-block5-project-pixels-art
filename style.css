@@ -8,6 +8,7 @@
 
 .color {
   border: 1px solid black;
+  cursor: pointer;
   height: 40px;
   margin: 5px;
   width: 40px;
@@ -15,7 +16,7 @@
 
 /* Colors */
 .aqua {
-  background: aquamarine;
+  background: aqua;
 }
 
 .black {
@@ -36,7 +37,7 @@ h1 {
 }
 
 td {
-  background: rgb(255, 255, 255);
+  background: white;
   border: 1px solid black;
   height: 41px;
   width: 41px;
