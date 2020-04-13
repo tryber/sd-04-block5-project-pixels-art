@@ -14,13 +14,9 @@ window.onload = function () {
 
   function SorteiaCor(min, max) {
     let cor = 'rgb(';
-    for (let i = 0; i < 3; i++) {
-      if (i !== 2) {
-        cor += (Math.floor(Math.random() * (max - min)) + min) + ',';
-      }
-      else {
-        cor += (Math.floor(Math.random() * (max - min)) + min) + ')';
-      }
+    for (let i = 0; i < 3; i += 1) {
+      if (i !== 2) cor += (Math.floor(Math.random() * (max - min)) + min) + ',';
+      else cor += (Math.floor(Math.random() * (max - min)) + min) + ')';
     }
     return cor;
   }

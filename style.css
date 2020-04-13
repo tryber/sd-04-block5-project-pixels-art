@@ -14,7 +14,7 @@
 
 .pixel-board {
   line-height: 0;
-  margin: 20px 20px 20px 20px ;
+  margin: 20px;
 }
 
 .selected {
@@ -24,7 +24,7 @@
   width: 65px;
 }
 
-.generate-board, .clear-board {
+.generate-board , .clear-board {
   height: 30px;
   width: 50px;
 }
