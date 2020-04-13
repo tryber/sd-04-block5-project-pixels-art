@@ -1,28 +1,29 @@
 const blackColor = document.getElementById('black');
-const purpleColor = document.getElementById('purple');
-const redColor = document.getElementById('red');
-const greenColor = document.getElementById('green');
+const color1 = document.getElementById('color1');
+const color2 = document.getElementById('color2');
+const color3 = document.getElementById('color3');
 const clearBoard = document.getElementById('clear-board');
 const pixelBoard = document.getElementsByClassName('pixel');
 
+function randomColor (){
+  const hexa = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i += 1){
+    color += hexa[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 blackColor.style.background = 'black';
-purpleColor.style.background = 'purple';
-redColor.style.background = 'red';
-greenColor.style.background = 'green';
-
-
+color1.style.background = randomColor();
+color2.style.background = randomColor();
+color3.style.background = randomColor();
 
 clearBoard.addEventListener('click', function () {
   for (let i = 0; i < pixelBoard.length; i += 1) {
     pixelBoard[i].style.background = 'white';
   }
 });
-
-function saveColor(n) {
-  const color = n;
-  localStorage.removeItem('color');
-  localStorage.setItem('color', color);
-}
 
 window.onload = function () {
   saveColor('black');
@@ -63,9 +64,9 @@ generateBoard.addEventListener ('click', function(){
         var tdPixel = document.createElement('td');
         tdPixel.classList.add('pixel');
         trPixel.appendChild(tdPixel);
+          
       }
-    
       document.getElementById ('pixel-board').appendChild (trPixel);
-  }
-  
+    }
 })
+
