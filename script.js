@@ -1,6 +1,5 @@
 let colors, corSelecionada, pixels, btnTrash, tabela, tamanho,
-  mudarTamanho, tbody, tr, td, criarTbody, criarTr;
-
+  mudarTamanho;
 
 colors = document.getElementsByClassName("color");
 pixels = document.getElementsByClassName("pixel");
@@ -11,10 +10,6 @@ colors[2].style.backgroundColor = randomColor();
 colors[3].style.backgroundColor = randomColor();
 mudarTamanho = document.getElementById("generate-board");
 tamanho = document.getElementById("board-size");
-tabela = document.getElementById("pixel-board");
-tbody = document.createElement('tbody');
-tr = document.createElement('tr');
-td = document.createElement('td');
 
 // Cores RGB - gerar cores aleatorias ao carregar a pagina para pintar os pixels
 function randomColor() {
@@ -41,35 +36,43 @@ function colorir() {
     });
   };
 };
-
-//Requisitos 11
-for (let i = 0; i < pixels.length; i += 1) {
-  btnTrash.addEventListener("click", function () {
-    pixels[i].style.backgroundColor = ""; //desfaz os pixels pintados
-  });
-};
-
+colorir(); // chamando a função colorir para funcionar sempre ao inicializar
 //Quadro de pixels ter seu tamanho definido pelo usuário
 function criarTabela() {
-  tabela.children[0].remove();//remove os filhos da table
-  tabela.appendChild(tbody);//cria o elemento tbody como filho da table
-  for (let i = 0; i < tamanho.value; i += 1) {
-    tabela.children[0].appendChild(tr); //adiciona um novo tr como filho do tbody
-    for (let j = 0; j < tamanho.value; j += 1) {
-    document.getElementsByTagName("tbody")[0].children[i].appendChild(td);
-      td.className = 'pixel';
+  let tabela = document.getElementById("pixel-board");
+  tabela.children[0].remove(); // remover tabela existente
+  let criarTbody = document.createElement("tbody");
+  tabela.appendChild(criarTbody); //criar tbody e os torna filho da table 
+  let newTbody = document.getElementsByTagName("tbody")[0];
+  for(let i = 0; i < tamanho.value; i += 1){  
+    let criarTr = document.createElement("tr"); //cria trs conforme a escolha do usuario;
+    newTbody.appendChild(criarTr); //cria trs e os torna filho do tbody
+    let newTr = document.getElementsByTagName("tr")[i];
+    for(let x = 0; x < tamanho.value; x += 1) {
+      let criarTd = document.createElement("td");
+      criarTd.className = "pixel";
+      newTr.appendChild(criarTd);//cria tds e os torna filhos de tr
     }
-  }
-  return colorir();
-};
-
-//Caso o usuario colocque um valor abaixo de 5 ou maior que 50
+  } return colorir(), clearAll();
+}
+//Requisito 12
 mudarTamanho.addEventListener("click", function () {
-  if (tamanho.value < 5) {
+  if (tamanho.value < 5) { //Caso o usuario colocque um valor abaixo de 5 ou maior que 50
     tamanho.value = 5;
+    criarTabela();//chama a função criarTabela()
   } else if (tamanho.value > 50) {
     tamanho.value = 50;
+    criarTabela();
   } else {
     criarTabela();
   }
 });
+//Requisitos 11
+function clearAll(){
+  for (let i = 0; i < pixels.length; i += 1) {
+    btnTrash.addEventListener("click", function () {
+      pixels[i].style.backgroundColor = ""; //desfaz os pixels pintados
+    });
+  };
+}
+clearAll();
