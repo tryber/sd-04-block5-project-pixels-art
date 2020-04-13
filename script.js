@@ -1,6 +1,6 @@
 //ao carregar a página seleciona a cor preto 
-window.onload =function (){  
-    capturaGrid(preto); 
+window.onload =function (){
+    capturaGrid(preto);
 }
 
 //Obtêm as cores da paleta
@@ -10,16 +10,16 @@ let amarelo = document.querySelector("#color-yellow");
 let preto = document.querySelector("#color-black");
 
 
-function capturaGrid(paleta){  
-  //Obtêm a cor selecionada na paleta de cores 
+function capturaGrid(paleta){
+  //Obtêm a cor selecionada na paleta de cores
   let cor =  window.getComputedStyle(paleta, null).getPropertyValue("background-color");
   //Obtêm o grid
   let grid = document.querySelectorAll("div#pixel");
   for(var i =0; i<grid.length; i++)
   {
     //Adiciona a cor selecionada no grid
-    grid[i].addEventListener("click", function(e){          
-     e.target.style.backgroundColor=cor;      
+    grid[i].addEventListener("click", function(e){
+     e.target.style.backgroundColor=cor;
     });
   }
 }
@@ -29,7 +29,7 @@ preto.addEventListener("click", function(e){
 });
 
 vermelho.addEventListener("click", function(e){
-          capturaGrid(vermelho);
+  capturaGrid(vermelho);
 });
 
 verde.addEventListener("click", function(e){
@@ -44,11 +44,10 @@ amarelo.addEventListener("click", function(e){
 let btlimpa = document.querySelector("#clear-board");
 console.log(btlimpa);
 btlimpa.addEventListener("click", function(){
-
   let cor =  window.getComputedStyle(btlimpa, null).getPropertyValue("background-color");
   let grid = document.querySelectorAll("div#pixel");
   for(var i =0; i<grid.length; i++)
-  {    
-    grid[i].style.backgroundColor=cor;   
+  {
+    grid[i].style.backgroundColor=cor;
   }
 });
