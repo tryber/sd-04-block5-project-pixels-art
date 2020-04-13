@@ -42,12 +42,10 @@ amarelo.addEventListener("click", function(e){
 
 //limpa grid
 let btlimpa = document.querySelector("#clear-board");
-console.log(btlimpa);
-btlimpa.addEventListener("click", function(){
-  let cor =  window.getComputedStyle(btlimpa, null).getPropertyValue("background-color");
-  let grid = document.querySelectorAll("div#pixel");
+btlimpa.addEventListener("click", function(){  
+  let grid = document.querySelectorAll(".pixel");
   for(var i =0; i<grid.length; i++)
   {
-    grid[i].style.backgroundColor=cor;
+    grid[i].style.backgroundColor='white';
   }
 });
