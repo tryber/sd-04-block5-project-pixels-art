@@ -44,7 +44,7 @@ window.onload = function () {
         const elemento = document.createElement('div');
         elemento.setAttribute('class', 'pixel');
         elemento.style.backgroundColor = 'white';
-        elemento.addEventListener('click', function (event) {Pintar(event);});
+        elemento.addEventListener('click', function (event) { Pintar(event); });
         painel.appendChild(elemento);
       }
     }
