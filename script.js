@@ -23,18 +23,10 @@ window.onload = function () {
 
   function Pintar(event) {
     let cor;
-    if (corAtual === 0) {
-      cor = buttonCor1.style.backgroundColor;
-    }
-    else if (corAtual === 1) {
-      cor = buttonCor2.style.backgroundColor;
-    }
-    else if (corAtual === 2) {
-      cor = buttonCor3.style.backgroundColor;
-    }
-    else if (corAtual === 3) {
-      cor = buttonCor4.style.backgroundColor;
-    }
+    if (corAtual === 0) cor = buttonCor1.style.backgroundColor;
+    else if (corAtual === 1) cor = buttonCor2.style.backgroundColor;
+    else if (corAtual === 2) cor = buttonCor3.style.backgroundColor;
+    else if (corAtual === 3) cor = buttonCor4.style.backgroundColor;
     event.target.style.backgroundColor = cor;
   }
 
@@ -52,9 +44,7 @@ window.onload = function () {
         const elemento = document.createElement('div');
         elemento.setAttribute('class', 'pixel');
         elemento.style.backgroundColor = 'white';
-        elemento.addEventListener('click', function (event) {
-          Pintar(event);
-        });
+        elemento.addEventListener('click', function (event) {Pintar(event);});
         painel.appendChild(elemento);
       }
     }
@@ -78,18 +68,10 @@ window.onload = function () {
       corAtual = corFutura;
     }
 
-    if (corFutura === 0) {
-      buttonCor1.className = 'color selected';
-    }
-    else if (corFutura === 1) {
-      buttonCor2.className = 'color selected';
-    }
-    else if (corFutura === 2) {
-      buttonCor3.className = 'color selected';
-    }
-    else if (corFutura === 3) {
-      buttonCor4.className = 'color selected';
-    }
+    if (corFutura === 0) buttonCor1.className = 'color selected';
+    else if (corFutura === 1) buttonCor2.className = 'color selected';
+    else if (corFutura === 2) buttonCor3.className = 'color selected';
+    else if (corFutura === 3) buttonCor4.className = 'color selected';
   }
 
   function LimpaTudo() {
@@ -122,22 +104,10 @@ window.onload = function () {
   IniciaPaleta();
   IniciaPainel(coLinAtual, coLinAtual);
 
-  buttonCor1.addEventListener('click', function () {
-    TrocaCor(event, 0);
-  });
-  buttonCor2.addEventListener('click', function () {
-    TrocaCor(event, 1);
-  });
-  buttonCor3.addEventListener('click', function () {
-    TrocaCor(event, 2);
-  });
-  buttonCor4.addEventListener('click', function () {
-    TrocaCor(event, 3);
-  });
-  zerar.addEventListener('click', function () {
-    LimpaTudo();
-  });
-  buttonPainel.addEventListener('click', function () {
-    TiraPainel(parseInt(newPainel.value));
-  });
+  buttonCor1.addEventListener('click', function () {TrocaCor(event, 0);});
+  buttonCor2.addEventListener('click', function () {TrocaCor(event, 1);});
+  buttonCor3.addEventListener('click', function () {TrocaCor(event, 2);});
+  buttonCor4.addEventListener('click', function () {TrocaCor(event, 3);});
+  zerar.addEventListener('click', function () {LimpaTudo();});
+  buttonPainel.addEventListener('click', function () {TiraPainel(parseInt(newPainel.value));});
 };
