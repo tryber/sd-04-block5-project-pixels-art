@@ -51,23 +51,11 @@ window.onload = function () {
   }
 
   function TrocaCor(event, corFutura) {
-    if (corAtual === 0) {
-      buttonCor1.classList.remove('selected');
-      corAtual = corFutura;
-    }
-    else if (corAtual === 1) {
-      buttonCor2.classList.remove('selected');
-      corAtual = corFutura;
-    }
-    else if (corAtual === 2) {
-      buttonCor3.classList.remove('selected');
-      corAtual = corFutura;
-    }
-    else if (corAtual === 3) {
-      buttonCor4.classList.remove('selected');
-      corAtual = corFutura;
-    }
-
+    if (corAtual === 0) buttonCor1.classList.remove('selected');
+    else if (corAtual === 1) buttonCor2.classList.remove('selected');
+    else if (corAtual === 2) buttonCor3.classList.remove('selected');
+    else if (corAtual === 3) buttonCor4.classList.remove('selected');
+    corAtual = corFutura;
     if (corFutura === 0) buttonCor1.className = 'color selected';
     else if (corFutura === 1) buttonCor2.className = 'color selected';
     else if (corFutura === 2) buttonCor3.className = 'color selected';
@@ -87,15 +75,9 @@ window.onload = function () {
           painel.removeChild(painel.firstChild);
         }
       }
-      if (elemento < 5) {
-        coLinFutura = 5;
-      }
-      else if (elemento > 50) {
-        coLinFutura = 50;
-      }
-      else {
-        coLinFutura = elemento;
-      }
+      if (elemento < 5) coLinFutura = 5;
+      else if (elemento > 50) coLinFutura = 50;
+      else coLinFutura = elemento;
       IniciaPainel(coLinFutura, coLinFutura);
       coLinAtual = coLinFutura;
     }
@@ -104,10 +86,10 @@ window.onload = function () {
   IniciaPaleta();
   IniciaPainel(coLinAtual, coLinAtual);
 
-  buttonCor1.addEventListener('click', function () {TrocaCor(event, 0);});
-  buttonCor2.addEventListener('click', function () {TrocaCor(event, 1);});
-  buttonCor3.addEventListener('click', function () {TrocaCor(event, 2);});
-  buttonCor4.addEventListener('click', function () {TrocaCor(event, 3);});
-  zerar.addEventListener('click', function () {LimpaTudo();});
-  buttonPainel.addEventListener('click', function () {TiraPainel(parseInt(newPainel.value));});
+  buttonCor1.addEventListener('click', function () { TrocaCor(event, 0); });
+  buttonCor2.addEventListener('click', function () { TrocaCor(event, 1); });
+  buttonCor3.addEventListener('click', function () { TrocaCor(event, 2); });
+  buttonCor4.addEventListener('click', function () { TrocaCor(event, 3); });
+  zerar.addEventListener('click', function () { LimpaTudo(); });
+  buttonPainel.addEventListener('click', function () { TiraPainel(parseInt(newPainel.value)); });
 };
