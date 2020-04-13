@@ -1,6 +1,7 @@
 //ao carregar a página seleciona a cor preto 
 window.onload =function (){
     capturaGrid(preto);
+    coresAleatorios();
 }
 
 //Obtêm as cores da paleta
@@ -8,18 +9,6 @@ let vermelho = document.querySelector("#color-red");
 let verde = document.querySelector("#color-green"); 
 let amarelo = document.querySelector("#color-yellow");
 let preto = document.querySelector("#color-black");
-
-function selecaoClasse()
-{
-  let cores = document.querySelectorAll(".color-palette");
-  for(var i=0; i < cores.length; i++)
-  {
-      cores[i].className = "selected";
-      console.log(cores[i]);
-  }
-}
-
-selecaoClasse();
 
 function capturaGrid(paleta){
   //Obtêm a cor selecionada na paleta de cores
@@ -60,3 +49,16 @@ btlimpa.addEventListener("click", function(){
     grid[i].style.backgroundColor='white';
   }
 });
+
+//Bônus -2 
+//Cores aleatórias
+function coresAleatorios(){
+  
+  var cores = ["#f36", "#C3C", "fc0", "#FC6", "#9C0"]; 
+  let divCroes = document.querySelectorAll(".color");
+  for (var i = 0; i < 6; i++) {
+    divCroes[1].style.backgroundColor = cores[Math.floor(Math.random() * 32)];
+    divCroes[2].style.backgroundColor = cores[Math.floor(Math.random() * 32)];
+    divCroes[3].style.backgroundColor = cores[Math.floor(Math.random() * 32)];
+  }  
+}
