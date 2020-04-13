@@ -1,12 +1,15 @@
+const palette = document.getElementById('color-palette');
+const pixelBoard = document.getElementById('pixel-board');
 const colors = document.getElementsByClassName('color');
 const pixels = document.getElementsByClassName('pixel');
+const selectedColor = document.getElementsByClassName('selected');
+const color = selectedColor.id;
 
-pixels[1].style["background-color"] = "red";
-
-//Clear button
-const clearButton = document.getElementsByClassName('clear-btn');
-clearButton[0].addEventListener('click', function() {
-  for (pixel in pixels){
-  pixels[pixel].style.backgroundColor = "white";
+palette.addEventListener('click', function(event) {
+  for(c in colors) {
+    colors[c].classList.remove('selected');
+    event.target.classList.add('selected');
   }
 })
+
+

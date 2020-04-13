@@ -8,8 +8,8 @@
 }
 
 h1 {
-  border: 1px solid red;
   font-family: Georgia, Times, serif;
+  font-size: 48px;
 }
 
 .color {
