@@ -1,23 +1,23 @@
 .color {
-    border: 1px solid black;
-    display: inline-block;
-    height: 40px;
-    width: 40px;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel {
-    background-color: white;
-    border: 1px black solid;
-    display: inline-block;
-    height: 40px;
-    line-height: 0;
-    width: 40px;
-  }
+  background-color: white;
+  border: 1px black solid;
+  display: inline-block;
+  height: 40px;
+  line-height: 0;
+  width: 40px;
+}
 
 .pixel-board {
-    font-size: 0;
-    height: 210px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 210px;
-  }
+  font-size: 0;
+  height: 210px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 210px;
+}
