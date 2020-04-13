@@ -9,10 +9,6 @@
   width: 40px;
 }
 
-.pink {
-  background-color: rgb(230, 47, 160);
-}
-
 .pixel {
   background-color: white;
   border: 1px solid black;
@@ -23,12 +19,4 @@
 .pixel-board {
   border: 1px solid black;
   border-collapse: collapse;
-}
-
-.purple {
-  background-color: blueviolet;
-}
-
-.yellow {
-  background-color: yellow;
 }
