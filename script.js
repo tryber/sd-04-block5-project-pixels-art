@@ -11,6 +11,37 @@ window.onload = function () {
   let coLinAtual = 5;
   let coLinFutura = 0;
 
+
+  function SorteiaCor(min, max) {
+    let cor = 'rgb(';
+    for (let i = 0; i < 3; i++) {
+      if (i !== 2) {
+        cor += (Math.floor(Math.random() * (max - min)) + min) + ',';
+      }
+      else {
+        cor += (Math.floor(Math.random() * (max - min)) + min) + ')';
+      }
+    }
+    return cor;
+  }
+
+  function Pintar(event) {
+    let cor;
+    if (corAtual === 0) {
+      cor = buttonCor1.style.backgroundColor;
+    }
+    else if (corAtual === 1) {
+      cor = buttonCor2.style.backgroundColor;
+    }
+    else if (corAtual === 2) {
+      cor = buttonCor3.style.backgroundColor;
+    }
+    else if (corAtual === 3) {
+      cor = buttonCor4.style.backgroundColor;
+    }
+    event.target.style.backgroundColor = cor;
+  }
+
   function IniciaPaleta() {
     buttonCor1.style.backgroundColor = 'black';
     buttonCor2.style.backgroundColor = SorteiaCor(0, 255);
@@ -19,11 +50,10 @@ window.onload = function () {
   }
 
   function IniciaPainel(linha, coluna) {
-    let tam = (44 * coluna) + 'px';
-    painel.style.maxWidth = tam;
-    for (let i = 0; i < linha; i+=1) {
-      for (let y = 0; y < coluna; y+=1) {
-        let elemento = document.createElement('div');
+    painel.style.maxWidth = (44 * coluna) + 'px';
+    for (let i = 0; i < linha; i += 1) {
+      for (let y = 0; y < coluna; y += 1) {
+        const elemento = document.createElement('div');
         elemento.setAttribute('class', 'pixel');
         elemento.style.backgroundColor = 'white';
         elemento.addEventListener('click', function (event) {
@@ -66,47 +96,17 @@ window.onload = function () {
     }
   }
 
-  function Pintar(event) {
-    let cor;
-    if (corAtual === 0) {
-      cor = buttonCor1.style.backgroundColor;
-    }
-    else if (corAtual === 1) {
-      cor = buttonCor2.style.backgroundColor;
-    }
-    else if (corAtual === 2) {
-      cor = buttonCor3.style.backgroundColor;
-    }
-    else if (corAtual === 3) {
-      cor = buttonCor4.style.backgroundColor;
-    }
-    event.target.style.backgroundColor = cor;
-  }
-
   function LimpaTudo() {
-    for (let i = 0; i < (coLinAtual * coLinAtual); i++) {
+    for (let i = 0; i < (coLinAtual * coLinAtual); i += 1) {
       painel.childNodes[i].style.backgroundColor = 'white';
     }
   }
 
-  function SorteiaCor(min, max) {
-    let cor = 'rgb(';
-    for (let i = 0; i < 3; i++) {
-      if (i != 2) {
-        cor += (Math.floor(Math.random() * (max - min)) + min) + ',';
-      }
-      else {
-        cor += (Math.floor(Math.random() * (max - min)) + min) + ')';
-      }
-    }
-    return cor;
-  }
-
   function TiraPainel(elemento) {
     if (elemento >= 0) {
-      for (let i = 0; i < coLinAtual; i++) {
-          for (let y = 0; y < coLinAtual; y++) {
-            painel.removeChild(painel.firstChild);
+      for (let i = 0; i < coLinAtual; i += 1) {
+        for (let y = 0; y < coLinAtual; y += 1) {
+          painel.removeChild(painel.firstChild);
         }
       }
       if (elemento < 5) {
