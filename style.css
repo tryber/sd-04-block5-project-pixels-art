@@ -1,58 +1,63 @@
 .color {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    clear: both;
-    display: inline-block;
-    height: 25px;
-    width: 25px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  clear: both;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
 }
-.pixel-board{
-    margin: 0px;
-    padding: 0px;
-    position: relative;
-    top: 40px;
-    width: 200px;
-    height: 200px;
+
+.pixel-board {
+  height: 210px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 40px;
+  width: 210px;
 }
+
 .pixel {
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    height: 38px;
-    margin: 0px;
-    padding: 0px;
-    width: 38px;
-    background-color: white;
-
+  background-color: white;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  width: 40px;
 }
+
 .first {
-    display: inline-block;
-    position: relative;
-    top: 0px;
+  display: inline-block;
+  position: relative;
+  top: 0;
 }
+
 .seccond {
-    display: inline-block;
-    position: relative;
-    top: -4px;
+  display: inline-block;
+  position: relative;
+  top: -4px;
 }
+
 .third {
-    display: inline-block;
-    position: relative;
-    top: -8px;
+  display: inline-block;
+  position: relative;
+  top: -8px;
 }
+
 .fourth {
-    display: inline-block;
-    position: relative;
-    top: -12px;
+  display: inline-block;
+  position: relative;
+  top: -12px;
 }
+
 .fifth {
-    display: inline-block;
-    position: relative;
-    top: -16px;
-}
-body{
-    background-color: turquoise;
+  display: inline-block;
+  position: relative;
+  top: -16px;
 }
 
-
+body {
+  background-color: turquoise;
+}
