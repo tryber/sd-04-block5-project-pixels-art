@@ -1,0 +1,30 @@
+#color-pallete{
+    margin: 10px;
+}
+#preto{
+    background-color: rgb(0, 0, 0);
+}
+#amarelo{
+    background-color: rgb(238, 255, 0);
+}
+#verde{
+    background-color: rgb(21, 232, 2);
+}
+#vermelho{
+    background-color: rgb(255, 0, 0);
+}
+.color{
+    border: solid 1px rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+#pixel-board{
+    width: 250px;
+}
+.pixel{
+    border: solid 1px rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
