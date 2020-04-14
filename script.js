@@ -73,12 +73,11 @@ generateBoard.addEventListener('click', function () {
     }
 
     document.getElementById('pixel-board').appendChild(trPixel);
-    const pixels = document.getElementsByClassName('pixel');
-    for (let i = 0; i < pixels.length; i += 1) {
-      pixels[i].addEventListener('click', function () {
+    for (let k = 0; k < pixels.length; k += 1) {
+      pixels[k].addEventListener('click', function () {
         const selectedColor = document.querySelector('.selected');
         const colorsSelected = selectedColor.style.backgroundColor;
-        pixels[i].style.backgroundColor = colorsSelected;
+        pixels[k].style.backgroundColor = colorsSelected;
       });
     }
   }
