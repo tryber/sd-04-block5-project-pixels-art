@@ -5,10 +5,10 @@ const colorThree = document.getElementById('color3');
 const clearBoard = document.getElementById('clear-board');
 const pixelBoard = document.getElementsByClassName('pixel');
 
-function randomColor () {
+function randomColor() {
   const hexa = '0123456789ABCDEF';
   let color = '#';
-  for (let i = 0; i < 6; i += 1){
+  for (let i = 0; i < 6; i += 1) {
     color += hexa[Math.floor(Math.random() * 16)];
   }
   return color;
@@ -62,12 +62,12 @@ generateBoard.addEventListener('click', function () {
   if (n < 5) n = 5;
   if (n > 50) n = 50;
 
-  document.getElementById('pixel-board').innerHTML = "";
+  document.getElementById('pixel-board').innerHTML = '';
   for (let i = 0; i < n; i += 1) {
-    let trPixel = document.createElement('tr');
+    const trPixel = document.createElement('tr');
     trPixel.classList.add('linha');
     for (let j = 0; j < n; j += 1) {
-      let tdPixel = document.createElement('td');
+      const tdPixel = document.createElement('td');
       tdPixel.classList.add('pixel');
       trPixel.appendChild(tdPixel);
     }
