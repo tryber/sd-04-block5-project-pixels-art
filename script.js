@@ -44,6 +44,11 @@ function createBoard(size) {
       trPixel.appendChild(tdPixel);
     }
     board.appendChild(trPixel);
+    for (let j = 0; j < pixel.length; j += 1) {
+      pixel[j].addEventListener('click', function () {
+        changeColor(j);
+      });
+    }
   }
 }
 
