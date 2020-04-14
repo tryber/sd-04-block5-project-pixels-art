@@ -12,7 +12,13 @@
   <section id="color-palette" class="color-palette">
     <div class="color" onclick="box1Selected()"></div><div class="color" onclick="box2Selected()"></div><div class="color" onclick="box3Selected()"></div><div class="color" onclick="box4Selected()"></div>
   </section>
+<!-- Input e button -->
   <button id="clear-board" class="clear-board">Limpar quadro</button>
+  <form class="form">
+    <label for="board-size">Escolha o tamanho do quadro</label><br>
+    <input id="board-size" class="board-size" type="text" placeholder="Digete um valor entre 5 e 50">
+  </form>
+  <button id="generate-board" class="generate-board">Gerar quadro</button>
 <!-- Pixels box -->
   <div class="board">
     <section id="pixel-board" class="pixel-board">

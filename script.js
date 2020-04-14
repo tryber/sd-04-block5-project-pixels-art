@@ -5,7 +5,9 @@ let box2 = document.querySelectorAll(".color")[1];
 let box3 = document.querySelectorAll(".color")[2];
 let box4 = document.querySelectorAll(".color")[3];
 let pixelBoard = document.getElementById("pixel-board");
-let button = document.getElementById("clear-board");
+let buttonClear = document.getElementById("clear-board");
+let inputBoardSize = document.getElementById("board-size");
+let buttonGenerateBoard = document.getElementById("generate-board");
 
 // Creating palette box
 box1.style.backgroundColor = "black";
@@ -54,10 +56,26 @@ pixelBoard.addEventListener("click", function(event) {
   event.target.style.backgroundColor = document.querySelector(".selected").style.backgroundColor;
 });
 // Clear button
-button.addEventListener("click", function() {
+buttonClear.addEventListener("click", function() {
   let allPixels = document.querySelectorAll(".pixel")
   for( let i = 0; i < allPixels.length; i+=1) {
     allPixels[i].style.backgroundColor = "white";
   }
+})
+// Generate board
+buttonGenerateBoard.addEventListener("click", function() {
+  let value = inputBoardSize.value;
+  if(value < 5) value = 5;
+  if(value > 50) value = 50;
+  let totalOfPixels = value * value;
+  let board = document.querySelector(".pixel-board");
+  board.style.width = value*40 + value*2 + "px"
+  board.style.height = value*40 + value*2 +"px"
+  pixelBoard.innerHTML = "";
   
+  for(i=0; i < totalOfPixels; i+=1) {
+    const board = document.createElement("div");
+    board.className = "pixel";
+    pixelBoard.appendChild(board);
+  }
 })
