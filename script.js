@@ -5,12 +5,7 @@ const colorThree = document.getElementById('color3');
 const clearBoard = document.getElementById('clear-board');
 const pixelBoard = document.getElementsByClassName('pixel');
 
-blackColor.style.backgroundColor = 'black';
-colorOne.style.backgroundColor = randomColor();
-colorTwo.style.backgroundColor = randomColor();
-colorThree.style.backgroundColor = randomColor();
-
-function randomColor (){
+function randomColor () {
   const hexa = '0123456789ABCDEF';
   let color = '#';
   for (let i = 0; i < 6; i += 1){
@@ -19,64 +14,69 @@ function randomColor (){
   return color;
 }
 
-clearBoard.addEventListener("click", function () {
+blackColor.style.backgroundColor = 'black';
+colorOne.style.backgroundColor = randomColor();
+colorTwo.style.backgroundColor = randomColor();
+colorThree.style.backgroundColor = randomColor();
+
+clearBoard.addEventListener('click', function () {
   for (let i = 0; i < pixelBoard.length; i += 1) {
-    pixelBoard[i].style.background = "white";
+    pixelBoard[i].style.background = 'white';
   }
 });
 
 function saveColor(n) {
   const color = n;
-  localStorage.removeItem("color");
-  localStorage.setItem("color", color);
+  localStorage.removeItem('color');
+  localStorage.setItem('color', color);
 }
 
 window.onload = function () {
-  saveColor("black");
-  blackColor.className = "color selected";
+  saveColor('black');
+  blackColor.className = 'color selected';
 };
 
-const colors = document.getElementsByClassName("color");
+const colors = document.getElementsByClassName('color');
 for (let i = 0; i < colors.length; i += 1) {
-  colors[i].addEventListener("click", function () {
+  colors[i].addEventListener('click', function () {
     for (let j = 0; j < colors.length; j += 1) {
-      colors[j].classList.remove("selected");
+      colors[j].classList.remove('selected');
     }
-    colors[i].classList.add("selected");
+    colors[i].classList.add('selected');
   });
 }
 
-const pixels = document.getElementsByClassName("pixel");
+const pixels = document.getElementsByClassName('pixel');
 for (let i = 0; i < pixels.length; i += 1) {
-  pixels[i].addEventListener("click", function () {
-    const selectedColor = document.querySelector(".selected");
+  pixels[i].addEventListener('click', function () {
+    const selectedColor = document.querySelector('.selected');
     const colorsSelected = selectedColor.style.backgroundColor;
     pixels[i].style.backgroundColor = colorsSelected;
   });
 }
 
-const generateBoard = document.getElementById("generate-board");
+const generateBoard = document.getElementById('generate-board');
 
-generateBoard.addEventListener("click", function () {
-  n = document.getElementById("board-size").value;
+generateBoard.addEventListener('click', function () {
+  let n = document.getElementById('board-size').value;
   if (n < 5) n = 5;
   if (n > 50) n = 50;
 
-  document.getElementById("pixel-board").innerHTML = "";
+  document.getElementById('pixel-board').innerHTML = "";
   for (let i = 0; i < n; i += 1) {
-    var trPixel = document.createElement("tr");
-    trPixel.classList.add("linha");
+    let trPixel = document.createElement('tr');
+    trPixel.classList.add('linha');
     for (let j = 0; j < n; j += 1) {
-      var tdPixel = document.createElement("td");
-      tdPixel.classList.add("pixel");
+      let tdPixel = document.createElement('td');
+      tdPixel.classList.add('pixel');
       trPixel.appendChild(tdPixel);
     }
 
-    document.getElementById("pixel-board").appendChild(trPixel);
-    const pixels = document.getElementsByClassName("pixel");
+    document.getElementById('pixel-board').appendChild(trPixel);
+    const pixels = document.getElementsByClassName('pixel');
     for (let i = 0; i < pixels.length; i += 1) {
-      pixels[i].addEventListener("click", function () {
-        const selectedColor = document.querySelector(".selected");
+      pixels[i].addEventListener('click', function () {
+        const selectedColor = document.querySelector('.selected');
         const colorsSelected = selectedColor.style.backgroundColor;
         pixels[i].style.backgroundColor = colorsSelected;
       });
