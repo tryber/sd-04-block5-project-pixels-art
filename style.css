@@ -1,0 +1,58 @@
+body {
+  text-align: center;
+}
+
+.color-palette {
+  margin: 10px;
+  text-align: center;
+  padding: 5px;
+}
+.color {
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 5px;
+  cursor: pointer;
+}
+.form {
+  position: absolute;
+  left: 850px;
+  top: 90px;
+  font-size: 20px;
+}
+.board-size {
+  width: 200px;
+}
+.generate-board {
+  position: absolute;
+  left: 980px;
+  top: 140px;
+  font-size: 13px;
+}
+.clear-board {
+  width: 100px;
+  font-size: 13px;
+  position: absolute;
+  left: 950px;
+  top: 150px;
+  margin: 20px;
+  cursor: pointer;
+}
+.board {
+  display: inline-block;
+}
+.pixel-board {
+  border: 1px solid black; 
+  width: 210px;
+  height: 210px;
+  line-height: 0px;
+}
+.pixel {
+  border: 1px solid black; 
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  float: left;
+  cursor: pointer;
+}
