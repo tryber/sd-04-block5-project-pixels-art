@@ -7,6 +7,15 @@
   height: 40px;
   width: 40px;
 }
+.selected {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+  }
 
 .pixel-board {
   height: 210px;

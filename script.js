@@ -6,14 +6,13 @@ let selected = 'black';
 const pixelBoard = document.getElementById('pixel-board');
 const colorPalette = document.getElementById('color-palette');
 
-
-black.style.backgroundColor = 'black';
-red.style.backgroundColor = 'red';
-blue.style.backgroundColor = 'blue';
-yellow.style.backgroundColor = 'yellow';
-
 colorPalette.addEventListener('click', function (event) {
   selected = event.target.id;
+  black.className = 'color'
+  red.className = 'color'
+  blue.className = 'color'
+  yellow.className = 'color'
+  event.target.className = 'selected'
 });
 
 pixelBoard.addEventListener('click', function (event) {
