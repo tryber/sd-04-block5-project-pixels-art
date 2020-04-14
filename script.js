@@ -1,6 +1,6 @@
 const palette = document.getElementById('color-palette');
 const pixelBoard = document.getElementById('pixel-board');
-const pixels = document.getElementsByClassName('pixel');
+const pixels = document.querySelectorAll('.pixel');
 const clearBtn = document.getElementById('clear-board');
 
 // Select Color
@@ -16,7 +16,7 @@ pixelBoard.addEventListener('click', function (event) {
 
 // Clear Board
 clearBtn.addEventListener('click', function () {
-  for (pixel in pixels) {
-    pixels[pixel].style.backgroundColor = 'white' ;
+  for (let i = 0; i < pixels.length; i++) {
+    pixels[i].style.backgroundColor = 'white';
   }
 });
