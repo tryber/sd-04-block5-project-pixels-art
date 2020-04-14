@@ -1,14 +1,23 @@
-const blackColor = document.getElementById("black");
-const purpleColor = document.getElementById("purple");
-const redColor = document.getElementById("red");
-const greenColor = document.getElementById("green");
-const clearBoard = document.getElementById("clear-board");
-const pixelBoard = document.getElementsByClassName("pixel");
+const blackColor = document.getElementById('black');
+const colorOne = document.getElementById('color1');
+const colorTwo = document.getElementById('color2');
+const colorThree = document.getElementById('color3');
+const clearBoard = document.getElementById('clear-board');
+const pixelBoard = document.getElementsByClassName('pixel');
 
-blackColor.style.background = "black";
-purpleColor.style.background = "purple";
-redColor.style.background = "red";
-greenColor.style.background = "green";
+blackColor.style.backgroundColor = 'black';
+colorOne.style.backgroundColor = randomColor();
+colorTwo.style.backgroundColor = randomColor();
+colorThree.style.backgroundColor = randomColor();
+
+function randomColor (){
+  const hexa = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i += 1){
+    color += hexa[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
 
 clearBoard.addEventListener("click", function () {
   for (let i = 0; i < pixelBoard.length; i += 1) {
