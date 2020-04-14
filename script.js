@@ -4,7 +4,8 @@ let box1 = document.querySelectorAll(".color")[0];
 let box2 = document.querySelectorAll(".color")[1];
 let box3 = document.querySelectorAll(".color")[2];
 let box4 = document.querySelectorAll(".color")[3];
-pixelBoard = document.getElementById("pixel-board");
+let pixelBoard = document.getElementById("pixel-board");
+let button = document.getElementById("clear-board");
 
 // Creating palette box
 box1.style.backgroundColor = "black";
@@ -48,8 +49,15 @@ function box4Selected() {
       box4.classList.add("selected");
     } 
 };
-
 // Painting pixel
 pixelBoard.addEventListener("click", function(event) {
   event.target.style.backgroundColor = document.querySelector(".selected").style.backgroundColor;
 });
+// Clear button
+button.addEventListener("click", function() {
+  let allPixels = document.querySelectorAll(".pixel")
+  for( let i = 0; i < allPixels.length; i+=1) {
+    allPixels[i].style.backgroundColor = "white";
+  }
+  
+})
