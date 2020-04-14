@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Paleta de Cores</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+      <h1 id="title" class="title">Paleta de Cores</h1>
+      <header>
+        <div id="color-palette" class="color-palette">
+          <p class='color black'></p>
+          <p class='color'></p>
+          <p class='color'></p>
+          <p class='color'></p>
+        </div>
+      </header>
+      <div>
+        <label>Entre com o numero ente 5 e 50 para definir o tamanho do quadro de pixels!</label><br>
+        <input type='number' id='board-size'>
+        <button id='generate-board'>Criar Quadro</button>
+      </div>
+      <table id="pixel-board" class="pixel-board">
+        <tr class='line'>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+        </tr>
+        <tr class='line'>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+        </tr>
+        <tr class='line'>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+        </tr>
+        <tr class='line'>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+        </tr>
+        <tr class='line'>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+          <td class='pixel'></td>
+        </tr>
+      </table>
+      <button id="clear-board">Clear Board</button>
+      <script src="script.js"></script>
+    </body>
+    </html>
