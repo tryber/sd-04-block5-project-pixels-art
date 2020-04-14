@@ -11,13 +11,26 @@ let buttonGenerateBoard = document.getElementById("generate-board");
 
 // Creating palette box
 box1.style.backgroundColor = "black";
-box2.style.backgroundColor = "lightblue";
-box3.style.backgroundColor = "pink";
-box4.style.backgroundColor = "orange";
+
+// Generate random colors
+function random(n) {
+  n = Math.round(Math.random()*256);
+  return n;
+}
+function generateColor() {
+  let rgb1 = "rgb(" + random() + ", " + random() + ", " + random() + ")";
+  let rgb2 = "rgb(" + random() + ", " + random() + ", " + random() + ")";
+  let rgb3 = "rgb(" + random() + ", " + random() + ", " + random() + ")";
+
+  box2.style.backgroundColor = rgb1;
+  box3.style.backgroundColor = rgb2;
+  box4.style.backgroundColor = rgb3;
+}
 
 // Select black when the page load
 window.addEventListener("load", function() {
   box1.classList.add("selected");
+  generateColor();
 });
 // Selecting box1
 function box1Selected() {
@@ -69,8 +82,8 @@ buttonGenerateBoard.addEventListener("click", function() {
   if(value > 50) value = 50;
   let totalOfPixels = value * value;
   let board = document.querySelector(".pixel-board");
-  board.style.width = value*40 + value*2 + "px"
-  board.style.height = value*40 + value*2 +"px"
+  board.style.width = value*40 + value*2 + "px";
+  board.style.height = value*40 + value*2 + "px";
   pixelBoard.innerHTML = "";
   
   for(i=0; i < totalOfPixels; i+=1) {
