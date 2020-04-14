@@ -4,10 +4,10 @@ const colorOne = document.getElementsByClassName('color')[1];
 const colorTwo = document.getElementsByClassName('color')[2];
 const colorThree = document.getElementsByClassName('color')[3];
 const clearButton = document.getElementById('clear-board');
-const pixel = [];
-for (let i = 0; i < 25; i += 1) {
-  pixel[i] = document.getElementsByClassName('pixel')[i];
-}
+const pixel = document.getElementsByClassName('pixel');
+const creat = document.getElementById('generate-board');
+const board = document.getElementById('pixel-board');
+let n;
 
 // Funçoes
 function saveColor(n) {
@@ -17,7 +17,7 @@ function saveColor(n) {
 }
 
 function clearBoard() {
-  for (let k = 0; k < 25; k += 1) {
+  for (let k = 0; k < pixel.length; k += 1) {
     pixel[k].style.backgroundColor = 'white';
   }
 }
@@ -30,17 +30,27 @@ function randomColor() {
   return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
 }
 
-function colorGenerate() {
-  black.style.backgroundColor = 'black';
-  colorOne.style.backgroundColor = randomColor();
-  colorTwo.style.backgroundColor = randomColor();
-  colorThree.style.backgroundColor = randomColor();
+black.style.backgroundColor = 'black';
+colorOne.style.backgroundColor = randomColor();
+colorTwo.style.backgroundColor = randomColor();
+colorThree.style.backgroundColor = randomColor();
+
+function createBoard(size) {
+  for (let i = 0; i < size; i += 1){
+    const trPixel = document.createElement('tr');
+    trPixel.className = 'line';
+    for (let j = 0; j < size; j += 1){
+      const tdPixel = document.createElement('td');
+      tdPixel.className = 'pixel';
+      trPixel.appendChild(tdPixel);
+    }
+    board.appendChild(trPixel);
+  }
 }
 
 window.onload = function () {
   saveColor('black', 'black');
   black.className = 'color black selected';
-  colorGenerate();
 };
 
 // Criando os event Listener
@@ -74,8 +84,16 @@ colorThree.addEventListener('click', function () {
 });
 clearButton.addEventListener('click', clearBoard);
 
-for (let j = 0; j < 25; j += 1) {
+for (let j = 0; j < pixel.length ; j += 1) {
   pixel[j].addEventListener('click', function () {
     changeColor(j);
   });
 }
+
+creat.addEventListener('click', function () {
+  board.innerHTML = '';
+  n = document.getElementById('board-size').value;
+  if (n < 5) n = 5;
+  if (n > 50) n = 50;
+  createBoard(n);
+})
