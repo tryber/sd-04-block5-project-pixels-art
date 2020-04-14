@@ -10,8 +10,7 @@ const board = document.getElementById('pixel-board');
 let n;
 
 // Funçoes
-function saveColor(n) {
-  const color = n;
+function saveColor(color) {
   localStorage.removeItem('color');
   localStorage.setItem('color', color);
 }
@@ -27,7 +26,7 @@ function changeColor(j) {
 }
 
 function randomColor() {
-  return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+  return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 }
 
 black.style.backgroundColor = 'black';
@@ -36,10 +35,10 @@ colorTwo.style.backgroundColor = randomColor();
 colorThree.style.backgroundColor = randomColor();
 
 function createBoard(size) {
-  for (let i = 0; i < size; i += 1){
+  for (let i = 0; i < size; i += 1) {
     const trPixel = document.createElement('tr');
     trPixel.className = 'line';
-    for (let j = 0; j < size; j += 1){
+    for (let j = 0; j < size; j += 1) {
       const tdPixel = document.createElement('td');
       tdPixel.className = 'pixel';
       trPixel.appendChild(tdPixel);
@@ -84,7 +83,7 @@ colorThree.addEventListener('click', function () {
 });
 clearButton.addEventListener('click', clearBoard);
 
-for (let j = 0; j < pixel.length ; j += 1) {
+for (let j = 0; j < pixel.length; j += 1) {
   pixel[j].addEventListener('click', function () {
     changeColor(j);
   });
@@ -96,4 +95,4 @@ creat.addEventListener('click', function () {
   if (n < 5) n = 5;
   if (n > 50) n = 50;
   createBoard(n);
-})
+});
