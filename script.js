@@ -16,7 +16,7 @@ pixelBoard.addEventListener('click', function (event) {
 
 // Clear Board
 clearBtn.addEventListener('click', function () {
-  for (let i = 0; i < pixels.length; i++) {
+  for (let i = 0; i < pixels.length; i += 1) {
     pixels[i].style.backgroundColor = 'white';
   }
 });
