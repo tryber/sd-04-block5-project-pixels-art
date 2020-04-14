@@ -8,11 +8,11 @@ const colorPalette = document.getElementById('color-palette');
 
 colorPalette.addEventListener('click', function (event) {
   selected = event.target.id;
-  black.className = 'color'
-  red.className = 'color'
-  blue.className = 'color'
-  yellow.className = 'color'
-  event.target.className = 'selected'
+  black.className = 'color';
+  red.className = 'color';
+  blue.className = 'color';
+  yellow.className = 'color';
+  event.target.className = 'color selected';
 });
 
 pixelBoard.addEventListener('click', function (event) {
