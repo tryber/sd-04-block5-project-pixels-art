@@ -1,12 +1,11 @@
 .color {
-  border: 2px solid black;
+  border: 1px solid black;
   cursor: pointer;
   display: inline-block;
   height: 60px;
   margin-right: 2px;
   width: 60px;
 }
-
 
 .pixel {
   border: 1px solid black;
