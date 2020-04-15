@@ -1,6 +1,6 @@
 let paletteColor = document.getElementsByClassName("color");
 let pixel = document.getElementsByClassName("pixel");
-
+sessionStorage.color = 'black'
 function getColor(evento) {
   sessionStorage.color = evento.target.style.backgroundColor;
 }
