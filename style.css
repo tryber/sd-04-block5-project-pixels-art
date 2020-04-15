@@ -1,21 +1,9 @@
 body {
-    text-align: center;
+  text-align: center;
 }
 #color-palette {
   margin: 10px;
   position: relative;
-}
-#cor1 {
-  background-color: black
-}
-#cor2 {
-  background-color: yellow
-}
-#cor3 {
-  background-color: green
-}
-#cor4 {
-  background-color: red
 }
 .color {
   border: solid 1px rgb(0, 0, 0);
@@ -27,12 +15,10 @@ body {
   width: 250px;
   align-items: center;
   justify-content: center;
-  
 }
 div.pixel {
   border: solid 1px rgb(0, 0, 0);
   display: inline-block;
-  background-color: white;
   height: 40px;
   width: 40px;
 }
