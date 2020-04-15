@@ -3,11 +3,11 @@ function selecionar() {
   preto.classList.add('selected');
 }
 
-let preto = document.querySelector('.preto');
-let verde = document.querySelector('.verde');
-let laranja = document.querySelector('.laranja');
-let amarelo = document.querySelector('.amarelo');
-let pixels = document.getElementsByClassName('pixel');
+const preto = document.querySelector('.preto');
+const verde = document.querySelector('.verde');
+const laranja = document.querySelector('.laranja');
+const amarelo = document.querySelector('.amarelo');
+const pixels = document.querySelector('#pixel-board');
 
 preto.addEventListener('click', function () {
   verde.classList.remove('selected');
@@ -42,15 +42,13 @@ amarelo.addEventListener('click', function () {
 });
 
 for (let i = 0; i < 25; i += 1) {
-  let divi = document.createElement('div');
-  let divis = document.querySelector('#pixel-board');
+  const divi = document.createElement('div');
+  const divis = document.querySelector('#pixel-board');
   divis.appendChild(divi);
-  divi.classList.add('pixel')
-  
+  divi.classList.add('pixel');
 }
 
-for (let i = 0; i < pixels.length; i += 1) {
-  pixels[i].addEventListener('click', function () {
-    pixels[i].classList.toggle('selected');
-  });
-}
+pixels.addEventListener('click', function () {
+  const selec = document.querySelector('.selected');
+  event.target.style.backgroundColor = selec.style.backgroundColor;
+});
