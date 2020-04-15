@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Projeto PA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="selecionar()">
+  <header>
+    <h1 id='title' class='titulo'>Paleta de Cores</h1>
+  </header>
+  <section id="color-palette">
+    <div class="color preto"></div>
+    <div class="color verde"></div>
+    <div class="color laranja"></div>
+    <div class="color amarelo"></div>
+  </section>
+  <section id="pixel-board" class="quadro">
+  </section>
+  <form>
+    <button id="clear-board" class="clear-board">Desfazer Alterações</button>
+    <input id="board-size" class="board-size" type="number" placeholder="Digite um valor entre 5 e 50">
+    <button id="generate-board" class="generate-board">Alterar</button>
+  </form>
+  <footer>
+    <p>Leonardo Xavier 04/20</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
