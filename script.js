@@ -1,4 +1,4 @@
-let matriz = document.getElementById('matriz');
+let matriz = document.getElementById('pixel-board');
 let pallet = document.getElementById('color-palette');
 let selectedColor = "black";
 
@@ -9,7 +9,7 @@ function CreatePixel() {
     for (let i = 0; i < 5; i++) {
         linha = document.createElement("div")
         linha.id = "linha" + i;
-        document.getElementById("matriz").appendChild(linha);
+        matriz.appendChild(linha);
         for (let j = 0; j < 5; j++) {
             coluna = document.createElement("div");
             coluna.id = "coluna" + i + j // alteracao linha + coluna
@@ -26,7 +26,11 @@ window.onload = function () {
     CreatePixel();
 
     pallet.addEventListener('click', function (event) {
+        for (var item of document.querySelectorAll('.color')) {
+            item.classList.remove('selected');
+        }
         selectedColor = event.target.id;
+        event.target.className = event.target.className + " selected";
     });
 
     matriz.addEventListener('click', function (event) {
