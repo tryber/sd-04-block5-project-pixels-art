@@ -17,6 +17,7 @@ footer {
   font-style: italic;
   margin: 10% 43%;
   text-align: center;
+  margin-top: 10px;
 }
 
 .titulo {
@@ -67,4 +68,9 @@ footer {
 
 .selected {
   cursor: pointer;
+}
+
+.clear-board {
+  margin-left: 515px;
+  margin-top: 20px;
 }
