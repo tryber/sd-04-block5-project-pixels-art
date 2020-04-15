@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+#color-palette {
+  margin: 10px;
+  position: relative;
+}
+.color {
+  border: solid 1px rgb(0, 0, 0);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+#pixel-board {
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+}
+div.pixel {
+  border: solid 1px rgb(0, 0, 0);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+}
