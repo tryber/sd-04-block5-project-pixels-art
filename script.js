@@ -8,6 +8,8 @@ const verde = document.querySelector('.verde');
 const laranja = document.querySelector('.laranja');
 const amarelo = document.querySelector('.amarelo');
 const pixels = document.querySelector('#pixel-board');
+const inp = document.querySelector('#board-size');
+const bot = document.querySelector('#generate-board')
 
 preto.addEventListener('click', function () {
   verde.classList.remove('selected');
@@ -52,3 +54,8 @@ pixels.addEventListener('click', function () {
   const selec = document.querySelector('.selected');
   event.target.style.backgroundColor = selec.style.backgroundColor;
 });
+
+const botao = document.querySelector('#clear-board');
+botao.addEventListener('click', function () {
+  pixels.style.backgroundColor = 'white'
+})
