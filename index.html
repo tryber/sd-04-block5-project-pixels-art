@@ -18,45 +18,18 @@
     </section>
     <br />
     <section class="container table" id="pixel-board">
-      <table>
-        <tr>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-        </tr>
-        <tr>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-        </tr>
-        <tr>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-        </tr>
-        <tr>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-        </tr>
-        <tr>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-          <td class="pixel"></td>
-        </tr>
-      </table>
+      <table id="board"></table>
       <br />
       <button id="clear-board">Clear</button>
+      <input
+        type="number"
+        name="num"
+        id="board-size"
+        value=5
+        min=5
+        max=50
+      />
+      <button id="generate-board">Gerar Quadro</button>
     </section>
     <script src="script.js"></script>
   </body>
