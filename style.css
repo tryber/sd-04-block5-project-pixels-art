@@ -33,6 +33,7 @@ caption {
 }
 
 .paleta tr td {
+  border: black solid 1px;
   height: 25%;
   width: 25%;
 }
