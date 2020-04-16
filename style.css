@@ -18,24 +18,30 @@ h1 {
   width: 100%;
 }
 
+table {
+  margin-top: 20px;
+}
+
 caption {
   color: rgb(62, 98, 62);
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .paleta {
   background-color: white;
-  height: 100px;
+  height: 55px;
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
+  width: 225px;
 }
 
 .paleta tr td {
   border: black solid 1px;
-  height: 25%;
-  width: 25%;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .colorBlack {
@@ -57,16 +63,18 @@ caption {
 .pixel-board {
   background-color: white;
   border: black solid 1px;
-  height: 25px;
+  height: 200px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  width: 25px;
+  width: 200px;
 }
 
 .pixel {
   background-color: white;
-  height: 5px;
+  border: black solid 1px;
+  height: 40px;
   margin: 0;
-  width: 5px;
+  padding: 0;
+  width: 40px;
 }
