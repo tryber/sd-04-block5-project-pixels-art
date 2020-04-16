@@ -5,7 +5,7 @@ const clearPixel = document.getElementById('clear-board');
 const createColor = [];
 let rgb = {};
 
-//gerar cor randomicamente
+// gerar cor randomicamente
 
 function generateColor() {
   for (let i = 0; i < 3; i += 1) {
