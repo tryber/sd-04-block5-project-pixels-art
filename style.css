@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.table {
+  flex-direction: column;
+}
+
 .color {
   border: 1px solid black;
   cursor: pointer;
