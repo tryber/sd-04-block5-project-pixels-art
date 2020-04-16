@@ -6,9 +6,10 @@ const createColor = [];
 let rgb = {};
 
 //gerar cor randomicamente
+
 function generateColor() {
   for (let i = 0; i < 3; i += 1) {
-    createColor[i] = parseInt(Math.random() * 255);
+    createColor[i] = parseInt(Math.random() * 255, 10);
   }
   rgb = `rgb(${createColor})`;
 }
