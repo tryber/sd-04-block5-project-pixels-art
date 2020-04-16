@@ -9,7 +9,22 @@
 </head>
 
 <body>
+    <!--Requisito obrigatório #1: A página deve possuir o título "Paleta de Cores"
+        - O título deverá ficar dentro de uma tag h1 com o id title.-->
     <h1 id="title">Paleta de Cores</h1>
+    <!--Requisito obrigatorio #2: A página deve possuir uma paleta de quatro cores
+        - A paleta deverá listar todas as cores disponíveis para utilização, lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores".
+        - A paleta de cores deve possuir o id color-palette, ao passo que cada cor individual da paleta de cores deve possuir a classe color.
+        - A cor de fundo de cada elemento da paleta deverá ser a cor que o elemento representa.-->
+        <table id="color-palette" class="paleta">
+            <caption>Paleta de Cores</caption>
+            <tr>
+              <td class="color colorBlack"></td>
+              <td class="color colorRed"></td>
+              <td class="color colorGreen"></td>
+              <td class="color colorBlue"></td>
+            </tr>
+        </table>
 </body>
 
 </html>
