@@ -8,24 +8,24 @@ function checkColor() {
     element.classList.remove('selected');
   });
   this.classList.add('selected');
-  selectedColor = this.classList.item(1);
+  selectedColor = this.style.backgroundColor;
 }
 
 function checkPixel() {
-  if (this.classList.length === 2) {
-    this.classList.remove(this.classList.item(1));
-  }
-  this.classList.add(selectedColor);
+  this.style.backgroundColor = selectedColor;
 }
 
 [...colors].forEach((element) => {
   element.addEventListener('click', checkColor);
+  element.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  colors[0].style.backgroundColor = 'black';
 });
+
 [...pixels].forEach((element) => {
   element.addEventListener('click', checkPixel);
 });
 btnClear.addEventListener('click', () => {
   [...pixels].forEach((element) => {
-    element.classList.remove(element.classList.item(1));
+    element.style.backgroundColor = 'white';
   });
 });
