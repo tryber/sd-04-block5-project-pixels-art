@@ -53,3 +53,20 @@ caption {
 .colorBlue {
   background-color: blue;
 }
+
+.pixel-board {
+  background-color: white;
+  border: black solid 1px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 25px;
+}
+
+.pixel {
+  background-color: white;
+  height: 5px;
+  margin: 0;
+  width: 5px;
+}
