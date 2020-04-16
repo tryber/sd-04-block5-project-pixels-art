@@ -10,9 +10,8 @@ h1 {
   color: white;
   font-size: 50px;
   font-weight: 700;
-  height: 70px;
+  height: 60px;
   margin: 0;
-  padding-top: 20px;
   text-align: center;
   vertical-align: middle;
   width: 100%;
@@ -39,9 +38,10 @@ caption {
 
 .paleta tr td {
   border: black solid 1px;
-  height: 25px;
+  height: 40px;
   margin-left: auto;
   margin-right: auto;
+  width: 40px;
 }
 
 .colorBlack {
@@ -62,11 +62,11 @@ caption {
 
 .pixel-board {
   background-color: white;
-  height: 400px;
+  height: 410px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  width: 400px;
+  width: 410px;
 }
 
 .pixel {
