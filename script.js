@@ -24,10 +24,6 @@ function checkPixel() {
   colors[0].style.backgroundColor = 'black';
 });
 
-[...pixels].forEach((element) => {
-  element.addEventListener('click', checkPixel);
-});
-
 btnClear.addEventListener('click', () => {
   [...pixels].forEach((element) => {
     element.style.backgroundColor = 'white';
@@ -44,6 +40,7 @@ function generateBoard() {
     for (let i = 0; i < Number(number.value); i += 1) {
       const td = document.createElement('td');
       td.className = 'pixel';
+      td.addEventListener('click', checkPixel);
       element.appendChild(td);
     }
   });
