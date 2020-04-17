@@ -30,18 +30,22 @@ caption {
 
 .paleta {
   background-color: white;
-  height: 55px;
+  border: black solid 1px;
+  display: flex;
+  flex-direction: row;
+  height: 52px;
   margin-left: auto;
   margin-right: auto;
-  width: 225px;
+  margin-top: 20px;
+  width: 212px;
 }
 
-.paleta tr td {
+.paleta .color {
   border: black solid 1px;
-  height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40px;
+  height: 52px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 52px;
 }
 
 .colorBlack {
@@ -62,11 +66,15 @@ caption {
 
 .pixel-board {
   background-color: white;
-  height: 410px;
+  border: black solid 1px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 210px;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
-  width: 410px;
+  width: 210px;
 }
 
 .pixel {
