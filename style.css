@@ -1,0 +1,53 @@
+.color {
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  margin: 3px;
+  width: 40px;
+}
+
+.selected {
+  background-color: black;
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  margin: 3px;
+  width: 40px;
+}
+
+.colorPaint {
+  border: 2px dashed black;
+  float: left;
+  height: 20px;
+  margin: 20px 3px 3px;
+  width: 20px;
+}
+
+.color-palette {
+  margin-left: 50px;
+}
+
+.title {
+  margin-left: 50px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  background-color: black;
+  border: 1px solid black;
+  margin-left: 25px;
+}
+
+.clear-board {
+  margin-left: 90px;
+}
+
+.change {
+  margin-left: 80px;
+}

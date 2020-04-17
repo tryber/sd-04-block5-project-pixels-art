@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Pixel Art</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+
+    <header>
+            <!--REQUISITO 1 -  TÍTULO------------------------------------------------------------------------------------------------------------->
+            <h1 id="title" class="title">Paleta de Cores</h1>
+            <!--REQUISITO 1 -  TÍTULO------------------------------------------------------------------------------------------------------------->
+
+
+            <!--Mudar o tamanho do quadro--------------------------------------------------------------------------------------------------------->
+            <form class="change">
+                <label for="text-input">Choose board's size:</label><br>
+                <input type="number"  id="boardSize" class="boardSize" min="1" max="50"><button>change!</button><br />
+            </form><br>
+             <!--Mudar o tamanho do quadro--------------------------------------------------------------------------------------------------------->
+
+
+        <!--REQUISITO 2 - PALETA------------------------------------------------------------------------------------------------------------------>
+        <section id="color-palette" class="color-palette">
+            <div class="color selected" id="black"></div>
+            <div class="color" id="olive"></div>
+            <div class="color" id="red"></div>
+            <div class="color" id="navy"></div>
+        </section>
+        <!--REQUISITO 2 - PALETA------------------------------------------------------------------------------------------------------------------>
+    </header>
+    <br><br><br>
+
+
+
+
+        <!--PIXEL BOARD----------------------------------------------------------------------------------------->
+        <div>
+            <table id="pixel-board" class="pixel-board">
+                <tr>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                </tr>
+                <tr>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                </tr>
+                <tr>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                </tr>
+                <tr>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                </tr>
+                <tr>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                    <td class="pixel"></td>
+                </tr>
+            </table><br>
+            <br>
+            <button id="clear-board" class="clear-board">- Clear Board -</button>
+        </div>
+
+</body>
+<script src="script.js"></script>
+</html>
