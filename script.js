@@ -1,4 +1,3 @@
 window.onload = function () {
-  const color = document.getElementsByClassName('color colorBlack');
-  color.className = 'color colorBlack selected';
+  document.getElementsByClassName('color colorBlack').className = 'color colorBlack selected';
 };
