@@ -1,9 +1,12 @@
+// Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels
 function blackColor() {
   document.getElementById('firstColor').className = 'color selected';
 }
 
 window.onload = blackColor;
 
+// Ao clicar em uma das cores da paleta,
+// a cor selecionada na paleta é que vai ser usada para preencher os pixels
 const firstColor = document.getElementById('firstColor');
 firstColor.addEventListener('click', function () {
   document.getElementById('firstColor').className = 'color selected';
@@ -45,6 +48,7 @@ document.getElementById('secondColor').style.backgroundColor = 'green';
 document.getElementById('thirdColor').style.backgroundColor = 'blue';
 document.getElementById('fourthColor').style.backgroundColor = 'red';
 
+// Ao clicar em um pixel com uma cor selecionada, o pixel deve ser preenchido com esta cor
 const pixelBoard = document.querySelector('#pixel-board');
 pixelBoard.addEventListener('click', function (event) {
   const selectedColor = document.querySelector('.selected').style.backgroundColor;
@@ -52,6 +56,8 @@ pixelBoard.addEventListener('click', function (event) {
   document.getElementById('pixel-board').style.backgroundColor = 'white';
 });
 
+// Crie um botão que, ao ser clicado, limpa o quadro,
+// preenchendo a cor de todos seus pixels com branco
 const botao = document.querySelector('#clear-board');
 const pixel = document.querySelectorAll('.pixel');
 botao.addEventListener('click', function () {
