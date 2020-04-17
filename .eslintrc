@@ -4,9 +4,9 @@
     "no-alert": "off",
     "prefer-arrow-callback": "off",
     "func-names": "off",
-    "arrow-parens": [2, "always"],
+    "arrow-parens": "off",
     "no-param-reassign": "off",
-    "prettier/prettier": ["error"]
+    "quotes": [2, "double"]
   },
   "env": {
     "browser": true,
@@ -14,7 +14,6 @@
     "jest": true
   },
   "plugins": [
-    "html",
-    "prettier"
+    "html"
   ]
 }
