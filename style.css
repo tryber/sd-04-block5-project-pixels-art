@@ -68,8 +68,7 @@ caption {
   background-color: white;
   border: black solid 1px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   height: 210px;
   margin-left: auto;
   margin-right: auto;
