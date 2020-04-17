@@ -4,12 +4,18 @@ window.onload = function () {
   const tres = this.document.getElementById('tres');
   const quatro = this.document.getElementById('quatro');
   preto.className = 'selected color';
-  function randomColor(min, max) {
-    return ((Math.random() * (max - min)) + min);
+  function randomColor() {
+    const min = 0;
+    const max = 16777215;
+    const cor = (Math.floor((Math.random() * (max - min)) + min)).toString(16);
+    return (`#${cor}`);
   }
-  dois.style.backgroundColor = 'rgb(' + randomColor(0, 255) + ',' + randomColor(0, 255) + ',' + randomColor(0, 255) + ')';
-  tres.style.backgroundColor = 'rgb(' + randomColor(0, 255) + ',' + randomColor(0, 255) + ',' + randomColor(0, 255) + ')';
-  quatro.style.backgroundColor = 'rgb(' + randomColor(0, 255) + ',' + randomColor(0, 255) + ',' + randomColor(0, 255) + ')';
+  const rgb2 = randomColor();
+  const rgb3 = randomColor();
+  const rgb4 = randomColor();
+  dois.style.backgroundColor = rgb2;
+  tres.style.backgroundColor = rgb3;
+  quatro.style.backgroundColor = rgb4;
   preto.style.backgroundColor = 'black';
   document.getElementById('preto').addEventListener('click', function () { preto.className = 'selected color'; dois.className = 'color'; tres.className = 'color'; quatro.className = 'color'; });
   document.getElementById('dois').addEventListener('click', function () { preto.className = 'color'; dois.className = 'selected color'; tres.className = 'color'; quatro.className = 'color'; });
