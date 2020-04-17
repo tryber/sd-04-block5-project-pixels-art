@@ -1,3 +1,3 @@
 window.onload = function () {
-  document.getElementsByClassName('color colorBlack').className = 'selected';
+  document.getElementsByTagName('preto').className = '.selected';
 };
