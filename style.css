@@ -48,22 +48,6 @@ caption {
   width: 52px;
 }
 
-.colorBlack {
-  background-color: black;
-}
-
-.colorRed {
-  background-color: red;
-}
-
-.colorGreen {
-  background-color: green;
-}
-
-.colorBlue {
-  background-color: blue;
-}
-
 .pixel-board {
   background-color: white;
   border: black solid 1px;
