@@ -11,10 +11,17 @@ window.onload = function () {
   let color = document.querySelectorAll('.color');
   let pixel = document.querySelectorAll('.pixel');
   let theCSSprop;
+  for (let i = 0; i < 25; i += 1) {
+    pixel[i].addEventListener('click', function () {
+      pixel[i].style.backgroundColor = black.style.backgroundColor;
+    })
+  }
+
   for (let c = 0; c < 4; c += 1) {
     for (let i = 0; i < 25; i += 1) {
+
       color[c].addEventListener('click', function () {
-        black.classList.remove('selected')
+        black.classList.remove('selected');
         theCSSprop = window.getComputedStyle(color[c], null).getPropertyValue('background-color');
         pixel[i].addEventListener('click', function () {
           this.style.backgroundColor = theCSSprop;
@@ -23,4 +30,6 @@ window.onload = function () {
       });
     }
   }
+
+
 };
