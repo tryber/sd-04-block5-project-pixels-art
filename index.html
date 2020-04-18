@@ -11,51 +11,48 @@
     <h1 id="title" class="title">Paleta de Cores</h1>
   </header>
 
-  <section id="color-palette" class="color-pallete">
+  <div id="color-palette" class="color-pallete">
     <div class="color selected"></div>
     <div class="color"></div>
     <div class="color"></div>
     <div class="color"></div>
-  </section>
+  </div>
 
-  <section class="settings">
-    <button id="clear-board" class="clear-board">Clear</button>
+  <form class="settings">
+    <label for="board-size">Enter an integer number:</label>
     <input type="number" value="5" id="board-size" class="board-size">
-    <button id="generate-board" class="generate-board">Generate board</button>
-  </section>
+  </form>
+  <button id="generate-board" class="generate-board">Generate board</button>
 
-  <p></p>
-  <br><br>
+  <div id="pixel-board" class="pixel-board">
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+    <div class="pixel"></div>
+  </div>
 
-  <section class="pixel-board-container">
-    <div id="pixel-board" class="pixel-board">
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-      <div class="pixel"></div>
-    </div>
-  </section>
+  <button id="clear-board" class="clear-board">Clear</button>
 
   <script src="./script.js"></script>
 </body>

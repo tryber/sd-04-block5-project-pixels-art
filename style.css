@@ -57,13 +57,19 @@
 }
 
 .settings {
+  color: white;
   display: flex;
   justify-content: center;
-  margin: 50px;
+  margin: 20px;
+  text-align: center;
 }
 
-.board-size {
-  width: 60px;
+.generate-board {
+  margin: 20px;
+}
+
+.clear-board {
+  margin: 20px;
 }
 
 button {
@@ -92,8 +98,12 @@ input {
 }
 
 body {
+  align-items: center;
   background-color: rgb(24, 24, 24);
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
