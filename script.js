@@ -2,13 +2,13 @@ window.onload = function () {
   makeColor();
   const color = document.querySelectorAll('.color');
   const pixel = document.querySelectorAll('.pixel');
-  const btnClr = document.querySelector('#apagar');
-
+  const btnClr = document.querySelector('#clear-board');
   let theCSSprop;
+
   for (let i = 0; i < 25; i += 1) {
     pixel[i].addEventListener('click', function () {
       pixel[i].style.backgroundColor = black.style.backgroundColor;
-    })
+    });
   }
   for (let c = 0; c < 4; c += 1) {
     for (let i = 0; i < 25; i += 1) {
@@ -23,7 +23,7 @@ window.onload = function () {
 
   btnClr.addEventListener('click', function() {
     mudaCor('white');
-  })
+  });
 };
 
 function makeColor() {
