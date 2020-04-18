@@ -70,7 +70,7 @@ btnClean.addEventListener('click', function () {
 const btnInsert = document.querySelector('#generate-board');
 btnInsert.addEventListener('click', function () {
   const inputValue = document.querySelector('#board-size');
-  const number = inputValue.value;
+  let number = inputValue.value;
   if (number<5) {
     number = 5;
   } else if (number>50) {
