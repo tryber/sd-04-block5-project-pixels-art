@@ -1,5 +1,6 @@
 body {
   background-color: white;
+  text-align: center;
 }
 
 /* O quadro de pixels deve aparecer abaixo da paleta de cores */
@@ -31,6 +32,9 @@ body {
   position: relative;
   top: 45px;
   width: 210px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 /* A cor inicial dos pixels, ao abrir a página, deve ser branca. */
@@ -41,6 +45,7 @@ body {
   display: inline-block;
   height: 40px;
   width: 40px;
+  left: auto;
 }
 
 .color {
@@ -51,7 +56,6 @@ body {
 }
 
 .botao {
-  left: 15px;
   position: relative;
   top: 70px;
 }

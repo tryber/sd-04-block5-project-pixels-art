@@ -43,10 +43,10 @@ fourthColor.addEventListener('click', function () {
   document.querySelector('.selected').style.backgroundColor = 'red';
 });
 
-document.getElementById('firstColor').style.backgroundColor = 'black';
-document.getElementById('secondColor').style.backgroundColor = 'green';
-document.getElementById('thirdColor').style.backgroundColor = 'blue';
-document.getElementById('fourthColor').style.backgroundColor = 'red';
+firstColor.style.backgroundColor = 'black';
+secondColor.style.backgroundColor = 'green';
+thirdColor.style.backgroundColor = 'blue';
+fourthColor.style.backgroundColor = 'red';
 
 // Ao clicar em um pixel com uma cor selecionada, o pixel deve ser preenchido com esta cor
 const pixelBoard = document.querySelector('#pixel-board');
@@ -58,11 +58,32 @@ pixelBoard.addEventListener('click', function (event) {
 
 // Crie um botão que, ao ser clicado, limpa o quadro,
 // preenchendo a cor de todos seus pixels com branco
-const botao = document.querySelector('#clear-board');
+const btnClean = document.querySelector('#clear-board');
 const pixel = document.querySelectorAll('.pixel');
-botao.addEventListener('click', function () {
-  document.getElementById('pixel-board').style.backgroundColor = 'white';
+btnClean.addEventListener('click', function () {
+  pixelBoard.style.backgroundColor = 'white';
   for (let i = 0; i < pixel.length; i = 1 + i) {
     pixel[i].style.backgroundColor = 'white';
+  }
+});
+
+const btnInsert = document.querySelector('#generate-board');
+btnInsert.addEventListener('click', function () {
+  for (let i = 0; i < pixel.length; i = 1 + i) {
+    pixelBoard.removeChild(pixel[i]);
+  }
+  const inputValue = document.querySelector('#board-size');
+  const number = inputValue.value;
+  if (number<5) {
+    number = 5;
+  } else if (number>50) {
+    number = 50;
+  }
+  pixelBoard.style.width = number*40 + number*2 + 'px';
+  pixelBoard.style.height = number*40 + number*2 + 'px';
+  for (let i = 0; i < number*number; i = 1 + i) {
+    const createPixel = document.createElement('div');
+    createPixel.className = 'pixel';
+    pixelBoard.appendChild(createPixel);
   }
 });
