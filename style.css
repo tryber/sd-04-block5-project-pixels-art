@@ -21,3 +21,10 @@
   height: 44px;
   width: 41px;
 }
+
+.apagar {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  padding: 8px;
+}
