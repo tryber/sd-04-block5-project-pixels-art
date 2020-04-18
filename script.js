@@ -24,17 +24,20 @@ window.onload = function () {
   btnClr.addEventListener('click', function() {
     mudaCor('white');
   });
+  let random = (Math.random() * (254-1) + 1)
+  console.log(Math.round(random));
 };
 
 function makeColor() {
+  let random = Math.round((Math.random() * (254-1) + 1));
   const black = document.querySelector('#black');
   black.style.backgroundColor = 'rgb(0, 0, 0)';
   const red = document.querySelector('#red');
-  red.style.backgroundColor = 'rgb(255, 0, 0)';
+  red.style.backgroundColor = 'rgb(255,' + random + ', ' + random + ' )';
   const green = document.querySelector('#green');
-  green.style.backgroundColor = 'rgb(0, 255, 0)';
+  green.style.backgroundColor = 'rgb(' + random + ', 255, ' + random + ' )';
   const blue = document.querySelector('#blue');
-  blue.style.backgroundColor = 'rgb(0, 0, 255)';
+  blue.style.backgroundColor = 'rgb(' + random + ', ' + random + ', 255)';
 }
 
 function mudaCor(cor) {
