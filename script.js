@@ -69,9 +69,6 @@ btnClean.addEventListener('click', function () {
 
 const btnInsert = document.querySelector('#generate-board');
 btnInsert.addEventListener('click', function () {
-  for (let i = 0; i < pixel.length; i = 1 + i) {
-    pixelBoard.removeChild(pixel[i]);
-  }
   const inputValue = document.querySelector('#board-size');
   const number = inputValue.value;
   if (number<5) {
@@ -81,6 +78,7 @@ btnInsert.addEventListener('click', function () {
   }
   pixelBoard.style.width = number*40 + number*2 + 'px';
   pixelBoard.style.height = number*40 + number*2 + 'px';
+  pixelBoard.innerHTML="";
   for (let i = 0; i < number*number; i = 1 + i) {
     const createPixel = document.createElement('div');
     createPixel.className = 'pixel';
