@@ -29,6 +29,14 @@
   width: 41px;
 }
 
+.gen-board {
+  background-color: rgb(27, 30, 212);
+  border-radius: 5px;
+  color: white;
+  margin-left: 8px;
+  padding: 8px;
+}
+
 .clear-board {
   background-color: white;
   border-radius: 5px;

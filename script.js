@@ -5,6 +5,9 @@ const blue = document.querySelector('#blue');
 const color = document.querySelectorAll('.color');
 const pixel = document.querySelectorAll('.pixel');
 const btnClr = document.querySelector('#clear-board');
+const pxlBoard = document.querySelector('#pixel-board');
+const tblSize = document.querySelector('#board-size');
+const btnCreate = document.querySelector('#generate-board');
 
 function makeColor() {
   let random1 = Math.round((Math.random() * (254 - 1) + 1));
@@ -68,7 +71,42 @@ function selectColor() {
       });
     }
   }
+}
 
+function createTable(size) {
+  if (size >= 5 && size <= 50) {
+  pxlBoard.innerHTML = '';
+  for (let i = 0; i<size; i+=1) {
+    let line = document.createElement('tr');
+    line.style.height = '44px';
+    line.style.width = '41px';
+    line.style.border = '1px solid black';
+    pxlBoard.appendChild(line);
+    for (let c = 0; c<size; c+=1) {
+      let column = document.createElement('td');
+      column.style.height = '44px';
+      column.style.width = '41px';
+      column.style.border = '1px solid black';
+      line.appendChild(column);
+    }
+  }
+  } else if (size > 50) {
+    for (let i = 0; i<50; i+=1) {
+      let line = document.createElement('tr');
+      line.style.height = '44px';
+      line.style.width = '41px';
+      line.style.border = '1px solid black';
+      pxlBoard.appendChild(line);
+      for (let c = 0; c<50; c+=1) {
+        let column = document.createElement('td');
+        column.style.height = '44px';
+        column.style.width = '41px';
+        column.style.border = '1px solid black';
+        line.appendChild(column);
+      }
+    }
+  }
+  
 }
 
 window.onload = function () {
@@ -78,8 +116,14 @@ window.onload = function () {
       pixel[i].style.backgroundColor = black.style.backgroundColor;
     });
   }
+
+  btnCreate.addEventListener('click', function() {
+    createTable(tblSize.value);
+  });
+
   selectColor()
   btnClr.addEventListener('click', function () {
     mudaCor('white');
   });
+  
 };
