@@ -92,6 +92,7 @@ function createTable(size) {
     }
   }
   } else if (size > 50) {
+    pxlBoard.innerHTML = '';
     for (let i = 0; i<50; i+=1) {
       let line = document.createElement('tr');
       line.style.height = '44px';
