@@ -86,6 +86,7 @@ function createTable(size) {
       let column = document.createElement('td');
       column.style.height = '44px';
       column.style.width = '41px';
+      column.classList.add('pixel');
       column.style.border = '1px solid black';
       line.appendChild(column);
     }
@@ -101,6 +102,7 @@ function createTable(size) {
         let column = document.createElement('td');
         column.style.height = '44px';
         column.style.width = '41px';
+        column.classList.add('pixel');
         column.style.border = '1px solid black';
         line.appendChild(column);
       }
@@ -111,19 +113,18 @@ function createTable(size) {
 
 window.onload = function () {
   makeColor();
+  btnCreate.addEventListener('click', function() {
+    createTable(tblSize.value);
+  });
+
   for (let i = 0; i < 25; i += 1) {
     pixel[i].addEventListener('click', function () {
       pixel[i].style.backgroundColor = black.style.backgroundColor;
     });
   }
 
-  btnCreate.addEventListener('click', function() {
-    createTable(tblSize.value);
-  });
-
   selectColor()
   btnClr.addEventListener('click', function () {
     mudaCor('white');
   });
-  
 };
