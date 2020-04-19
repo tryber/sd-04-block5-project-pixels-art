@@ -1,0 +1,20 @@
+.color-palette {
+    display: grid;
+    grid-template-columns: 41px 41px 41px 41px;
+}
+.color {
+    height: 40px;
+    width: 40px;
+}
+.color#color1 {
+    background-color: black;
+}
+.color#color2 {
+    background-color: red;
+}
+.color#color3 {
+    background-color: blue;
+}
+.color#color4 {
+    background-color: green;
+}
