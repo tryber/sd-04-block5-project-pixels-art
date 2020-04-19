@@ -74,7 +74,11 @@ function selectColor() {
 }
 
 function createTable(size) {
-  if (size >= 5 && size <= 50) {
+  if (size < 5) {
+    size = 5;
+  }else if (size > 50) {
+  size = 50;
+  }
   pxlBoard.innerHTML = '';
   for (let i = 0; i<size; i+=1) {
     let line = document.createElement('tr');
@@ -91,25 +95,6 @@ function createTable(size) {
       line.appendChild(column);
     }
   }
-  } else if (size > 50) {
-    pxlBoard.innerHTML = '';
-    for (let i = 0; i<50; i+=1) {
-      let line = document.createElement('tr');
-      line.style.height = '44px';
-      line.style.width = '41px';
-      line.style.border = '1px solid black';
-      pxlBoard.appendChild(line);
-      for (let c = 0; c<50; c+=1) {
-        let column = document.createElement('td');
-        column.style.height = '44px';
-        column.style.width = '41px';
-        column.classList.add('pixel');
-        column.style.border = '1px solid black';
-        line.appendChild(column);
-      }
-    }
-  }
-  
 }
 
 window.onload = function () {
