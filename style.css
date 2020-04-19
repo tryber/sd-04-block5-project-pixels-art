@@ -4,6 +4,13 @@
   width: 40px;
 }
 
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .selected {
   border: 1px solid black;
   height: 40px;
@@ -26,5 +33,6 @@
   background-color: white;
   border-radius: 5px;
   color: black;
+  margin-top: 16px;
   padding: 8px;
 }
