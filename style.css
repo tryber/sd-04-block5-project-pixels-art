@@ -1,0 +1,23 @@
+#color-pallete {
+    display: table;
+    border-spacing: 1px;
+    background-color: black;
+    border: 1px solid black;
+}
+
+#pixel-board {
+    border-collapse: collapse;
+}
+
+.color {
+    border: 1px solid rgb(0, 0, 0);
+    width: 41px;
+    height: 41px;
+}
+
+.pixel {   
+    border: 1px solid black;
+    width: 41px;
+    height: 41px;
+    background-color: rgb(255, 255, 255);
+}
