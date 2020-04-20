@@ -7,3 +7,4 @@ function setPenColor (color) {
 function setPixelColor (pixel) {
     pixel.style.backgroundColor = penColor;
 }
+
