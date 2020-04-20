@@ -2,52 +2,37 @@
 .container {
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
 }
 
-.table {
-  flex-direction: column;
+.board {
+  height: 210px;
+  width: 210px;
 }
 
 .color {
+  background: black;
   border: 1px solid black;
   cursor: pointer;
   height: 40px;
-  margin: 5px;
   width: 40px;
 }
 
-/* Colors */
-.aqua {
-  background: aqua;
+.inputs {
+  margin: 20px 0;
 }
 
-.black {
-  background: black;
-}
-
-.olive {
-  background: olive;
-}
-
-.salmon {
-  background: salmon;
+.pixel {
+  background: white;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
 }
 
 /* General Styling */
 h1 {
   text-align: center;
-}
-
-td {
-  background: white;
-  border: 1px solid black;
-  cursor: pointer;
-  height: 41px;
-  width: 41px;
-}
-
-table {
-  border-collapse: collapse;
 }

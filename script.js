@@ -1,12 +1,12 @@
 // Initialize vars
-const colors = document.getElementsByClassName("color");
-const pixels = document.getElementsByClassName("pixel");
-const rows = document.getElementsByClassName("row");
+const colors = document.querySelectorAll(".color");
+const pixels = document.querySelectorAll(".pixel");
+const board = document.querySelector("#pixel-board");
 const btnClear = document.getElementById("clear-board");
 const boardSize = document.getElementById("board-size");
-const boardTable = document.getElementById("board");
 const btnGenBoard = document.getElementById("generate-board");
 let selectedColor = "black";
+let currentBoard = Number(boardSize.value);
 // func: Check which color is selected from palette
 function checkColor() {
   [...colors].forEach((element) => {
@@ -20,35 +20,34 @@ function checkPixel() {
   this.style.backgroundColor = selectedColor;
 }
 // func: Delete all rows from board
-function deleteRows(n) {
+function deleteCells(n) {
   for (let i = 0; i < n; i += 1) {
-    boardTable.deleteRow(0);
-  }
-}
-// func: Add new rows to board
-function addRows(n) {
-  for (let i = 0; i < n; i += 1) {
-    const newTr = boardTable.insertRow();
-    newTr.className = "row";
+    board.removeChild(board.lastChild);
   }
 }
 // func: Add new cells (with eventlisteners) to board
 function addCells(n) {
-  [...rows].forEach((element) => {
-    for (let i = 0; i < n; i += 1) {
-      const newTd = element.insertCell();
-      newTd.className = "pixel";
-      newTd.backgroundColor = "white";
-      newTd.addEventListener("click", checkPixel);
-    }
-  });
+  for (let i = 0; i < n; i += 1) {
+    const newDiv = document.createElement("div");
+    newDiv.className = "pixel";
+    newDiv.backgroundColor = "white";
+    newDiv.addEventListener("click", checkPixel);
+    board.appendChild(newDiv);
+  }
 }
+
 // Initialize SPA
 window.onload = () => {
   btnGenBoard.addEventListener("click", () => {
-    deleteRows(rows.length);
-    addRows(Number(boardSize.value));
-    addCells(Number(boardSize.value));
+    const numCells = Math.abs((currentBoard ** 2) - (Number(boardSize.value ** 2)));
+    board.style.width = `${Number(boardSize.value) * 42}px`;
+    board.style.height = `${Number(boardSize.value) * 42}px`;
+    if (currentBoard < Number(boardSize.value)) {
+      addCells(numCells);
+    } else {
+      deleteCells(numCells);
+    }
+    currentBoard = Number(boardSize.value);
   });
 
   [...colors].forEach((element) => {
