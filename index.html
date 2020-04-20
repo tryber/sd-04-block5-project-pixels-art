@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixels Art Project</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+  <h1 id="title">Paleta de Cores</h1>
+  <table id="color-palette">
+    <tbody>
+      <tr>
+        <td class="color selected" style="background-color: black;"></td>
+        <td class="color"></td>
+        <td class="color"></td>
+        <td class="color"></td>
+      </tr>
+    </tbody>
+  </table>
+  <form>
+    <label for="board-size">Board size (between 5 and 50 pixels):</label><br>
+    <input type="number" id="board-size" name="board-size" min="5" max="50" value="5">
+    <button type="button" id="generate-board">Generate board</button>
+    <button type="button" id="clear-board">Clear board</button>
+
+  </form>
+  <h2>Pixel Board:</h2>
+  <table class="pixel-board" id="pixel-board">
+    <tbody id='pixel-body'>
+    </tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+
+</html>
