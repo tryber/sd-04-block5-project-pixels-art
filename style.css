@@ -1,0 +1,46 @@
+.color {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.flexbox {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.selected {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 44px;
+  width: 41px;
+}
+
+.gen-board {
+  background-color: rgb(27, 30, 212);
+  border-radius: 5px;
+  color: white;
+  margin-left: 8px;
+  padding: 8px;
+}
+
+.clear-board {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  margin-top: 16px;
+  padding: 8px;
+}
