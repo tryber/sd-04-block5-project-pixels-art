@@ -11,6 +11,8 @@
 
 .pixel-board {
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: 42px 42px 42px 42px 42px;
   height: 5px;
   width: 5px;
 }
@@ -18,4 +20,7 @@
 .pixel {
   background-color: white;
   border: 1px solid black;
+  height: 40px;
+  margin: 1px solid black;
+  width: 40px;
 }
