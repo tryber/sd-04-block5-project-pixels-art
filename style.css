@@ -1,0 +1,38 @@
+/* Flexbox */
+.container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.board {
+  height: 210px;
+  width: 210px;
+}
+
+.color {
+  background: black;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.inputs {
+  margin: 20px 0;
+}
+
+.pixel {
+  background: white;
+  border: 1px solid black;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+/* General Styling */
+h1 {
+  text-align: center;
+}
