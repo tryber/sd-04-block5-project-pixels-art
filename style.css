@@ -1,6 +1,7 @@
 .color-palette {
   display: grid;
   grid-template-columns: 43px 43px 43px 43px;
+  margin: 1px;
 }
 
 .color {
@@ -13,14 +14,15 @@
   border: 1px solid black;
   display: grid;
   grid-template-columns: 42px 42px 42px 42px 42px;
-  height: 5px;
-  width: 5px;
+  margin: 1px;
+  height: 210px;
+  width: 210px;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
   height: 40px;
-  margin: 1px solid black;
+  margin: 1px black;
   width: 40px;
 }
