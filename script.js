@@ -39,7 +39,14 @@ function addCells(n) {
 // Initialize SPA
 window.onload = () => {
   btnGenBoard.addEventListener("click", () => {
-    const numCells = Math.abs((currentBoard ** 2) - (Number(boardSize.value ** 2)));
+    let numCells = 0;
+    if (Number(boardSize.value) < 5) {
+      numCells = 5 ** 2;
+    } else if (Number(boardSize.value) > 50) {
+      numCells = 50 ** 2;
+    } else {
+      numCells = Math.abs((currentBoard ** 2) - (Number(boardSize.value ** 2)));
+    }
     board.style.width = `${Number(boardSize.value) * 42}px`;
     board.style.height = `${Number(boardSize.value) * 42}px`;
     if (currentBoard < Number(boardSize.value)) {
