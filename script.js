@@ -1,55 +1,66 @@
-window.onload = () => {
+const colorPalette = document.getElementById('color-palette');
+const pixels = document.getElementById('pixel-board');
+const divsPalette = document.querySelectorAll('.color');
+const pixelBody = document.getElementById('pixel-body');
+const sizeInput = document.getElementById('board-size');
+const generateButton = document.getElementById('generate-board');
+const clearButton = document.getElementById('clear-board');
+const pixelTable = document.getElementsByClassName('pixel');
 
-  for (let i = 1; i <= 4; i += 1) {
-    document.getElementById(`color${i}`).addEventListener('click', function () {
-      document.querySelector('.selected').classList.remove('selected');
-      document.getElementById(`color${i}`).classList.add('selected');
-    });
+// adding a selected class to the selected color from the palette:
+function selectedColor(e) {
+  if (document.querySelector('.selected') !== null) {
+    document.querySelector('.selected').classList.remove('selected');
   }
-
-  let pixels = document.getElementById('pixel-board');
-  pixels.addEventListener('click', function (event) {
-    const selected = document.querySelector('.selected');
-    event.target.style.backgroundColor = selected.style.backgroundColor;
-  });
-
-  let generateButton = document.getElementById('generate-board')
-  generateButton.addEventListener('click', boardSize);
-
-  function boardSize() {
-    let pixelBody = document.getElementById('pixel-body');
-    let sizeValue = document.getElementById('board-size').value;
-    pixelBody.innerHTML = '';
-    if (sizeValue < 5) sizeValue = 5;
-    if (sizeValue > 50) sizeValue = 50;
-    for (let j = 1; j <= sizeValue; j += 1) {
-      let tr = document.createElement('tr');
-      pixelBody.appendChild(tr);
-      for (let k = 1; k <= sizeValue; k += 1) {
-        let td = document.createElement('td');
-        td.className = 'pixel';
-        let trFind = document.querySelectorAll('tr');
-        trFind[j].appendChild(td);
-      }
-    }
+  if (e.target && e.target.nodeName === 'TD') {
+    e.target.classList.add('selected');
   }
+}
 
-  let clear = document.getElementById('clear-board');
-  let pixels2 = document.getElementsByClassName('pixel');
+colorPalette.addEventListener('click', selectedColor);
 
-  clear.addEventListener('click', function () {
-    for (let i = 0; i < pixels2.length; i += 1) {
-      pixels2[i].style.backgroundColor = 'white';
-    }
-  });
+// coloring pixels:
+pixels.addEventListener('click', function (event) {
+  const selected = document.querySelector('.selected');
+  event.target.style.backgroundColor = selected.style.backgroundColor;
+});
 
-  randomColors();
-  function randomColors() {
-    for (let i = 2; i <= 4; i += 1) {
-      let r = Math.floor(Math.random() * (255 - 0 + 1) + 0);
-      let g = Math.floor(Math.random() * (255 - 0 + 1) + 0);
-      let b = Math.floor(Math.random() * (255 - 0 + 1) + 0);
-      document.getElementById(`color${i}`).style.backgroundColor = 'rgb(' + r + ',' + b + ',' + g + ')';
+// creating the pixels board from the input size received:
+function boardSize() {
+  // instead using while going to use .innerText = '' (codeclimate Cognitive Complexity issues)
+  // while (pixelBody.firstChild) {
+  //   pixelBody.firstChild.remove();
+  // }
+  pixelBody.innerHTML = '';
+  if (sizeInput.value < 5) sizeInput.value = 5;
+  if (sizeInput.value > 50) sizeInput.value = 50;
+  for (let j = 1; j <= sizeInput.value; j += 1) {
+    const tr = document.createElement('tr');
+    pixelBody.appendChild(tr);
+    for (let k = 1; k <= sizeInput.value; k += 1) {
+      const td = document.createElement('td');
+      td.className = 'pixel';
+      document.querySelectorAll('tr')[j].appendChild(td);
     }
   }
 }
+
+generateButton.addEventListener('click', boardSize);
+
+// clearing pixels colors:
+clearButton.addEventListener('click', function () {
+  for (let i = 0; i < pixelTable.length; i += 1) {
+    pixelTable[i].style.backgroundColor = 'white';
+  }
+});
+
+// adding random colors to the color palette:
+function randomColors() {
+  for (let i = 1; i < 4; i += 1) {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    divsPalette[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+  }
+}
+randomColors();
