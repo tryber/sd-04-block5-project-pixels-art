@@ -37,39 +37,31 @@ function addCells(n) {
 }
 
 // Initialize SPA
-window.onload = () => {
-  btnGenBoard.addEventListener("click", () => {
-    let numCells = 0;
-    if (Number(boardSize.value) < 5) {
-      numCells = 5 ** 2;
-    } else if (Number(boardSize.value) > 50) {
-      numCells = 50 ** 2;
-    } else {
-      numCells = Math.abs((currentBoard ** 2) - (Number(boardSize.value ** 2)));
-    }
-    board.style.width = `${Number(boardSize.value) * 42}px`;
-    board.style.height = `${Number(boardSize.value) * 42}px`;
-    if (currentBoard < Number(boardSize.value)) {
-      addCells(numCells);
-    } else {
-      deleteCells(numCells);
-    }
-    currentBoard = Number(boardSize.value);
-  });
 
-  [...colors].forEach((element) => {
-    element.addEventListener("click", checkColor);
-    element.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-    colors[0].style.backgroundColor = "black";
-  });
+btnGenBoard.addEventListener("click", () => {
+  const numCells = Math.abs((currentBoard ** 2) - (Number(boardSize.value ** 2)));
+  board.style.width = `${Number(boardSize.value) * 42}px`;
+  board.style.height = `${Number(boardSize.value) * 42}px`;
+  if (currentBoard < Number(boardSize.value)) {
+    addCells(numCells);
+  } else {
+    deleteCells(numCells);
+  }
+  currentBoard = Number(boardSize.value);
+});
 
+[...colors].forEach((element) => {
+  element.addEventListener("click", checkColor);
+  element.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  colors[0].style.backgroundColor = "black";
+});
+
+[...pixels].forEach((element) => {
+  element.addEventListener("click", checkPixel);
+});
+
+btnClear.addEventListener("click", () => {
   [...pixels].forEach((element) => {
-    element.addEventListener("click", checkPixel);
+    element.style.backgroundColor = "white";
   });
-
-  btnClear.addEventListener("click", () => {
-    [...pixels].forEach((element) => {
-      element.style.backgroundColor = "white";
-    });
-  });
-};
+});
