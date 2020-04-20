@@ -4,7 +4,6 @@ window.onload = function () {
   const tres = this.document.getElementById('tres');
   const quatro = this.document.getElementById('quatro');
   const generate = document.getElementById('generate-board');
-  const clear = document.getElementById('clear-board');
   preto.className = 'selected color';
   tres.style.backgroundColor = `#${(Math.floor((Math.random() * (0, 16777215)) + 0)).toString(16)}`;
   dois.style.backgroundColor = `#${(Math.floor((Math.random() * (0, 16777215)) + 0)).toString(16)}`;
@@ -17,11 +16,12 @@ window.onload = function () {
   generate.addEventListener('click', function () {
     const board = document.getElementById('pixel-board');
     const pixels = document.querySelectorAll('.pixel');
-    const size = document.getElementById('board-size').value;
+    let size = document.getElementById('board-size').value;
+    if (size < 5) size = 5;
     for (let i = 0; i < pixels.length; i += 1) { board.removeChild(pixels[i]); }
     board.style.height = `${size * 42}px`;
     board.style.width = `${size * 42}px`;
     for (let i = 0; i < size * size; i += 1) { const pixel = document.createElement('div'); pixel.classList.add('pixel'); board.appendChild(pixel); }
   });
-  clear.addEventListener('click', function () { const pixels = document.querySelectorAll('.pixel'); for (let i = 0; i < pixels.length; i += 1) { pixels[i].style.backgroundColor = 'white'; } });
+  document.getElementById('clear-board').addEventListener('click', function () { const pixels = document.querySelectorAll('.pixel'); for (let i = 0; i < pixels.length; i += 1) { pixels[i].style.backgroundColor = 'white'; } });
 };
