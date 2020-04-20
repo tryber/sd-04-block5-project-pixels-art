@@ -1,8 +1,9 @@
 .color-palette {
     display: grid;
-    grid-template-columns: 41px 41px 41px 41px;
+    grid-template-columns: 43px 43px 43px 43px;
 }
 .color {
+    border: 1px solid black;
     height: 40px;
     width: 40px;
 }
