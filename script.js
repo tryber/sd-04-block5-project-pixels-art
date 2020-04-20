@@ -11,7 +11,7 @@ window.onload = function(){
     let colorThree = document.querySelector("#color3");
     let colorFour = document.querySelector("#color4");
 
-    let pixelBoard = document.querySelector(".pixel-board");
+    let pixelBoard = document.querySelector("#pixel-board");
 
 //ESCOLHENDO AS CORES DA PALETA    
     colorOne.style.backgroundColor = 'black';
