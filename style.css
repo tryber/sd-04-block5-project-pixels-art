@@ -1,21 +1,21 @@
 .color-palette {
-    display: grid;
-    grid-template-columns: 43px 43px 43px 43px;
+  display: grid;
+  grid-template-columns: 43px 43px 43px 43px;
 }
+
 .color {
-    border: 1px solid black;
-    height: 40px;
-    width: 40px;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
 }
-.color#color1 {
-    background-color: black;
+
+.pixel-board {
+  border: 1px solid black;
+  height: 5px;
+  width: 5px;
 }
-.color#color2 {
-    background-color: red;
-}
-.color#color3 {
-    background-color: blue;
-}
-.color#color4 {
-    background-color: green;
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
 }
