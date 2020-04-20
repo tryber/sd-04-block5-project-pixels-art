@@ -44,7 +44,7 @@ function boardSize() {
     }
   }
 }
-
+boardSize();
 generateButton.addEventListener('click', boardSize);
 
 // clearing pixels colors:
