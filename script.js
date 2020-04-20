@@ -9,7 +9,7 @@ function randomBackgroundColor() {
   const r = randomColor();
   const g = randomColor();
   const b = randomColor();
-  const bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+  const bgColor = `rgb(${r}, ${g}, ${b})`;
   return bgColor;
 }
 
@@ -20,7 +20,7 @@ function randomColorPalette() {
 }
 
 function createPixelBoard(size) {
-  pixelBoard.style.width = size * 42 + 'px';
+  pixelBoard.style.width = `${size * 42}px`;
   for (let line = 0; line < size * size; line += 1) {
     const newPixel = document.createElement('div');
     newPixel.className = 'pixel';
@@ -35,6 +35,9 @@ window.onload = function () {
   randomColorPalette();
 
   createPixelBoard(5);
+
+  let selectedColor = document.getElementsByClassName('color');
+  selectedColor[0].classList.add('selected');
 
   console.log(colorPalette);
   console.log(pixelBoard);
