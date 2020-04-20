@@ -17,8 +17,8 @@ window.onload = function () {
   generate.addEventListener('click', function () {
     const board = document.getElementById('pixel-board');
     const pixels = document.querySelectorAll('.pixel');
-    for (let i = 0; i < pixels.length; i += 1) { board.removeChild(pixels[i]); }
     const size = document.getElementById('board-size').value;
+    for (let i = 0; i < pixels.length; i += 1) { board.removeChild(pixels[i]); }
     board.style.height = `${size * 42}px`;
     board.style.width = `${size * 42}px`;
     for (let i = 0; i < size * size; i += 1) { const pixel = document.createElement('div'); pixel.classList.add('pixel'); board.appendChild(pixel); }
