@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Paleta de Cores</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!--Requisito obrigatório #1: A página deve possuir o título "Paleta de Cores"
+        - O título deverá ficar dentro de uma tag h1 com o id title.-->
+    <h1 id="title">Paleta de Cores</h1>
+    <!--Requisito obrigatorio #2: A página deve possuir uma paleta de quatro cores
+        - A paleta deverá listar todas as cores disponíveis para utilização, lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores".
+        - A paleta de cores deve possuir o id color-palette, ao passo que cada cor individual da paleta de cores deve possuir a classe color.
+        - A cor de fundo de cada elemento da paleta deverá ser a cor que o elemento representa.-->
+
+    <div id="color-palette" class="paleta">
+        <form>
+            <div class="lb">
+                <label for="board-size">Altura x Largura:</label><br>
+                <input type="text" id="board-size" name="tamanho" min="5" max="50" maxlength="2"
+                    placeholder="Valor entre 5 e 50">
+            </div><br>
+        </form>
+        <div class="btns">
+            <button id="generate-board">Gerar</button>
+            <button id="clear-board">Resetar</button>
+        </div>
+        <!--Requisito obrigatorio #3: A cor preta deve ser a primeira na paleta de cores
+                As demais cores podem ser escolhidas livremente.-->
+        <div class="cores">
+            <div id="preto" class="color" style="background-color:black;"></div>
+            <div id="dois" class="color"></div>
+            <div id="tres" class="color"></div>
+            <div id="quatro" class="color"></div>
+        </div>
+    </div>
+    <br>
+    <!--Requisito obrigatorio #4: A página deve possuir um quadro de pixels, com 25 pixels
+        O quadro de pixels deve possuir 5 pixels de largura por 5 pixels de altura. A cor inicial dos pixels, ao abrir a página, deve ser branca.
+        O quadro de pixels deve possuir o id pixel-board, ao passo que cada pixel individual no quadro deve possuir a classe pixel.-->
+    <div id="pixel-board" class="pixel-board">
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+        <div class="pixel"></div>
+    </div>
+
+</body>
+
+</html>
