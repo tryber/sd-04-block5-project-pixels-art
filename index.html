@@ -16,54 +16,60 @@
         - A paleta deverá listar todas as cores disponíveis para utilização, lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores".
         - A paleta de cores deve possuir o id color-palette, ao passo que cada cor individual da paleta de cores deve possuir a classe color.
         - A cor de fundo de cada elemento da paleta deverá ser a cor que o elemento representa.-->
-    <form>
-        <button id="clear-board">Resetar Quadro</button>
-    </form>
-    <br>
+
     <div id="color-palette" class="paleta">
+        <form class="interacao">
+            <div class="lb">
+                <label for="board-size">Altura x Largura:</label><br>
+                <input type="text" id="board-size" name="tamanho" min="5" max="50" maxlength="2"
+                    placeholder="Valor entre 5 e 50">
+            </div><br>
+            <div class="btns">
+                <button id="generate-board">Gerar</button>
+                <button id="clear-board">Resetar</button>
+            </div>
+        </form>
         <!--Requisito obrigatorio #3: A cor preta deve ser a primeira na paleta de cores
                 As demais cores podem ser escolhidas livremente.-->
-        <div id="preto" class="color"> </div>
-        <div id="dois" class="color"> </div>
-        <div id="tres" class="color"> </div>
-        <div id="quatro" class="color"> </div>
+        <div class="cores">
+            <div id="preto" class="selected color" style="background-color:black;"></div>
+            <div id="dois" class="color"></div>
+            <div id="tres" class="color"></div>
+            <div id="quatro" class="color"></div>
+        </div>
     </div>
     <br>
     <!--Requisito obrigatorio #4: A página deve possuir um quadro de pixels, com 25 pixels
         O quadro de pixels deve possuir 5 pixels de largura por 5 pixels de altura. A cor inicial dos pixels, ao abrir a página, deve ser branca.
         O quadro de pixels deve possuir o id pixel-board, ao passo que cada pixel individual no quadro deve possuir a classe pixel.-->
     <div id="pixel-board" class="pixel-board">
-        <br>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
-        <br>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
-        <br>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
-        <br>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
-        <br>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
         <div class="pixel"></div>
     </div>
+
 
 </body>
 
