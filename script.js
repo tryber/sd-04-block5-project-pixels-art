@@ -99,9 +99,9 @@ function createTable(size) {
 
 window.onload = function () {
   makeColor();
-  btnCreate.addEventListener('click', function() {
-    createTable(tblSize.value);
-  });
+  // btnCreate.addEventListener('click', function() {
+  //   createTable(tblSize.value);
+  // });
 
   for (let i = 0; i < 25; i += 1) {
     pixel[i].addEventListener('click', function () {
