@@ -1,7 +1,7 @@
 let penColor = 'black';
 
-function setPenColor (pen) {
-    penColor = pen;
+function setPenColor (color) {
+    penColor = color;
 }
 
 function setPixelColor (pixel) {
