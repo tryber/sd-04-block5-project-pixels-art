@@ -1,41 +1,45 @@
-function randomColor () {
-    return Math.floor(Math.random() * 256);
+let colorPalette;
+let pixelBoard;
+
+function randomColor() {
+  return Math.floor(Math.random() * 256);
 }
 
-function randomBackgroundColor () {
-    let r = randomColor();
-    let g = randomColor();
-    let b = randomColor();
-    let bgColor = "rgb(" + r + "," + g + "," + b + ")";
-    return bgColor;
+function randomBackgroundColor() {
+  const r = randomColor();
+  const g = randomColor();
+  const b = randomColor();
+  const bgColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+  return bgColor;
 }
 
-//function createPixelBoard () {    
-//}
+function randomColorPalette() {
+  for (let i = 1; i < colorPalette.children.length; i += 1) {
+    colorPalette.children[i].style.backgroundColor = randomBackgroundColor();
+  }
+}
+
+function createPixelBoard(size) {
+  pixelBoard.style.width = size * 42 + 'px';
+  for (let line = 0; line < size * size; line += 1) {
+    const newPixel = document.createElement('div');
+    newPixel.className = 'pixel';
+    pixelBoard.appendChild(newPixel);
+  }
+}
 
 window.onload = function () {
-    let colorPalette = document.querySelector("#color-palette");
-    let pixelBoard = document.querySelector("#pixel-board");
+  colorPalette = document.querySelector('#color-palette');
+  pixelBoard = document.querySelector('#pixel-board');
 
-    function randomColorPalette () {
-        for (let i = 1; i < colorPalette.children.length; i+=1){
-          colorPalette.children[i].style.backgroundColor = randomBackgroundColor();
-      }
-    }
+  randomColorPalette();
 
-    randomColorPalette();
+  createPixelBoard(5);
 
-    //createPixelBoard();
+  console.log(colorPalette);
+  console.log(pixelBoard);
 
-    console.log(colorPalette);
-    console.log(pixelBoard);
-
-    console.log(colorPalette.children);
-    console.log(colorPalette.children[0]);
-    console.log(colorPalette.children[1]);
-    console.log(colorPalette.children[2]);
-    console.log(colorPalette.children.length);
-
-    console.log(pixelBoard.children);
+  console.log(colorPalette.children);
+  console.log(pixelBoard.children);
 
 };
