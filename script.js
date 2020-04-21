@@ -20,7 +20,7 @@ function randomColorPalette() {
   }
 }
 
-function chooseColor(event) {  
+function chooseColor(event) {
   for (let i = 0; i < selectedColor.length; i += 1) {
     selectedColor[i].classList.remove('selected');
   }
@@ -43,6 +43,6 @@ window.onload = function () {
   selectedColor[0].classList.add('selected');
 
   randomColorPalette();
-  createPixelBoard(5); 
-  colorPalette.addEventListener('click',chooseColor);
+  createPixelBoard(5);
+  colorPalette.addEventListener('click', chooseColor);
 };
