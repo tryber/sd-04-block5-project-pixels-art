@@ -1,5 +1,6 @@
 let colorPalette;
 let pixelBoard;
+let selectedColor;
 
 function randomColor() {
   return Math.floor(Math.random() * 256);
@@ -19,6 +20,13 @@ function randomColorPalette() {
   }
 }
 
+function chooseColor(event) {  
+  for (let i = 0; i < selectedColor.length; i += 1) {
+    selectedColor[i].classList.remove('selected');
+  }
+  event.target.classList.add('selected');
+}
+
 function createPixelBoard(size) {
   pixelBoard.style.width = `${size * 42}px`;
   for (let line = 0; line < size * size; line += 1) {
@@ -31,18 +39,10 @@ function createPixelBoard(size) {
 window.onload = function () {
   colorPalette = document.querySelector('#color-palette');
   pixelBoard = document.querySelector('#pixel-board');
-
-  randomColorPalette();
-
-  createPixelBoard(5);
-
-  let selectedColor = document.getElementsByClassName('color');
+  selectedColor = document.getElementsByClassName('color');
   selectedColor[0].classList.add('selected');
 
-  console.log(colorPalette);
-  console.log(pixelBoard);
-
-  console.log(colorPalette.children);
-  console.log(pixelBoard.children);
-
+  randomColorPalette();
+  createPixelBoard(5); 
+  colorPalette.addEventListener('click',chooseColor);
 };
