@@ -6,7 +6,9 @@ body {
 .color-palette {
   display: grid;
   grid-template-columns: 45px 45px 45px 45px;
-  padding-left: 38.6%;
+  height: 45px;
+  margin: 1px auto;
+  width: 210px;
 }
 
 .color {
