@@ -1,0 +1,70 @@
+.btlimpa{
+  background-color: rgb(255, 255, 255);  
+  float: right;
+  position: relative;  
+  right: 150px;
+  top: -240px;
+}
+
+.color{
+  border: 1px solid;
+  height: 40px;
+  width: 40px;
+}
+
+.color-palette{
+  border: 1px solid;
+  height: 50px;
+  list-style-type: none;
+  width: 200px;
+}
+
+.color#color-black{
+  background-color: black;
+}
+
+.color#color-red{
+  background-color: red;
+}
+
+.color#color-green{
+  background-color: green;
+}
+
+.color#color-yellow{
+  background-color: yellow;
+}
+
+.color-palette li{
+  display: inline-block;
+  border: 1px solid;
+}
+
+.pixel{
+  border: 1px solid rgb(0,0,0);
+  background-color: rgb(255, 255, 255);
+  height: 40px;  
+  margin: 1px;
+  width: 40px;
+}
+
+.pixel-board{
+  border: 1px solid;
+  height: 260px;
+  width: 500px;
+}
+
+.pixel-board li{
+  display: inline-block;
+}
+
+.pixel-board ul{
+  margin: 1px;
+}
+
+.selected{
+  background-color: rgb(0, 0, 0);  
+  border: 1px solid;
+  height: 40px;
+  width: 40px;
+}
