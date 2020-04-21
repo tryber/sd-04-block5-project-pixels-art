@@ -10,7 +10,7 @@ function CreatePixel() {
   let linha;
   let coluna;
 
-  for (let i = 0; i < sizePixel; i += 1) {
+  for (let i = 1; i <= sizePixel; i += 1) {
     linha = document.createElement('div');
     linha.id = `linha${i}`;
     MATRIZ.appendChild(linha);
@@ -63,7 +63,7 @@ window.onload = function () {
     ClearBord();
   });
 
-  GENERATEBORD.addEventListener('click', function (){
+  GENERATEBORD.addEventListener('click', function () {
     GenerateBoard();
-  })
+  });
 };
