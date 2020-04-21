@@ -25,6 +25,12 @@ function chooseColor(event) {
     selectedColor[i].classList.remove('selected');
   }
   event.target.classList.add('selected');
+  colorPalette.classList.remove('selected');
+}
+
+function paint(event) {
+  const color = document.getElementsByClassName('selected')[0];
+  event.target.style.backgroundColor = color.style.backgroundColor;
 }
 
 function createPixelBoard(size) {
@@ -45,4 +51,5 @@ window.onload = function () {
   randomColorPalette();
   createPixelBoard(5);
   colorPalette.addEventListener('click', chooseColor);
+  pixelBoard.addEventListener('click', paint);
 };
