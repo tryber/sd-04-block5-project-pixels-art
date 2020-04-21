@@ -5,11 +5,11 @@ window.onload = function () {
   let caixa4 = document.getElementsByClassName('color')[3];
   let pixelBoard = document.getElementById('pixel-board');
 
-  caixa1.className = 'selected';
   caixa1.style.backgroundColor = 'black';
   caixa2.style.backgroundColor = 'red';
   caixa3.style.backgroundColor = 'blue';
   caixa4.style.backgroundColor = 'green';
+  caixa1.classList.add('selected');
 
   function inserindoCor (event) {
     event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;

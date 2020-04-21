@@ -1,7 +1,12 @@
+body {
+  background-color: darkgrey;
+  text-align: center;
+}
+
 .color-palette {
   display: grid;
-  grid-template-columns: 43px 43px 43px 43px;
-  margin: 1px;
+  grid-template-columns: 45px 45px 45px 45px;
+  padding-left: 38.6%;
 }
 
 .color {
@@ -15,7 +20,7 @@
   display: grid;
   grid-template-columns: 42px 42px 42px 42px 42px;
   height: 210px;
-  margin: 1px;
+  margin: 1px auto;
   width: 210px;
 }
 
