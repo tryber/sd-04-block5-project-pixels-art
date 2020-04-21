@@ -7,7 +7,8 @@ let selectedColor = 'black';
 let sizePixel = 5;
 
 function CreatePixel() {
-  let linha, coluna;
+  let linha;
+  let coluna;
 
   for (let i = 0; i < sizePixel; i += 1) {
     linha = document.createElement('div');
