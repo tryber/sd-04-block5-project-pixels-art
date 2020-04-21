@@ -24,9 +24,9 @@ function CreatePixel() {
 }
 
 function ClearBord() {
-  let pixel = document.getElementsByClassName('pixel');
-  for( let i = 0; i < pixel.length - 1; i += 1){
-    document.getElementById(pixel[i].id).classList = 'pixel';
+  const PIXEL = document.getElementsByClassName('pixel');
+  for (let i = 0; i < PIXEL.length - 1; i += 1) {
+    document.getElementById(PIXEL[i].id).classList = 'pixel white';
   }
 }
 
@@ -46,7 +46,7 @@ window.onload = function () {
     document.getElementById(event.target.id).classList = `pixel ${selectedColor}`;
   });
 
-  CLEARBORD.addEventListener('click', function (event) {
+  CLEARBORD.addEventListener('click', function () {
     ClearBord();
   });
 };
