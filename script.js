@@ -24,3 +24,4 @@ window.onload = function () {
   color4.addEventListener('click', selectColor);
   pixelBoard.addEventListener('click', insertColor);
 }
+
