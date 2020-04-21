@@ -44,13 +44,13 @@ function GenerateBoard() {
 }
 
 function LoadRandomColor() {
-  COLOR[0].style.backgroundColor = `rgb(0, 0, 0)`;
-    for (let i = 1; i < 4; i += 1) {
-      let r = Math.floor(Math.random() * 256);
-      let g = Math.floor(Math.random() * 256);
-      let b = Math.floor(Math.random() * 256);
-      COLOR[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-    }
+  COLOR[0].style.backgroundColor = 'rgb(0, 0, 0)';
+  for (let i = 1; i < 4; i += 1) {
+    const RED = Math.floor(Math.random() * 256);
+    const GREEN = Math.floor(Math.random() * 256);
+    const BLUE = Math.floor(Math.random() * 256);
+    COLOR[i].style.backgroundColor = `rgb(${RED}, ${GREEN}, ${BLUE})`;
+  }
 }
 
 window.onload = function () {
