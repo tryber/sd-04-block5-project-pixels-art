@@ -18,9 +18,10 @@
     height: 40px;
     border:  1px solid black;
     margin: 1px;
+    background-color: white;
 }
 
 .color.selected {
-    border-width: 2px; 
+    border: 1px solid black ; 
 }
 
