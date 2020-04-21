@@ -10,26 +10,6 @@ function CreatePixel() {
   let linha;
   let coluna;
 
-  for (let i = 1; i <= 5; i += 1) {
-    linha = document.createElement('div');
-    linha.id = `linha${i}`;
-    MATRIZ.appendChild(linha);
-    for (let j = 0; j < 5; j += 1) {
-      coluna = document.createElement('div');
-      coluna.id = `coluna${i}${j}`;
-      coluna.classList.add('pixel');
-      document.getElementById(linha.id).appendChild(coluna);
-    }
-    const DIVCLEAR = document.createElement('div');
-    DIVCLEAR.classList.add('clear');
-    document.getElementById(linha.id).appendChild(DIVCLEAR);
-  }
-}
-
-function CreatePixelUser() {
-  let linha;
-  let coluna;
-
   for (let i = 1; i <= sizePixel; i += 1) {
     linha = document.createElement('div');
     linha.id = `linha${i}`;
@@ -59,7 +39,7 @@ function GenerateBoard() {
   sizePixel = (sizePixel > 50 ? 50 : sizePixel);
   MATRIZ.innerHTML = '';
 
-  CreatePixelUser();
+  CreatePixel();
 }
 
 window.onload = function () {

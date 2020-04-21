@@ -11,13 +11,9 @@
   background-color: white;
   border: 1px solid black;
   cursor: pointer;
+  float: left;
   height: 40px;
   width: 40px;
-}
-
-.pixelBoard {
-  display: flex;
-  flex-flow: row wrap;
 }
 
 .colorPallet {
