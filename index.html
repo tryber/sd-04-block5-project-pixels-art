@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <title>Pixel-art</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Paleta de Cores</h1>
+    </header>
+<hr>
+    <section id="color-palette" class="colorPallet">
+        <h1 class="font-zero">Paleta de Cores</h1>
+
+        <div id="black" class="color black selected"></div>
+
+        <div id="red" class="color red"></div>
+
+        <div id="blue" class="color blue"></div>
+
+        <div id="green" class="color green"></div>
+    </section>
+
+    <section class="configBoard">
+        <h1 class="font-zero"> Configurações</h1>
+        <h3> Configurações de pixels</h3>
+
+        <button id="clear-board" class="btn">Limpar grade de pixels</button>
+        <input type="text" id="board-size" value="5">
+        <button id="generate-board" class="btn">Definir novo tamanho de pixel</button>
+
+    </section>
+
+    <section id="pixel-board" class="pixelBoard">
+        <h1 class="font-zero">Grade de pixels</h1>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
