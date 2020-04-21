@@ -2,11 +2,12 @@
 window.onload =function (){
     capturaGrid(preto);
     coresAleatorios()
+    preto.classList.add('.selected')
 }
 
 //Obtêm as cores da paleta
 let vermelho = document.querySelector("#color-red");
-let verde = document.querySelector("#color-green"); 
+let verde = document.querySelector("#color-green");
 let amarelo = document.querySelector("#color-yellow");
 let preto = document.querySelector("#color-black");
 
@@ -19,7 +20,7 @@ function capturaGrid(paleta){
   {
     //Adiciona a cor selecionada no grid
     grid[i].addEventListener("click", function(e){
-     e.target.style.backgroundColor=cor;
+    e.target.style.backgroundColor=cor;
     });
   }
 }
@@ -42,7 +43,7 @@ amarelo.addEventListener("click", function(e){
 
 //limpa grid
 let btlimpa = document.querySelector("#clear-board");
-btlimpa.addEventListener("click", function(){  
+btlimpa.addEventListener("click", function(){
   let grid = document.querySelectorAll(".pixel");
   for(var i =0; i<grid.length; i++)
   {
@@ -50,13 +51,13 @@ btlimpa.addEventListener("click", function(){
   }
 });
 
-//Bônus -2 
+//Bônus -2
 //Cores aleatórias
 function coresAleatorios(){
   let divCroes = document.querySelectorAll(".color");
-  var cores = ["#f36", "#C3C", "fc0", "#FC6", "#9C0"]; 
+  var cores = ["#f36","#C3C","fc0","#FC6","#9C0"];
   let divCores = document.querySelectorAll(".color");
-  console.log(divCroes[0].style.backgroundColor= cores[Math.floor(Math.random() * 16)]);
   console.log(divCroes[1].style.backgroundColor= cores[Math.floor(Math.random() * 16)]);
-  console.log(divCroes[2].style.backgroundColor= cores[Math.floor(Math.random() * 16)]); 
+  console.log(divCroes[2].style.backgroundColor= cores[Math.floor(Math.random() * 16)]);
+  console.log(divCroes[3].style.backgroundColor= cores[Math.floor(Math.random() * 16)]);
 }
