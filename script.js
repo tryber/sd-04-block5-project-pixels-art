@@ -25,8 +25,9 @@ function CreatePixel() {
 
 function ClearBord() {
   const PIXEL = document.getElementsByClassName('pixel');
-  for (let i = 0; i < PIXEL.length - 1; i += 1) {
-    document.getElementById(PIXEL[i].id).classList = 'pixel white';
+  for (let i = 0; i < PIXEL.length; i += 1) {
+    PIXEL[i].classList = 'pixel';
+    PIXEL[i].style.backgroundColor = 'white';
   }
 }
 
@@ -44,6 +45,7 @@ window.onload = function () {
 
   MATRIZ.addEventListener('click', function (event) {
     document.getElementById(event.target.id).classList = `pixel ${selectedColor}`;
+    document.getElementById(event.target.id).style.backgroundColor = '';
   });
 
   CLEARBORD.addEventListener('click', function () {
