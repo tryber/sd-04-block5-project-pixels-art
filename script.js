@@ -3,6 +3,7 @@ const PALLET = document.getElementById('color-palette');
 const PIXEL = document.getElementsByClassName('pixel');
 const CLEARBORD = document.getElementById('clear-board');
 const GENERATEBORD = document.getElementById('generate-board');
+const COLOR = document.getElementsByClassName('color');
 let selectedColor = 'black';
 let sizePixel = 5;
 
@@ -42,7 +43,18 @@ function GenerateBoard() {
   CreatePixel();
 }
 
+function LoadRandomColor() {
+  COLOR[0].style.backgroundColor = `rgb(0, 0, 0)`;
+    for (let i = 1; i < 4; i += 1) {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      COLOR[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }
+}
+
 window.onload = function () {
+  LoadRandomColor();
   CreatePixel();
 
   PALLET.addEventListener('click', function (event) {
@@ -50,13 +62,12 @@ window.onload = function () {
     document.getElementById('red').classList.remove('selected');
     document.getElementById('blue').classList.remove('selected');
     document.getElementById('green').classList.remove('selected');
-    selectedColor = event.target.id;
+    selectedColor = event.target.style.backgroundColor;
     event.target.className += ' selected';
   });
 
   MATRIZ.addEventListener('click', function (event) {
-    document.getElementById(event.target.id).classList = `pixel ${selectedColor}`;
-    document.getElementById(event.target.id).style.backgroundColor = '';
+    document.getElementById(event.target.id).style.backgroundColor = selectedColor;
   });
 
   CLEARBORD.addEventListener('click', function () {
