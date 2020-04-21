@@ -1,17 +1,19 @@
 const MATRIZ = document.getElementById('pixel-board');
 const PALLET = document.getElementById('color-palette');
-let selectedColor = 'black';
+const PIXEL = document.getElementsByClassName('pixel');
 const CLEARBORD = document.getElementById('clear-board');
+const GENERATEBORD = document.getElementById('generate-board');
+let selectedColor = 'black';
+let sizePixel = 5;
 
 function CreatePixel() {
-  let linha;
-  let coluna;
+  let linha, coluna;
 
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < sizePixel; i += 1) {
     linha = document.createElement('div');
     linha.id = `linha${i}`;
     MATRIZ.appendChild(linha);
-    for (let j = 0; j < 5; j += 1) {
+    for (let j = 0; j < sizePixel; j += 1) {
       coluna = document.createElement('div');
       coluna.id = `coluna${i}${j}`;
       coluna.classList.add('pixel');
@@ -24,11 +26,19 @@ function CreatePixel() {
 }
 
 function ClearBord() {
-  const PIXEL = document.getElementsByClassName('pixel');
   for (let i = 0; i < PIXEL.length; i += 1) {
     PIXEL[i].classList = 'pixel';
     PIXEL[i].style.backgroundColor = 'white';
   }
+}
+
+function GenerateBoard() {
+  sizePixel = document.getElementById('board-size').value;
+  sizePixel = (sizePixel < 5 ? 5 : sizePixel);
+  sizePixel = (sizePixel > 50 ? 50 : sizePixel);
+  MATRIZ.innerHTML = '';
+
+  CreatePixel();
 }
 
 window.onload = function () {
@@ -51,4 +61,8 @@ window.onload = function () {
   CLEARBORD.addEventListener('click', function () {
     ClearBord();
   });
+
+  GENERATEBORD.addEventListener('click', function (){
+    GenerateBoard();
+  })
 };
