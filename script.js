@@ -35,7 +35,6 @@ function createPalette() {
     colorUnit.setAttribute("class", "color");
     colorPalette.appendChild(colorUnit);
   }
-
   let childs = colorPalette.childNodes;
   childs[1].style.backgroundColor = "black";
   childs[1].classList.add("selected");
