@@ -44,21 +44,24 @@ clearBoard.addEventListener('click', () => {
 
 // Create board
 generateBoard.addEventListener('click', () => {
-  let sizeInput = boardSize.value;
-  if (boardSize.value <= 5) sizeInput = 5;
-  else if (boardSize.value >= 50) sizeInput = 50;
-
   while (pixelBoard.firstChild) {
     pixelBoard.removeChild(pixelBoard.lastChild);
   }
+  // for (let i = 0; i < pixels.length; i += 1) {
+  //   pixelBoard.removeChild(pixels[i]);
+  // }
+  let size = boardSize.value;
+  if (size < 5) size = 5;
+  if (size > 50) size = 50;
 
-  for (let size = 0; size < sizeInput * sizeInput; size += 1) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    clickPaint(pixel);
-    pixelBoard.appendChild(pixel);
+  pixelBoard.style.height = `${(size * 40)}px`;
+  pixelBoard.style.width = `${(size * 40)}px`;
+  pixelBoard.style.gridTemplateColumns = `repeat(${size}, 40px)`;
+  pixelBoard.style.gridTemplateRows = `repeat(${size}, 40px)`;
+
+  for (let i = 0; i < size * size; i += 1) {
+    const newPixel = document.createElement('div');
+    newPixel.classList.add('pixel');
+    pixelBoard.appendChild(newPixel);
   }
-
-  pixelBoard.style.gridTemplateColumns = `repeat(${sizeInput}, 40px)`;
-  pixelBoard.style.gridTemplateRows = `repeat(${sizeInput}, 40px)`;
 });
